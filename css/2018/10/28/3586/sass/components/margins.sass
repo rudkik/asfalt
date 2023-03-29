@@ -1,0 +1,32 @@
+@import '../themes/_module'
+@import '../utils/_module'
+@for $i from 1 through 4
+  .margin-t-#{$i}
+    margin-top: #{$mp-default * $i}
+    &-5
+      margin-top: #{$mp-default * ($i + 0.5)}
+  .margin-b-#{$i}
+    margin-bottom: #{$mp-default * $i}
+    &-5
+      margin-bottom: #{$mp-default * ($i + 0.5)}
+  .margin-tb-#{$i}
+    margin-top: #{$mp-default * $i}
+    margin-bottom: #{$mp-default * $i}
+    &-5
+      margin-top: #{$mp-default * ($i + 0.5)}
+      margin-bottom: #{$mp-default * ($i + 0.5)}
+  @media screen and (max-width: 991px)
+    .margin-mob-t-#{$i}
+      margin-top: #{$mp-default * $i}
+      &-5
+        margin-top: #{$mp-default * ($i + 0.5)}
+    .margin-mob-b-#{$i}
+      margin-bottom: #{$mp-default * $i}
+      &-5
+        margin-bottom: #{$mp-default * ($i + 0.5)}
+    .margin-mob-tb-#{$i}
+      margin-top: #{$mp-default * $i}
+      margin-bottom: #{$mp-default * $i}
+      &-5
+        margin-top: #{$mp-default * ($i + 0.5)}
+        margin-bottom: #{$mp-default * ($i + 0.5)}

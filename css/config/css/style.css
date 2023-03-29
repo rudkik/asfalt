@@ -1,0 +1,218 @@
+.tr-header-buttom{
+    width: 121px;
+    min-width: 121px;
+}
+@media (min-width: 960px) {
+    .tr-header-buttom {
+        width: 220px;
+        min-width: 220px;
+    }
+}
+.col-md-1-5{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.width-78{
+    width: 78px;
+    min-width: 78px;
+    max-width: 78px;
+}
+.width-112{
+    width: 112px;
+    min-width: 112px;
+    max-width: 112px;
+}
+.width-80{
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+.width-90{
+    width: 90px;
+    min-width: 90px;
+    max-width: 90px;
+}
+.width-95{
+    width: 95px;
+    min-width: 95px;
+    max-width: 95px;
+}
+.width-85{
+    width: 85px;
+    min-width: 85px;
+    max-width: 85px;
+}
+.width-125{
+    width: 125px;
+    min-width: 125px;
+    max-width: 125px;
+}
+.width-115{
+    width: 115px;
+    min-width: 115px;
+    max-width: 115px;
+}
+.width-165{
+    width: 165px;
+    min-width: 165px;
+    max-width: 165px;
+}
+.width-97{
+    width: 97px;
+    min-width: 97px;
+    max-width: 97px;
+}
+.width-100{
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
+.width-105{
+    width: 105px;
+    min-width: 105px;
+    max-width: 105px;
+}
+.width-65{
+    width: 65px;
+    min-width: 65px;
+    max-width: 65px;
+}
+.width-130{
+    width: 130px;
+    min-width: 130px;
+    max-width: 130px;
+}
+.width-138{
+    width: 138px;
+    min-width: 138px;
+    max-width: 138px;
+}
+.width-135{
+    width: 135px;
+    min-width: 135px;
+    max-width: 135px;
+}
+.width-120{
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+}
+.width-110{
+    width: 110px;
+    min-width: 110px;
+    max-width: 110px;
+}
+.width-140{
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+}
+.width-150{
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
+.width-175{
+    width: 175px;
+    min-width: 175px;
+    max-width: 175px;
+}
+.width-170{
+    width: 170px;
+    min-width: 170px;
+    max-width: 170px;
+}
+.width-75{
+    width: 75px;
+    min-width: 75px;
+    max-width: 75px;
+}
+.width-40{
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+}
+.width-45{
+    width: 45px;
+    min-width: 45px;
+    max-width: 45px;
+}
+.width-145{
+    width: 145px;
+    min-width: 145px;
+    max-width: 145px;
+}
+.width-195{
+    width: 195px;
+    min-width: 195px;
+    max-width: 195px;
+}
+.width-165{
+    width: 165px;
+    min-width: 165px;
+    max-width: 165px;
+}
+.width-155{
+    width: 155px;
+    min-width: 155px;
+    max-width: 155px;
+}
+.width-60{
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+}
+.width-70{
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+}
+.width-240{
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+}
+.tr-header-public{
+    width: 37px;
+    min-width: 37px;
+}
+
+.tr-button{
+    margin-bottom: 0px;
+    white-space: normal;
+}
+.tr-button.delete > .tr-un-remove {
+    display: none;
+}
+.tr-button.un-delete > .tr-remove {
+    display: none;
+}
+.page-content {
+    padding: 10px 10px 50px 10px;
+}
+.nav-tabs > li {
+    float: right;
+}
+.nav-tabs {
+    width: 100%;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0;
+}
+.pagination {
+    margin: 0px;
+}
+.dataTables_length{
+    padding-top: 10px;
+}
+.dataTables_wrapper .table {
+    margin-bottom: 5px;
+}
+.text-center {
+    text-align: center !important;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align: middle;
+}

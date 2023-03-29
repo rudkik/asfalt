@@ -1,0 +1,70 @@
+.box-images > div{
+    max-width: 338px;
+    margin: 0 auto;
+}
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.box.box-danger {
+    border-top-color:#dd4b39
+}
+.box-image{
+    cursor: move;
+}
+.box-image > .box-header > input{
+    width: calc(100% - 30px);
+}
+.box-image > .box-header > .box-tools{
+    margin-top: 7px;
+}
+.box-image > .box-load{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 160px;
+}
+.box-image > .box-load > label{
+    margin-bottom: 0px;
+}
+.input-files,
+.box-image > .box-load > label > input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: transparent;
+    border-image: none;
+    cursor: pointer;
+    direction: ltr;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 80px);
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 30px;
+    height: calc(100% - 45px);
+}
+.box-image > .box-body {
+    height: 195px;
+}
+.box-image > .box-body > ul > li {
+    width: 100%;
+}
+.box-image > .box-body > ul > li > img{
+    max-height: 175px;
+    border-radius: 0%;
+}
+.box-image > .box-body > ul > li > .error{
+    color: #dd4b39 !important;
+    font-weight: 700;
+}
+

@@ -1,0 +1,458 @@
+@import url("../AkzidenzGroteskPro/stylesheet.css");
+
+body{
+    font-family: "Akzidenz-Grotesk Pro";
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+}
+.h1, h1{
+    font-size: 40px;
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 19px;
+    color: #1e2444;
+}
+.h1 span, h1 span, .h2 span, h2 span{
+    color: #e6af07;
+}
+.h2, h2{
+    color: #1e2444;
+    font-size: 38px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+.h4, h4{
+    font-size: 26px;
+    margin-bottom: 22px;
+    margin-top: 0px;
+}
+p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: underline;
+}
+a:active, a:hover, a:focus{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 1380px;
+    padding: 0px 15px;
+}
+header{
+    padding: 95px 0px 95px;
+}
+.header-top {
+    padding: 20px 0px 10px;
+    background: url("../img/b-top.png") no-repeat scroll center top transparent;
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+}
+.header-top .logo{
+    position: absolute;
+}
+.header-top .logo img{
+    width: 100%;
+}
+.header-top .title{
+    float: left;
+    max-width: 270px;
+    margin-left: 140px;
+    top: 27px;
+    margin-bottom: 10px;
+}
+.header-top .contacts{
+    float: right;
+    margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+    .header-top .contacts{
+        margin-left: 120px;
+    }
+}
+.header-top .contacts .phone{
+    float: left;
+    max-width: 168px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.header-top .contacts .phone a{
+    color: #fff;
+}
+@media (max-width: 400px) {
+    .header-top .logo{
+        width: 70px;
+    }
+    .header-top .title{
+        margin-left: 88px;
+    }
+    .header-top .contacts{
+        margin-left: 68px;
+    }
+}
+.header-menu {
+    padding: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.header-menu .navbar{
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin-left: 126px;
+    margin-bottom: 0px;
+}
+.header-menu .navbar-default .navbar-nav > li > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 4px solid #fff;
+    color: #000;
+}
+@media (min-width: 768px) {
+    .header-menu .navbar-default .navbar-nav > li > a {
+        padding: 22px 15px;
+    }
+}
+.header-menu .navbar-default .navbar-nav > li > a:focus, .header-menu .navbar-default .navbar-nav > li > a:hover, .header-menu .navbar-default .navbar-nav > li > a:active {
+    border-bottom-color: rgb(230, 175, 7);
+}
+.header-menu .btn-orange{
+    margin: 15px 0px;
+}
+@media (max-width: 809px) {
+    .header-menu .navbar {
+        margin-left: 0px;
+    }
+}
+.btn-orange{
+    border-radius: 4px;
+    background-color: rgb(230, 175, 7);
+    padding: 8px 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+.btn-orange:focus, .btn-orange:hover, .btn-orange:active{
+    color: #fff;
+    text-decoration: underline;
+}
+.btn-orange > img{
+    margin-right: 10px;
+}
+.header-slider{
+    padding: 0px;
+}
+.header-slider .slider{
+    background: url("../img/slider.png") no-repeat scroll center top transparent;
+    background-size: cover;
+    padding: 110px 0px 190px;
+}
+.header-slider .slider .info{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 2.188;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    max-width: 492px;
+}
+.header-slider .slider h1{
+    font-weight: 800;
+    font-style: italic;
+}
+.header-directions{
+    padding: 0px;
+    margin-top: -75px;
+}
+.header-directions .box-direction{
+    border-radius: 4px;
+    background-color: rgb(30, 36, 68);
+    text-align: center;
+    padding: 25px 20px 20px;
+    margin-bottom: 30px;
+}
+.header-directions .box-direction:focus, .header-directions .box-direction:active, .header-directions .box-direction:hover{
+    background-color: rgb(230, 175, 7);
+    box-shadow: 0px 15px 22.08px 1.92px rgba(0, 0, 0, 0.2);
+}
+.header-directions .box-direction .name a{
+    font-size: 22px;
+    color: rgb(249, 249, 249);
+    font-weight: bold;
+    line-height: 1.222;
+    text-decoration: none;
+}
+.header-directions .box-direction .name{
+    min-height: 55px;
+}
+.header-directions .box-direction img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 25px;
+}
+@media (max-width: 991px) and (min-width: 500px){
+    .header-directions > .container > .row > .col-md-3{
+        float: left;
+        width: 50%;
+    }
+}
+.header-direction-info h2{
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.header-direction-info .box-info{
+    text-align: center;
+    font-size: 22px;
+    color: #1e2444;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+.header-direction-info .box-text{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.988;
+    margin-top: 30px;
+}
+.header-direction-info .box-title{
+    text-align: center;
+    font-size: 25px;
+    color: rgb(30, 36, 68);
+    font-weight: bold;
+    margin-bottom: 27px;
+}
+.header-direction-info .scopes img{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.header-direction-info .scopes ul{
+    list-style-image: url(../img/check.png);
+    padding-left: 19px;
+}
+.header-direction-info .scopes ul > li > a{
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    padding: 6px 0px 6px 5px;
+    display: inline-block;
+}
+.header-direction-info .scopes ul > li > a:hover, .header-direction-info .scopes ul > li > a:focus, .header-direction-info .scopes ul > li > a:active{
+    text-decoration: underline;
+}
+.header-advantages{
+    background: url("../img/b-2.png") no-repeat scroll center top transparent;
+    background-size: cover;
+    padding: 58px 0px 58px;
+}
+.header-advantages .box-advantages p{
+    text-align: center;
+    font-size: 22px;
+    color: rgb(249, 249, 249);
+    line-height: 1.222;
+    font-weight: bold;
+    min-height: 41px;
+    width: 100%;
+}
+.header-advantages .box-advantages{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+.header-advantages .box-advantages img{
+    display: block;
+    margin: 0 auto 33px;
+}
+.header-advantages .box-info {
+    font-size: 18px;
+    color: rgb(249, 249, 249);
+    font-weight: bold;
+    text-align: center;
+}
+.header-advantages .box-info > span {
+    color: rgb(230, 175, 7);
+}
+.header-advantages .box-advantages > .col-md-3{
+    margin-bottom: 30px;
+}
+@media (max-width: 991px) and (min-width: 500px){
+    .header-advantages .box-advantages > .col-md-3{
+        float: left;
+        width: 50%;
+    }
+}
+.header-direction-info .box-why > *{
+    margin-bottom: 30px;
+}
+.header-direction-info .box-why img{
+    margin: 0 auto 30px;
+    display: block;
+}
+.header-direction-info .box-why .name{
+    font-size: 24px;
+    color: rgb(30, 36, 68);
+    font-weight: bold;
+    line-height: 1.222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header-direction-info .box-why .info{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.563;
+    text-align: center;
+}
+.btn-white{
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 8px 30px;
+    color: rgb(230, 175, 7);
+    font-weight: bold;
+    border: 2px solid rgb(230, 175, 7);
+    font-size: 16px;
+    text-decoration: none;
+}
+.btn-white:focus, .btn-white:hover, .btn-white:active{
+    color: rgb(230, 175, 7);
+    text-decoration: underline;
+}
+.btn-white > img{
+    margin-right: 10px;
+}
+.btn-big{
+    padding: 17px 55px;
+    box-shadow: 0px 12px 22.08px 1.92px rgba(230, 175, 7, 0.2);
+}
+.header-message{
+    background: url("../img/b-3.png") no-repeat scroll center top transparent;
+    background-size: cover;
+    text-align: center;
+}
+.header-message .box-message{
+    margin: 35px 0px;
+}
+.header-message .box-message .btn{
+    width: 100%;
+}
+.header-message .box-message .input-group{
+    margin-bottom: 20px;
+}
+.input-group{
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 4px;
+}
+ .form-control{
+    font-size: 16px;
+    color: rgb(30, 36, 68);
+    height: auto;
+    padding: 17px 28px;
+    border: none;
+}
+.input-group-addon {
+    border-left: 0px;
+    background: #fff;
+    border: none;
+}
+.form-control:focus {
+    border-color: rgb(230, 175, 7);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(230, 175, 7, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(230, 175, 7, .6);
+}
+.header-message .box-text p{
+    text-align: center;
+    font-size: 18px;
+}
+.img-width{
+    width: 100%;
+}
+.header-comment h2{
+    text-align: center;
+}
+.header-comment .img-width{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    display: block;
+}
+.margin-b-30{
+    margin-bottom: 30px;
+}
+@media (min-width: 1380px) {
+    .header-comment .carousel-control.left {
+        left: -138px;
+    }
+    .header-comment .carousel-control.right {
+        right: -138px;
+    }
+}
+.header-comment .carousel-control.left {
+    background: none;
+}
+.header-comment .carousel-control.right {
+    background: none;
+}
+.header-comment .carousel-control img{
+    position: absolute;
+    top: calc((100% - 28px) / 2);
+}
+.footer-bottom{
+    padding: 15px 0px;
+}
+.footer-bottom .copyright {
+    margin-left: 140px;
+    font-size: 16px;
+    color: rgba(30, 36, 68, 0.702);
+    float: left;
+}
+.footer-bottom .social > a{
+    float: right;
+    margin-left: 5px;
+}
+.modal .form-control {
+    padding: 14px 22px;
+}
+.header-articles .box-article .box-img{
+    width: 100%;
+    margin: 0 auto 40px;
+    max-width: 500px;
+}
+.header-articles .box-article .box-info{
+    margin-bottom: 40px;
+}
+.header-articles .box-article .box-info .info{
+    line-height: 1.988;
+}
+.box_text{
+    line-height: 1.988;
+}
+.box_text img{
+    max-width: 100%;
+}
+.header-contacts .maps{
+    height: 600px;
+    margin-top: 50px;
+}
+@media (max-width: 700px) {
+    header{
+        padding: 45px 0px
+    }
+    .h1, h1{
+        font-size: 26px;
+    }
+    .h2, h2{
+        font-size: 24px;
+    }
+    .h4, h4{
+        font-size: 20px;
+    }
+}

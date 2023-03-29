@@ -1,0 +1,1 @@
+<li><a href="<?php echo $siteData->urlBasic.$siteData->url.URL::query(array('data_language_id' => $data->id));?>"><?php echo $data->values['name']; ?></a></li>

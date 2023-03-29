@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/application/logs/2021" />
+      <excludeFolder url="file://$MODULE_DIR$/application/logs/cookies" />
+      <excludeFolder url="file://$MODULE_DIR$/application/logs/session" />
+      <excludeFolder url="file://$MODULE_DIR$/css/2018" />
+      <excludeFolder url="file://$MODULE_DIR$/css/2019" />
+      <excludeFolder url="file://$MODULE_DIR$/css/2020" />
+      <excludeFolder url="file://$MODULE_DIR$/css/_component" />
+      <excludeFolder url="file://$MODULE_DIR$/css/adsgs" />
+      <excludeFolder url="file://$MODULE_DIR$/css/auto-part" />
+      <excludeFolder url="file://$MODULE_DIR$/css/calendar" />
+      <excludeFolder url="file://$MODULE_DIR$/css/nur" />
+      <excludeFolder url="file://$MODULE_DIR$/css/pyramid" />
+      <excludeFolder url="file://$MODULE_DIR$/css/sladushka" />
+      <excludeFolder url="file://$MODULE_DIR$/css/smmarket" />
+      <excludeFolder url="file://$MODULE_DIR$/files" />
+      <excludeFolder url="file://$MODULE_DIR$/img" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,1 @@
+<li><a data-action="auto-transfer" href="<?php echo $siteData->urlBasic; ?>/asu/shopcar/save?id=#id#&shop_turn_place_id=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a></li>

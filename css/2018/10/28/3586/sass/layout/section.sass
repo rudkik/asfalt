@@ -1,0 +1,237 @@
+@import '../themes/_module'
+%section
+  min-height: 700px
+  background:
+    position: right
+    repeat: no-repeat
+    size: 100% auto
+  @media screen and (max-height: 700px)
+    min-height: 360px
+
+@for $i from 1 through 6
+  .section--#{$i}
+    @extend %section
+
+.section
+  @extend %section
+  &--1
+    background-image: url('../img/main/section-1/bg.jpg')
+    display: flex
+    align-items: center
+    @media screen and (max-width: 767px)
+      background-size: 130% auto
+      align-items: flex-end
+    @media screen and (max-width: 575px)
+      background-size: 150% auto
+  // 000000000055555555555555
+  &--2
+    padding-top: $mp-medium
+    padding-bottom: $mp-default * 8
+    &__title
+      margin-top: $mp-default * 2 + 5
+      margin-bottom: $mp-default * 2 + 5
+    .section-number
+      margin-left: $mp-default * 1.5
+      @media screen and (max-width: 991px)
+        margin-bottom: $mp-default
+  // 000000000055555555555555
+  &--3
+    display: flex
+    align-items: center
+    margin-bottom: $mp-default * 4
+    background:
+      image: url('../img/main/section-3/bg.jpg')
+      position: left
+      repeat: no-repeat
+      size: auto 100%
+    @media screen and (max-width: 1199px)
+      background-position: 20% 50%
+    @media screen and (max-width: 991px)
+      padding-top: 120px
+      background:
+        position: -118% top
+        size: 135% auto
+    @media screen and (max-width: 419px)
+      padding-top: 100px
+      background:
+        position: -23% top
+        size: 185% auto
+    &__block
+      margin: $mp-default * 4 0
+      .title
+        @media screen and (min-width: 992px)
+          margin-left: -$mp-default * 8
+    &__num
+      display: inline-block
+      position: relative
+      height: 0
+      width: 0
+      >*
+        height: 110px
+        width: 85.85px
+        position: absolute !important
+        left: 0 !important
+        top: 0 !important
+        transform: translate(75%, calc(-100% - 40px)) !important
+        @media screen and (max-width: 991px)
+          left: auto !important
+          right: 0
+        @media screen and (max-width: 575px)
+          transform: translate(-25%, calc(-100% - 40px)) !important
+  // 000000000055555555555555
+  &--4
+    &__title
+      display: flex
+      align-items: center
+      position: absolute
+      top: $mp-default / 2
+      right: 0
+      left: 0
+      z-index: 2
+      .section-number
+        @media screen and (max-width: 991px)
+          position: absolute
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+      .title
+        margin-left: auto
+        margin-right: auto
+    &__img
+      display: flex
+      align-items: flex-end
+      justify-content: flex-start
+      @media screen and (max-width: 991px)
+        justify-content: center
+      img
+        max-width: 100%
+  // 000000000055555555555555
+  &--5
+    background-color: color('lightgray')
+    padding-bottom: $mp-default * 7
+    &__title
+      padding-top: $mp-default * 2 + ($mp-default / 3 * 2)
+      padding-bottom: $mp-default + $mp-default / 2
+    &__form
+      .col, [class*=col]
+        @media screen and (max-width: 991px) and (min-width: 768px)
+          &:nth-child(odd)
+            padding-right: 5px
+          &:nth-child(even)
+            padding-left: 5px
+        @media screen and (max-width: 991px)
+          margin-top: 5px
+          margin-bottom: 5px
+          .btn
+            justify-content: center
+          >*
+            width: 100%
+            >*
+              width: 100%
+        @media screen and (max-width: 767px)
+          &:first-child
+            margin-top: 0
+          &:last-child
+            margin-bottom: 0
+        @media screen and (min-width: 992px)
+          padding: 0 $mp-default / 2
+          &:first-child
+            padding-left: $mp-default
+          &:last-child
+            padding-right: $mp-default
+
+    &__calc
+      background-color: color('white')
+      font-size: $size-little + 2
+      line-height: $size-little + 4
+      &--block
+        margin-top: $mp-default * 2
+    &__block
+      margin: 0 $mp-default * 6 - $mp-default / 2
+      @media screen and (max-width: 1199px)
+        margin: 0 $mp-default * 4 - $mp-default / 2
+      @media screen and (max-width: 991px)
+        margin: 0 $mp-default * 2 - $mp-default / 2
+      @media screen and (max-width: 767px)
+        margin: 0 $mp-default - $mp-default / 2
+      &--row
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-bottom: 1px solid color('darkgray')
+        >*
+          padding: $mp-default / 1.75 0
+          &:first-child
+            padding-top: $mp-default * 1.25
+          &:last-child
+            padding-bottom: $mp-default * 1.25
+            @include font-family('ProximaNova', 'SemiBold')
+    &__info
+      margin: $mp-default $mp-default * 6 - $mp-default $mp-default * 2
+      line-height: $size-little + 10
+      color: color('darkgray')
+      @media screen and (max-width: 1199px)
+        margin: $mp-default $mp-default * 4.5 - $mp-default $mp-default * 2
+      @media screen and (max-width: 991px)
+        margin: $mp-default $mp-default * 2.5 - $mp-default $mp-default * 2
+        line-height: $size-little + 4
+      @media screen and (max-width: 767px)
+        margin: $mp-default $mp-default * 1.5 - $mp-default $mp-default * 2
+    &__comp
+      padding: $mp-default * 2 0
+      &--name
+        font-size: $size-normal
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: space-between
+        @include font-family('ProximaNova', 'Bold')
+        >*
+          margin: $mp-default / 2 0
+          @media screen and (max-width: 575px)
+            margin: $mp-default / 3 0
+          &:fisrt-child
+            margin-top: 0
+          &:last-child
+            margin-bottom: 0
+      &--desc
+        line-height: $mp-default + $mp-default / 4
+        @include font-family('ProximaNova', 'SemiBold')
+        @media screen and (max-width: 575px)
+          text-align: center
+          padding: $mp-default / 2 $mp-default !important
+  // 000000000055555555555555
+  &--6
+    @media screen and (max-width: 991px) and (min-width: 768px)
+      padding-top: 100px
+    @media screen and (max-width: 767px)
+      padding-top: 30px
+    &__order
+      @media screen and (max-width: 767px)
+        display: flex
+        flex-direction: column
+        &--1
+          order: 1
+    &__num
+      transform: translateY(33%)
+      z-index: 2
+    &__car
+      position: relative
+      width: 100%
+      max-height: 450px
+      @media screen and (max-width: 767px)
+        display: flex
+        justify-content: flex-end
+        align-items: center
+      img
+        @media screen and (max-width: 767px)
+          max-width: 120%
+        @media screen and (min-width: 768px)
+          position: absolute
+          right: 0
+          top: 0
+          height: auto
+      &--space
+        padding-bottom: $mp-default * 10
+        @media screen and (max-width: 767px)
+          padding-bottom: $mp-default * 2

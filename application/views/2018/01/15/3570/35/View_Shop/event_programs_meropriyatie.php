@@ -1,0 +1,2 @@
+<h1><a href="<?php echo $siteData->urlBasic; ?>/event/programs?id=<?php echo $data->values['id']; ?>">Программа</a></h1>
+<span><a href="<?php echo $siteData->urlBasic; ?>/event?id=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a> / Программа </span>

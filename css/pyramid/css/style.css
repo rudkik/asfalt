@@ -1,0 +1,17 @@
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.bootstrap-table .fixed-table-container {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+}
+.main-body{
+    background: #fff;
+}
+.bootstrap-table .fixed-table-toolbar .columns .btn.dropdown-toggle {
+    padding: 8px;
+}

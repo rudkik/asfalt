@@ -1,0 +1,606 @@
+@import url("../BebasNeue/stylesheet.css");
+@import url("../Montserrat/stylesheet.css");
+
+body{
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+    font-weight: 400;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue";
+    font-weight: 700;
+    color: rgb(76, 76, 76);
+}
+.header-background .h1, .header-background .header-background .h2, .header-background .h3, .header-background .h4,
+.header-background .h5, .header-background .h6, .header-background h1, .header-background h2, .header-background h3,
+.header-background h4, .header-background h5, .header-background h6 {
+    color: #fff;
+}
+.h1, h1{
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+.h1 span, h1 span{
+    color: rgb(70, 70, 70);
+}
+.h2, h2{
+    font-size: 45px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+.h2 span, h2 span{
+    color: rgb(70, 70, 70);
+    text-transform: none;
+}
+.h4, h4{
+    font-size: 26px;
+    margin-bottom: 22px;
+    margin-top: 0px;
+}
+p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+a{
+    color: #fff;
+    text-decoration: underline;
+}
+a:active, a:hover, a:focus{
+    text-decoration: none;
+    color: #fff;
+}
+.container{
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 1380px;
+    padding: 0px 15px;
+}
+header{
+    padding: 100px 0px 115px 65px;
+}
+.header-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+    background-color: #fff;
+    padding: 20px 15px;
+    box-shadow: 5.977px 0.523px 29.44px 2.56px rgba(40, 40, 40, 0.15);
+}
+.header-right .box-socials{
+    margin-top: calc((100vh - 167px) / 2);
+}
+.header-right .box-socials .box-social{
+    margin-bottom: 20px;
+}
+.header-background{
+    padding: 0px;
+}
+.header-background-1{
+    background: url("../img/b-1.png") no-repeat scroll center top transparent;
+    background-size: cover;
+}
+.header-menu {
+    padding: 0px;
+    padding-left: 65px;
+    position: fixed;
+    width: 100%;
+    z-index: 9995;
+    background: rgba(33, 31, 29, 0.7);
+}
+.header-menu > .container{
+    padding: 13px 15px;
+    color: #fff;
+}
+.header-menu .logo{
+    float: left;
+    margin-right: 25px;
+    margin-top: 7px;
+}
+.header-menu .title{
+    float: left;
+    max-width: 241px;
+    margin-right: 25px;
+    line-height: 1.733;
+    margin-top: 7px;
+}
+.header-menu .title span{
+    color: #b89e8f;
+    font-weight: 700;
+}
+.header-menu .contacts{
+    float: right;
+    text-align: right;
+    width: 200px;
+    margin-right: 25px;
+    margin-top: 7px;
+}
+.header-menu .contacts .phone a{
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+.header-menu .contacts .phone a:active, .header-menu .contacts .phone a:hover, .header-menu .contacts .phone a:focus{
+    text-decoration: underline;
+}
+.header-menu .contacts .phone span {
+    color: rgba(255, 255, 255, 0.502);
+}
+.header-menu .box-call {
+    padding: 10px;
+    float: left;
+    margin-right: 25px;
+}
+.header-menu .box-call:last-child {
+    margin-right: 0px;
+}
+.header-menu .box-call:focus, .header-menu .box-call:hover, .header-menu .box-call:active {
+    background-color: rgba(184, 158, 143, 0.4);
+}
+.header-menu > .container {
+    border-bottom: 1px solid rgba(184, 158, 143, 0.2);
+}
+@media (max-width: 926px) {
+    .header-menu {
+        position: inherit;
+    }
+}
+.header-slider{
+    padding: 0px;
+    padding-left: 65px;
+}
+.header-slider .slider{
+    background: url("../img/slider/b-1.png") no-repeat scroll center top transparent;
+    background-size: auto 100%;
+    padding: 185px 0px 135px;
+}
+.header-slider .slider .info{
+    color: rgba(255, 255, 255, 0.702);
+    line-height: 2.286;
+    margin-bottom: 25px;
+}
+.header-slider .slider .box-left{
+    display: inline-block;
+    max-width: 636px;
+    width: 100%;
+}
+.header-background-2{
+    background: url("../img/b-2.png") no-repeat scroll center top transparent;
+    background-size: cover;
+}
+.header-direction .box-direction-info{
+    padding-top: 110px;
+}
+.header-direction .box-direction-info .info{
+    color: rgba(255, 255, 255, 0.702);
+    line-height: 2.286;
+    margin-bottom: 25px;
+}
+.header-direction .box-direction{
+    border: 2px solid rgb(184, 158, 143);
+    padding: 48px 25px 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header-direction .box-direction img{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+.header-direction .box-direction .name{
+    font-size: 18px;
+    font-family: "Bebas Neue";
+    margin-top: 30px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.389;
+    height: 50px;
+    text-overflow: clip;
+    overflow: hidden;
+    word-wrap: normal;
+    text-decoration: none;
+}
+.header-direction .box-direction img.active{
+    display: none;
+}
+.header-direction .box-direction:focus, .header-direction .box-direction:hover, .header-direction .box-direction:active{
+    background: rgb(184, 158, 143);
+}
+.header-direction .box-direction:focus a, .header-direction .box-direction:hover a, .header-direction .box-direction:active a{
+    color: #000;
+}
+.header-direction .box-direction:focus img.basic, .header-direction .box-direction:hover img.basic, .header-direction .box-direction:active img.basic{
+    display: none;
+}
+.header-direction .box-direction:focus img.active, .header-direction .box-direction:hover img.active, .header-direction .box-direction:active img.active{
+    display: block;
+}
+.header-background-3{
+    background: url("../img/b-3.png") no-repeat scroll center top transparent;
+    background-size: cover;
+}
+.header-workers .box-worker-info .info{
+    color: rgba(255, 255, 255, 0.702);
+    line-height: 2.286;
+    margin-bottom: 25px;
+}
+.header-workers .box-worker-info{
+    padding-top: 110px;
+}
+.header-workers .box-worker{
+    border: 2px solid rgb(184, 158, 143);
+    padding: 0px 25px 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.header-workers .box-worker img{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+.header-workers .box-worker a{
+    font-size: 18px;
+    font-family: "Bebas Neue";
+    margin-top: 30px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.389;
+    text-decoration: none;
+}
+.header-workers .box-worker:focus a, .header-workers .box-worker:hover a, .header-workers .box-worker:active a{
+    text-decoration: underline;
+}
+.header-background-4{
+    background: url("../img/b-4.png") no-repeat scroll center top transparent;
+    background-size: cover;
+}
+.header-contact .box-map{
+    height: 504px;
+    width: 100%;
+    border: 2px solid rgb(184, 158, 143);
+}
+.header-contact .contact{
+    margin-bottom: 15px;
+}
+.header-contact .contact label, .header-contact .contact a{
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(76, 76, 76);
+}
+.index.header-contact .contact label, .index.header-contact .contact a{
+    color: #fff;
+}
+.header-contact .contact a:active, .header-contact .contact a:hover, .header-contact .contact a:focus{
+    text-decoration: underline;
+}
+.header-contact .contact span {
+    display: block;
+}
+.index.header-contact .contact span {
+    color: #fff;
+}
+.header-contact h4{
+    margin-top: 10px;
+}
+.header-contact h4:first-child{
+    margin-top: 0px;
+}
+.index.header-contact.header-background .contact label, .header-contact.header-background .contact a{
+    color: rgb(255, 255, 255);
+}
+.index.header-contact.header-background .contact span {
+    color: rgba(255, 255, 255, 0.502);
+}
+.btn-grey {
+    background: rgb(184, 158, 143);
+    padding: 20px 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border: none;
+    box-shadow: 0px 12px 24px 0px rgba(184, 158, 143, 0.2);
+    font-weight: 600;
+}
+.btn-grey img{
+    margin-left: 50px;
+}
+.btn-grey:focus, .btn-grey:hover, .btn-grey:active {
+    box-shadow: 0px 12px 24px 0px rgba(184, 158, 143, 0.4);
+    color: rgb(255, 255, 255);
+}
+.header-background-5{
+    background: url("../img/b-5.png") no-repeat scroll center top transparent;
+    background-size: cover;
+}
+.header-breadcrumb{
+    padding: 120px 0px 120px 65px;
+}
+.header-breadcrumb h1{
+    margin-bottom: 15px;
+}
+.header-breadcrumb .breadcrumbs a{
+    color: rgba(255, 255, 255, 0.702);
+}
+.header-breadcrumb .breadcrumbs a.active{
+    text-decoration: none;
+}
+.header-breadcrumb .breadcrumbs a.active{
+    text-decoration: none;
+}
+.box-text{
+    text-align: left;
+    line-height: 2.086;
+}
+.box-text p, .box-text ol, .box-text ul{
+    margin-bottom: 20px;
+}
+.box-text ul{
+    padding-left: 0px;
+    list-style-type: none;
+}
+.box-text ul li{
+    margin-bottom: 10px;
+}
+.box-text ul li:before {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: rgb(0, 51, 142);
+    content: "•";
+    padding-right: 7px;
+}
+.box-text ol{
+    counter-reset: myCounter;
+    padding-left: 50px;
+}
+.box-text ol > li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.box-text ol > li:before {
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: white;
+    background: rgb(184, 158, 143);
+    display: inline-block;
+    text-align: center;
+    margin: -4px 10px -4px -50px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+}
+.box-text .col-md-4 img{
+    width: 100%;
+}
+.box-text img{
+    max-width: 100%;
+}
+.header-text{
+    padding: 45px 0px 100px;
+}
+footer {
+    background-color: rgb(235, 235, 235);
+    padding: 35px 0px;
+}
+footer .copyright {
+    color: rgb(40, 40, 40);
+    text-align: center;
+}
+.header-cart{
+    padding: 95px 0px;
+}
+.header-cart .box-goods{
+    padding: 19px 0px;
+    border-bottom: 1px solid rgb(236, 235, 234);
+}
+.box-goods-name, .box-goods-name > a{
+    font-size: 30px;
+    font-family: "Bebas Neue";
+    color: rgb(184, 158, 143);
+}
+.header-cart .box-goods .info{
+    color: rgb(76, 76, 76);
+}
+.box-goods-price{
+    font-size: 23px;
+    font-family: "Bebas Neue";
+    color: rgb(76, 76, 76);
+    margin-top: 8px;
+    display: block;
+}
+.header-cart .box-goods .box-goods-price {
+    text-align: right;
+}
+.header-cart .box-goods .delete{
+    margin-top: 15px;
+    display: block;
+    float: right;
+}
+.header-cart .box-goods .img-goods{
+    float: left;
+    margin-right: 30px;
+}
+.header-cart .img-goods{
+    width: auto;
+}
+.img-box{
+    width: 100%;
+    max-width: 100%;
+}
+.select2-container .select2-selection--single {
+    border-radius: 0px;
+    height: 46px;
+    padding: 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    padding: 22px 15px;
+}
+.select2-container--default .select2-results__option {
+    padding-left: 16px;
+}
+.header-cart .box-total{
+    padding: 40px 0px;
+}
+.header-cart .box-total .total {
+    color: rgb(76, 76, 76);
+    font-size: 20px;
+}
+.header-cart .box-total .total span{
+    color: rgb(184, 158, 143);
+    font-weight: 600;
+}
+.header-cart h1 {
+    color: rgb(184, 158, 143);
+    margin-bottom: 33px;
+}
+.form-group .form-control.input-tree{
+    border-radius: 0px;
+    padding: 18px 27px;
+    color: rgb(70, 70, 70);
+    -moz-transform: matrix( 1,0,0,1.00011940758843,0,0);
+    -webkit-transform: matrix( 1,0,0,1.00011940758843,0,0);
+    -ms-transform: matrix( 1,0,0,1.00011940758843,0,0);
+    border: 1px solid rgb(233, 239, 227);
+}
+.form-group input.form-control.input-tree{
+    height: 52px;
+}
+.form-control.input-tree:focus {
+    border-color: rgb(184, 158, 143);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(184, 158, 143, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(184, 158, 143, .6);
+}
+.header-cart .delivery-info{
+    max-width: 750px;
+    width: 100%;
+}
+.header-cart .box-agreement{
+    padding: 10px 0px 20px;
+}
+.icheckbox_minimal-blue.checked {
+    margin-right: 10px;
+}
+.img-goods{
+    width: 100%;
+    max-width: 100%;
+}
+.header-goods .img-goods{
+    margin-bottom: 35px;
+}
+ul.check{
+    padding: 0px;
+}
+ul.check > li {
+    list-style: none;
+    padding: 5.5px 0 5.5px 30px;
+    position: relative; }
+
+ul.check > li:before {
+    content: '';
+    background: url(../img/check.png) no-repeat left center;
+    height: 12px;
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+.header-goods .btn-grey {
+    margin: 25px 0px 35px;
+}
+.header-catalog .box-goods{
+    border: 2px solid rgb(184, 158, 143);
+    margin-bottom: 30px;
+}
+.header-catalog .box-goods .box-info{
+    padding: 20px;
+}
+.header-catalog .box-goods .box-img-goods{
+    background: url("../img/goods-b.png") no-repeat scroll center top transparent;
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    border-right: 2px solid rgb(184, 158, 143);
+}
+.header-catalog .box-goods .box-img-goods > a{
+    display: inline-table;
+    width: 100%;
+    height: 100%;
+}
+.header-catalog .box-goods .box-goods-price{
+    margin-bottom: 15px;
+}
+.ul-check{
+    list-style-image: url("../img/check.png");
+    padding-left: 20px;
+}
+.ul-check > li{
+    padding-left: 3px;
+    padding-bottom: 5px;
+}
+.header-catalog .box-goods .ul-check {
+    height: 98px;
+    text-overflow: clip;
+    overflow: hidden;
+    word-wrap: normal;
+}
+.box-pagination{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.box-pagination > li {
+    list-style-type: none;
+    display: grid;
+    margin-right: 20px;
+    float: left;
+}
+.box-pagination > li > a{
+    min-height: 50px;
+    min-width: 50px;
+    padding: 12px 20px;
+    background-color: rgb(235, 235, 235);
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(184, 158, 143);
+    border-radius: 0;
+    text-align: center;
+}
+.box-pagination > li > span{
+    padding: 14px 0px;
+    font-size: 20px;
+    color: #282828;
+}
+.box-pagination > li.active > a, .box-pagination > li > a:hover, .box-pagination > li > a:active, .box-pagination > li > a:focus{
+    background: rgb(184, 158, 143);
+    color: #fff;
+}
+.box-pagination > li.next > a{
+    background: url("../img/right.png") no-repeat scroll center center rgb(235, 235, 235);
+}
+.box-pagination > li.next > a:hover, .box-pagination > li.next > a:active, .box-pagination > li.next > a:focus{
+    background: url("../img/right-a.png") no-repeat scroll center center rgb(184, 158, 143);
+}
+.box-pagination > li.prev > a{
+    background: url("../img/left.png") no-repeat scroll center center rgb(235, 235, 235);
+    padding: 26px 20px;
+}
+.box-pagination > li.prev > a:hover, .box-pagination > li.prev > a:active, .box-pagination > li.prev > a:focus{
+    background: url("../img/left-a.png") no-repeat scroll center center rgb(184, 158, 143);
+}
+.header-slider .carousel-control .glyphicon-chevron-left, .header-slider .carousel-control .icon-prev {
+    margin-left: -45px;
+}
+.header-slider .carousel-control .glyphicon-chevron-right, .header-slider .carousel-control .icon-next {
+    margin-right: -45px;
+}

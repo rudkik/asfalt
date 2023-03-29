@@ -1,0 +1,1 @@
+<option value="<?php echo $data->values['id'];?>" data-id="<?php echo $data->values['id'];?>"><?php echo $data->values['name'];?> (<?php echo Func::getPriceStr($siteData->currency, $data->values['price']); ?>)</option>

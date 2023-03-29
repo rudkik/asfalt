@@ -1,0 +1,1 @@
+<li><a href="<?php echo $siteData->urlBasic; ?>/blog?rubric=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a></li>

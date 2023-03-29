@@ -1,0 +1,95 @@
+<?php
+$dateFrom = Request_RequestParams::getParamDate('date_from');
+if($dateFrom === NULL){
+    $dateFrom = Helpers_DateTime::getMonthBeginStr(date('m'), date('Y'));
+}
+$dateTo = Request_RequestParams::getParamDate('date_to');
+if($dateTo === NULL){
+    $dateTo = date('Y-m-d');
+}
+?>
+<form id="form-filter" class="box-body no-padding padding-bottom-10px">
+	<div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group"  style="margin-bottom: 5px">
+                        <label for="shop_client_id">Клиент</label>
+                        <select data-action="shop_client" data-basic-url="<?php echo $siteData->actionURLName;?>" data-action-select2="1" data-value="<?php echo Request_RequestParams::getParamInt('shop_client_id');?>"
+                                id="shop_client_id" name="shop_client_id" class="form-control select2" style="width: 100%">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="date_from">Период от</label>
+                        <div class="input-group" style="width: 100%;">
+                            <div class="input-group">
+                                <input id="date_from" class="form-control pull-right" type="datetime" date-type="date" name="date_from" value="<?php echo Helpers_DateTime::getDateFormatRus($dateFrom);?>">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="date_to">Период до</label>
+                        <div class="input-group" style="width: 100%;">
+                            <div class="input-group">
+                                <input id="date_to" class="form-control pull-right" type="datetime" date-type="date" name="date_to" value="<?php echo Helpers_DateTime::getDateFormatRus($dateTo);?>">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label class="span-checkbox" style="margin-top: 30px;">
+                        <input name="is_add_virtual_invoice" data-id="1" <?php if(Request_RequestParams::getParamBoolean('is_add_virtual_invoice')){ ?>value="1" checked<?php }else{?>value="0"<?php }?> type="checkbox" class="minimal">
+                        Исходные накладные
+                    </label>
+                </div>
+                <div class="col-md-1">
+                    <div hidden>
+                        <?php if($siteData->branchID > 0){ ?>
+                            <input name="shop_branch_id" value="<?php echo $siteData->branchID; ?>">
+                        <?php } ?>
+
+                        <?php if(Arr::path($siteData->urlParams, 'is_public', '') == 1){?>
+                            <input id="input-status" name="is_public" value="1">
+                        <?php }elseif(Arr::path($siteData->urlParams, 'is_not_public', '') == 1){?>
+                            <input id="input-status" name="is_not_public" value="1">
+                        <?php }elseif(Arr::path($siteData->urlParams, 'is_delete', '') == 1){?>
+                            <input id="input-status" name="is_delete" value="1">
+                        <?php }else{?>
+                            <input id="input-status" name="" value="1">
+                        <?php }?>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group pull-right">
+                        <label for="input-limit-page">Кол-во записей</label>
+                        <div class="input-group" style="width: 145px;">
+                            <select id="input-limit-page" name="limit_page" class="form-control select2" style="width: 100%">
+                                <?php $tmp = Request_RequestParams::getParamInt('limit_page'); ?>
+                                <option value="25" <?php if(($tmp === NULL) || ($tmp == 25)){echo 'selected';} ?>>25</option>
+                                <option value="50" <?php if($tmp == 50){echo 'selected';} ?>>50</option>
+                                <option value="100" <?php if($tmp == 100){echo 'selected';} ?>>100</option>
+                                <option value="200" <?php if($tmp == 200){echo 'selected';} ?>>200</option>
+                                <option value="500" <?php if($tmp == 500){echo 'selected';} ?>>500</option>
+                                <option value="1000" <?php if($tmp == 1000){echo 'selected';} ?>>1000</option>
+                                <option value="5000" <?php if($tmp == 5000){echo 'selected';} ?>>5000</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn bg-orange btn-flat"><i class="fa fa-fw fa-search"></i> Поиск</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</form>

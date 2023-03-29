@@ -1,0 +1,1 @@
+<li class="wc-layered-nav-term <?php if($data->id == Request_RequestParams::getParamInt('brand_id')){echo 'chosen';}?>"><a href="<?php echo $siteData->urlBasic.$siteData->url.URL::query(array('page' => 1, 'brand_id' => $data->values['id'])); ?>"><?php echo $data->values['name']; ?></a></li>

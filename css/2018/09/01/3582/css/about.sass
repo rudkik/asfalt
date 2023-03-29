@@ -1,0 +1,72 @@
+@import '../_vars.sass'
+.about
+  margin: $margin * 2 0
+  *[data-company="2"]
+    display: none
+  &__switch
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__company
+      &__input
+        display: none
+        &:checked + label
+          color: $main_color
+          font-weight: 400
+          font-size: 22px
+          position: relative
+          &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            border: 5px solid transparent
+            border-left: 10px solid $main_color
+      &__title
+        font-weight: 300
+        cursor: pointer
+        display: inline-block
+        padding: 10px 0 10px $pl
+        font-size: 18px
+        transition: all 0.1s ease-out
+        &:hover
+          color: $main_dark_color
+  &__title
+    font-size: 36px
+    line-height: 40px
+    @media screen and (max-width: 991px)
+      margin-top: $margin
+      font-size: 30px
+      text-align: center
+    @media screen and (max-width: 567px)
+      font-size: 26px
+  &__body
+    font-weight: 300
+    &__block
+      display: flex
+      background-color: white
+      align-items: center
+      justify-content: center
+      text-align: center
+      padding: 50px 40px
+      height: 100%
+      border: 1px solid $main_light_color
+      &__wrap
+        margin: $margin 0
+        >*
+          @media screen and (max-width: 767px)
+            margin-bottom: $pl / 2
+          &:nth-child(odd)
+            margin-left: -15px
+            @media screen and (max-width: 767px)
+              margin-left: 0
+          &:nth-child(even)
+            margin-right: -15px
+            @media screen and (max-width: 767px)
+              margin-right: 0
+    &__text
+      font-size: 15px
+      line-height: 20px
+      p
+        margin: 12px 0

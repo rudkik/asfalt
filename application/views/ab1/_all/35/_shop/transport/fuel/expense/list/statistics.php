@@ -1,0 +1,43 @@
+<table class="table table-hover table-db table-tr-line" >
+    <thead>
+    <tr>
+        <th>Подразделение</th>
+        <th class="width-100 text-right">Сегодня</th>
+        <th class="width-100 text-right">Вчера</th>
+        <th class="width-100 text-right">Неделя</th>
+        <th class="width-100 text-right">Месяц</th>
+        <th class="width-130 text-right">Прошлый месяц</th>
+        <th class="width-100 text-right">Год</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach ($data['view::_shop/transport/fuel/expense/one/statistics']->childs as $value) {
+        echo $value->str;
+    }
+    $data = $data['view::_shop/transport/fuel/expense/one/statistics'];
+    ?>
+    <tr class="total">
+        <td>Итого</td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_day'], TRUE, 3); ?>
+        </td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_yesterday'], TRUE, 3); ?>
+        </td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_week'], TRUE, 3); ?>
+        </td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_month'], TRUE, 3); ?>
+        </td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_month_previous'], TRUE, 3); ?>
+        </td>
+        <td class="text-right">
+            <?php echo Func::getNumberStr($data->additionDatas['quantity_year'], TRUE, 3); ?>
+        </td>
+    </tr>
+    </tbody>
+</table>
+

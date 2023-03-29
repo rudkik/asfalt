@@ -1,0 +1,111 @@
+@import '../_vars.sass'
+.product
+  &__title
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+  &__subtitle
+    margin: $pl 0
+    color: black
+    background-color: white
+    border: 1px solid black
+  .catalog__product__tth__wrap
+    @media screen and (max-width: 419px)
+      padding-top: $pl/4
+  .catalog__product__title__lease
+    margin-top: $pl / 4
+  .catalog__product__title__model
+    padding-left: $pl
+  .catalog__product__wrap_block
+    overflow-x: hidden
+    padding-top: 40px
+  .catalog__product__preview_img
+    order: 1
+    position: relative
+    left: auto
+    right: 0
+    top: 0
+    margin-top: -60px
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 500px
+    @media screen and (max-width: 991px)
+      transform: translateX(0)
+      flex-basis: calc(100% - 30px)
+      margin-top: $pl
+      order: 0
+    img
+      position: relative
+      top: -40px
+      max-width: 100%
+      @media screen and (max-width: 991px)
+        top: 0
+    .loading__wrap
+      top: 80px
+      left: auto
+      width: auto
+  .bigm
+    margin-top: $margin * 2
+    margin-bottom: $margin * 2
+    @media screen and (max-width: 991px)
+      margin-top: $margin / 2
+      margin-bottom: $margin / 2
+  &__table
+    &__title
+      text-align: left
+      padding-left: $margin
+      font-size: 24px
+      line-height: 32px
+      font-weight: 300
+      background-color: $main_light_color
+      height: 60px
+      display: flex
+      align-items: center
+      &__main
+        font-size: 32px
+        font-weight: 400
+    &__wrap
+      width: 100%
+      text-align: left
+      font-size: 15px
+      line-height: 24px
+      tr
+        &:nth-child(odd)
+          background-color: #f1f1f1
+        >td
+          width: 50%
+          @media screen and (max-width: 991px)
+            width: 100%
+            display: block
+          &:first-child
+            font-weight: 700
+            padding-left: $pl
+            border-right: 2px solid white
+            @media screen and (max-width: 991px)
+              border-right: none
+          &:last-child
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            text-align: center
+            position: relative
+            @media screen and (max-width: 991px)
+              display: flex
+              align-items: center
+              justify-content: center
+            >span
+              flex-grow: 1
+              width: 20%
+              display: flex
+              flex-direction: column
+              border-left: 1px solid white
+    &__item
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%)
+      @media screen and (max-width: 991px)
+        position: static
+        transform: translate(0)

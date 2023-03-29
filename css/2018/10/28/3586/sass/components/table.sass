@@ -1,0 +1,144 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.table
+  width: 100%
+  &--full
+    @media screen and (max-width: 575px)
+      display: block
+      thead, tbody, td
+        display: block
+      tr
+        display: flex
+        justify-content: space-between
+        td:first-child
+          padding-right: 5px
+        td:last-child
+          padding-left: 5px
+  &__wrap
+    width: 100%
+  &__head
+    .table
+      &__row
+        background-color: color('main') !important
+        @include font-family('ProximaNova', 'SemiBold')
+  &__body
+    .table
+      &__row
+        &:first-child
+          @media screen and (min-width: 576px)
+            height: $mp-default * 3.75
+            >*
+              vertical-align: bottom
+        &:last-child
+          @media screen and (min-width: 576px)
+            height: $mp-default * 3.75
+            >*
+              vertical-align: top
+  &__row
+    line-height: $mp-default * 3
+    white-space: nowrap
+    &:nth-child(even)
+      background-color: color('lightgray')
+    &:nth-child(odd)
+      background-color: color('white')
+  &__col
+    padding: 0 $mp-default * 1.75
+  &--invert
+    .table
+      &__row
+        &:nth-child(odd)
+          background-color: color('lightgray')
+        &:nth-child(even)
+          background-color: color('white')
+  &--clear
+    font-size: $size-normal
+    &__head
+      @include font-family('ProximaNova', 'Bold')
+    &__row
+      line-height: $mp-default * 2
+    &__col
+      padding: 0 $mp-default / 2
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+      &--ml
+        margin-left: $mp-default * 4
+        @media screen and (max-width: 767px)
+          margin-left: $mp-default * 2
+        @media screen and (max-width: 575px)
+          margin-left: $mp-default / 3
+  &--dubble
+    font-size: $size-normal
+    margin: $mp-default 0
+    &__col
+      @media screen and (min-width: 992px)
+        height: $size-normal * 1.75
+        line-height: $size-normal * 1.25
+        &:first-child
+          padding-right: $mp-default * 2.5
+        &:last-child
+          padding-left: $mp-default * 2.5
+      @media screen and (max-width: 991px)
+    &__row
+      @media screen and (min-width: 992px)
+        padding: $mp-default / 2 0
+        &:first-child
+          padding-top: 0
+        &:last-child
+          padding-bottom: 0
+      @media screen and (max-width: 991px)
+        display: flex
+        flex-direction: column
+        padding: 5px 0
+  &--first-main
+    .table
+      &__col:first-child
+        color: color('main')
+        white-space: nowrap
+      &--dubble, &--clear
+        &__col:first-child
+          color: color('main')
+          white-space: nowrap
+.table--with_content
+  @media screen and (max-width: 991px)
+    display: block
+    .table__head, .table__body, .table__row, .table__col
+      display: block
+    tbody, thead
+      display: block
+    .table__head .table__row
+      position: absolute
+      top: -9999px
+      left: -9999px
+    .table__row
+      border: 1px solid color('lightgray')
+    .table__col
+      border: none
+      position: relative
+      padding-left: 60%
+      padding-right: 10%
+      white-space: normal
+      line-height: calc(45px / 2)
+      min-height: 45px
+      display: flex
+      align-items: center
+    .table__col:before
+      position: absolute
+      left: 6px
+      width: 45%
+      top: 50%
+      transform: translateY(-50%)
+      padding-right: 10px
+    .table__col:nth-of-type(1):before
+      content: "Трэкинг ID"
+    .table__col:nth-of-type(2):before
+      content: "Цена посылки"
+    .table__col:nth-of-type(3):before
+      content: "Описание посылки"
+    .table__col:nth-of-type(4):before
+      content: "Статус"
+  @media screen and (max-width: 575px)
+    .table__col
+      padding-left: 50%
+      padding-right: 0

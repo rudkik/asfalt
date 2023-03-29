@@ -1,0 +1,1 @@
+<button type="button" class="btn bg-purple btn-flat" data-action="add-ballast" data-id="<?php echo $data->values['id']; ?>" style="margin: 0px 10px 10px 0px;"><i class="fa fa-fw fa-plus"></i> <?php echo $data->values['text']; ?></button>

@@ -1,0 +1,1 @@
+<?php echo trim($data['view::_shop/tax/return/200/list/index']); ?>

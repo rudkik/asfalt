@@ -1,0 +1,1 @@
+<option value="<?php echo $data->values['id'];?>" data-id="<?php echo $data->values['id'];?>" data-barcode="<?php echo $data->values['barcode'];?>"><?php echo $data->values['name'] . ' ('.$data->values['barcode'].')';?></option>

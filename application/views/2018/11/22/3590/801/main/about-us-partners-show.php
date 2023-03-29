@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::View_Shop_New\-about-us-partners-show-statya']); ?>

@@ -1,0 +1,12 @@
+
+*/.gitignore
+*/.htaccess
+*/.idea/
+*.DS_store
+application/cache/
+application/logs/
+application/logs/pgsql-select.txt
+application/logs/action-time/3610.txt
+.idea/workspace.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/dictionaries/Kuk.xml

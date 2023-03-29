@@ -1,0 +1,1 @@
+<h1 itemprop="headline"><?php if ($data->id > 0){ echo $data->values['name']; }else{ echo 'Продукция'; } ?> в Алматы</h1>

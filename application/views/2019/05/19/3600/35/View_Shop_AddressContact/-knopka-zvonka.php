@@ -1,0 +1,1 @@
+<a href="tel:<?php echo $data->values['name']; ?>"><img src="<?php echo $siteData->urlBasic;?>/css/<?php echo $siteData->shopShablonPath;?>/img/call.png"></a>

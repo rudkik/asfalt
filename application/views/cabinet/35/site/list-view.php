@@ -1,0 +1,1 @@
+<li><a data-id="<?php echo $data->values['data'];?>" href="" list="1"><?php echo $data->values['title']['ru'];?></a></li>

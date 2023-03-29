@@ -1,0 +1,1 @@
+<option value="<?php echo $data->values['data'];?>" data-id="<?php echo $data->values['data'];?>"><?php echo Arr::path($data->values, 'title.ru', $data->values['title']);?></option>

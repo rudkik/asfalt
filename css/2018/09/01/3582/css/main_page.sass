@@ -1,0 +1,225 @@
+@import '../_vars.sass'
+.slick-list
+  overflow: visible !important
+.main__page
+  *, *:focus, *:active, *:hover
+    outline: none !important
+  &__title
+    &__wrap
+      h1
+        font-size: 48px
+        line-height: 48px
+        text-transform: uppercase
+        @media screen and (min-width: 992px)
+          width: 75%
+        @media screen and (max-width: 991px)
+          font-size: 38px
+          line-height: 38px
+        @media screen and (max-width: 568px)
+          font-size: 38px
+          line-height: 38px
+      h3
+        font-size: 23px
+        line-height: 32px
+        @media screen and (max-width: 991px)
+          font-size: 18px
+          line-height: 24px
+  &__catalog
+    &__slider
+      margin-top: $margin * 2
+      position: relative
+      overflow-x: hidden
+      padding-bottom: 40px
+      @media screen and (max-width: 991px)
+        margin-top: $margin / 2
+      &__description
+        background-color: $main_light_color
+        position: relative
+        top: -2px
+      &__wrap
+      &__slide
+        margin-top: $margin * 2
+        background-color: $main_light_color
+        &__block
+          &__right
+            margin-top: -$margin * 2
+          &__left
+            margin-top: -$margin
+            margin-bottom: $margin
+          &__info
+            display: flex
+            margin-bottom: $margin
+            flex-direction: column
+            align-items: flex-start
+            width: auto
+            >*
+              display: inline-block
+              padding: $pl
+            h2
+              padding: $pl / 2 $pl
+              font-size: 42px
+              color: white
+              background-color: $main_color
+              width: auto
+              text-transform: uppercase
+              @media screen and (max-width: 991px)
+                font-size: 32px
+              span
+                font-weight: 700
+            h3
+              font-size: 32px
+              @media screen and (max-width: 991px)
+                font-size: 24px
+            &__lease
+          &__small_img
+            @media screen and (max-width: 767px)
+              display: flex
+              align-items: center
+              justify-content: center
+            img
+              max-width: 80%
+          &__big_img
+            @media screen and (max-width: 767px)
+              display: none
+            img
+              max-width: 100%
+          &__description
+            z-index: 2
+            right: 0
+            position: absolute
+            bottom: calc(100% - 40px)
+            min-height: 120px
+            background-color: $main_dark_color
+            color: white
+            display: flex
+            flex-direction: column
+            justify-content: center
+            margin: 0 56px
+            padding: $pl
+            @media screen and (max-width: 767px)
+              position: static
+              margin-bottom: $pl
+              margin: 0
+            &__more_info
+              margin-top: 20px
+              border: 1px solid white
+              padding: 0 15px
+            &__arrow
+              position: absolute
+              width: 28px
+              height: 28px
+              background-color: $main_light_color
+              border-radius: 50%
+              top: calc(50% - 40px)
+              img
+                height: 100%
+              &__right
+                right: -28px
+                transform: translate(50%, calc(-50% + 20px)) rotate(180deg)
+              &__left
+                left: -28px
+                transform: translate(-50%, calc(-50% + 20px))
+  &__news
+    margin-bottom: $margin * 2
+    margin-top: $margin
+    @media screen and (max-width: 991px)
+      margin-bottom: $margin
+      margin-top: $margin / 2
+    &__title
+      margin-bottom: $margin * 1.5
+      @media screen and (max-width: 991px)
+        margin-bottom: $margin * 0.75
+    &__wrap
+      display: flex
+      flex-direction: column
+      max-width: 344px
+      margin: 0 auto $pl
+    &__preview_img
+      width: calc(100% - 40px)
+      min-width: 100px
+      display: flex
+      align-items: flex-end
+      img
+        width: 100%
+    &__block
+      color: white
+      background-color: $main_color
+      position: relative
+      margin-bottom: 20px
+      >*
+        padding: $pl / 2 $pl
+      >*:first-child
+        padding-top: $pl
+      &__date
+        font-size: 15px
+        line-height: 16px
+      &__title
+        font-size: 28px
+        @media screen and (max-width: 991px)
+          font-size: 22px
+      &__description
+        font-size: 15px
+        line-height: 18px
+        padding-bottom: $pl * 2
+      &__more_info
+        font-size: 14px
+        position: absolute
+        left: $pl
+        bottom: 0
+        transform: translateY(50%)
+    &__more_news
+      position: absolute
+      right: $pl
+      bottom: -$margin * 2
+      background-color: white
+      border: 1px solid black
+      color: black
+      @media screen and (max-width: 991px)
+        bottom: -$margin
+  &__contacts
+    padding-top: 60px
+    &__block
+      color: $main_color
+      z-index: 2
+      position: absolute
+      top: -60px
+      left: -20px
+      background-color: white
+      border: 1px solid $main_color
+      font-size: 16px
+      padding-right: 60px
+      @media screen and (max-width: 767px)
+        position: relative
+        top: 0
+        left: 0
+        padding-right: 40px
+      >*
+        padding: 10px $pl * 2
+        @media screen and (max-width: 991px)
+          padding: 8px $pl
+      &__title
+        padding-top: 20px
+        font-size: 32px
+      &__text
+        padding-top: 5px
+        &__block
+          padding-top: 20px
+          padding-bottom: 20px
+          &:hover
+            color: $main_dark_color
+      &__tel
+        margin-bottom: 40px
+        &:hover
+          color: $main_dark_color
+    &__more_contacts
+      position: absolute
+      right: 20px
+      bottom: 0
+      transform: translateY(50%)
+      padding-right: $pl
+      padding-left: $pl
+    #map
+      width: 100%
+      height: 400px
+      @media screen and (max-width: 767px)
+        height: 250px

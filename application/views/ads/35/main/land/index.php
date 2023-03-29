@@ -1,0 +1,1 @@
+<?php echo trim($data['view::land/list/index']); ?>

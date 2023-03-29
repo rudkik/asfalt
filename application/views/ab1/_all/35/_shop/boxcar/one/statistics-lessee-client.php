@@ -1,0 +1,6 @@
+<tr>
+    <td><?php echo $data->getElementValue('shop_client_id'); ?></td>
+    <td><?php echo $data->getElementValue('shop_raw_id'); ?></td>
+    <td class="text-right"><?php echo Func::getNumberStr($data->values['quantity_year'], TRUE, 3, FALSE); ?></td>
+    <td class="text-right"><?php echo Func::getNumberStr($data->values['quantity'], TRUE, 3, FALSE); ?></td>
+</tr>

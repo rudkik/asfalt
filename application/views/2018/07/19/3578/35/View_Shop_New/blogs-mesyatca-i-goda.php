@@ -1,0 +1,1 @@
+<li><a href="<?php echo $siteData->urlBasic; ?>/blog?year=<?php echo $data->values['created_at_year']; ?>&month=<?php echo $data->values['created_at_month']; ?>"><?php echo Helpers_DateTime::monthToStrRus($data->values['created_at_month']); ?> <?php echo $data->values['created_at_year']; ?> (<?php echo $data->values['count']; ?>)</a></li>

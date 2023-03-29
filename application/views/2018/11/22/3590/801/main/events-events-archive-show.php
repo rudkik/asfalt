@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::View_Shop_New\-events-events-archive-show-vystavka']); ?>

@@ -1,0 +1,1 @@
+более <?php echo Func::getCountElementStrRus($data->values['count'], 'объявлений', 'объявления', 'объявлений'); ?>

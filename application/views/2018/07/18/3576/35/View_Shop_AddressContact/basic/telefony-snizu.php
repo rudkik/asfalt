@@ -1,0 +1,1 @@
+<a href="tel:<?php echo $data->values['name']; ?>"><?php echo $data->values['name']; ?></a><br>

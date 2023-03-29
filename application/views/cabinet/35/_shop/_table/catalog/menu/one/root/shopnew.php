@@ -1,0 +1,28 @@
+<?php if ((Func::isShopMenu('shopnew/index?type='.$data->id, $siteData))){ ?>
+    <li <?php if(!(($siteData->controllerName == 'shopnew')
+        && (Request_RequestParams::getParamInt('type') == $data->id)
+        && (! Request_RequestParams::getParamBoolean('is_group')))){echo 'class="menu-left"';} ?>>
+        <a href="<?php echo Func::getFullURL($siteData, '/shopnew/index', array(), array('is_public_ignore' => 1, 'type' => $data->id, 'is_group' => 0)); ?>"><i class="fa fa-circle-o text-light-blue"></i>
+            <span><?php echo $data->values['name'];?></span>
+        </a>
+    </li>
+<?php } ?>
+<?php if ((Func::isShopMenu('shopnew/group?type='.$data->id, $siteData))){ ?>
+    <li <?php if(!(($siteData->controllerName == 'shopbranch')
+        && (Request_RequestParams::getParamInt('type') == $data->id)
+        && (Request_RequestParams::getParamBoolean('is_group')))){echo 'class="menu-left"';} ?>>
+        <a href="<?php echo Func::getFullURL($siteData, '/shopnew/index', array(), array('is_public_ignore' => 1, 'type' => $data->id, 'is_group' => 1)); ?>"><i class="fa fa-circle-o text-light-blue"></i>
+            <span>Группы <?php echo $data->values['name'];?></span>
+        </a>
+    </li>
+<?php } ?>
+<?php if ((Func::isShopMenu('shoptablerubric/index?type='.$data->id, $siteData))){ ?>
+    <li <?php if(!(($siteData->controllerName == 'shoptablerubric')
+        && (Request_RequestParams::getParamInt('type') == $data->id)
+        && (Request_RequestParams::getParamInt('table_id') == Model_Shop_New::TABLE_ID))){echo 'class="menu-left"';} ?>>
+        <a href="<?php echo Func::getFullURL($siteData, '/shoptablerubric/index', array(), array('is_public_ignore' => 1, 'type' => $data->id, 'table_id' => Model_Shop_New::TABLE_ID)); ?>"><i class="fa fa-circle-o text-light-blue"></i>
+            <?php echo Func::mb_ucfirst(Arr::path($data->values['form_data'], 'shop_table_rubric.fields_title.title', 'рубрики '.$data->values['name']));?>
+        </a>
+    </li>
+<?php }  ?>
+<?php echo $data->additionDatas['view::_shop/_table/catalog/menu/one/child']; ?>

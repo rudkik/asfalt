@@ -1,0 +1,1 @@
+<li class="listar-<?php echo str_replace('fa-', '', Arr::path($data->values['options'], 'class', '')); ?>"><a href="<?php echo Arr::path($data->values['options'], 'url', ''); ?>"><i class="fa <?php echo Arr::path($data->values['options'], 'class', ''); ?>"></i></a></li>

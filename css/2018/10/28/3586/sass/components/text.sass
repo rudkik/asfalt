@@ -1,0 +1,56 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.text
+  font-size: $size-normal - 6
+  line-height: $size-normal - 2
+  @media screen and (max-width: 575px)
+    font-size: $size-normal - 7
+    line-height: $size-normal - 3
+  &--medium
+    font-size: $size-normal
+    line-height: $size-normal + 4
+    @media screen and (max-width: 575px)
+      font-size: $size-normal - 1
+      line-height: $size-normal + 3
+  &--big
+    font-size: $size-block-title
+    line-height: $size-block-title + 4
+    @media screen and (max-width: 575px)
+      font-size: $size-block-title - 1
+      line-height: $size-block-title + 3
+  &--title
+    font-size: $size-normal
+    line-height: $size-normal + 4
+    margin: $mp-default 0
+    display: block
+    @include font-family('ProximaNova', 'SemiBold')
+    @media screen and (max-width: 575px)
+      font-size: $size-normal - 1
+      line-height: $size-normal + 3
+    &--big
+      font-size: $size-text-title
+      line-height: $size-text-title + 4
+      @media screen and (max-width: 575px)
+        font-size: $size-text-title - 1
+        line-height: $size-text-title + 3
+  &--bold
+    @include font-family('ProximaNova', 'Bold')
+  &--nowrap
+    @media screen and (min-width: 576px)
+      white-space: nowrap
+    &--mob
+      white-space: nowrap
+  &--center
+    text-align: center
+  &--list
+    list-style-type: disc
+    margin-left: $mp-default
+    margin-bottom: $mp-default
+    &.after
+      li:after
+        content: ';'
+        margin-left: -2px
+  &--item
+    padding: $mp-default / 6 0
+  &--block
+    margin: $mp-default 0

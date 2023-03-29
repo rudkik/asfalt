@@ -1,0 +1,1 @@
+<li><?php echo str_replace('<a ', '<a style="text-overflow: clip; overflow: hidden;"', Func::getContactHTMLRus($data->values, false, true));?></li>

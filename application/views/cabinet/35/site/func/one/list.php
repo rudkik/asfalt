@@ -1,0 +1,1 @@
+<option value="<?php echo htmlspecialchars(empty($data->values['shablon']['ru'])?$data->values['name']:$data->values['shablon']['ru'], ENT_QUOTES);?>"><?php echo $data->values['title']['ru'];?></option>

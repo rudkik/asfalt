@@ -1,0 +1,1 @@
+<?php echo trim($data['view::shop/one/edit']); ?>

@@ -1,0 +1,1 @@
+<span>Доверенность №<?php echo $data->values['number'];?> от <?php echo Helpers_DateTime::getDateFormatRus($data->values['from_at']);?></span> <label style="font-size: 18px"><?php echo Func::getNumberStr($data->values['balance'], TRUE, 2, FALSE);?></label> тг<br>

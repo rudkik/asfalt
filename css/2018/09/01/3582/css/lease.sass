@@ -1,0 +1,215 @@
+@import '../_vars.sass'
+.lease
+  &_price
+      font-weight: 700
+      color: $main_color
+      font-size: 24px
+      white-space: nowrap
+  &__wrap
+    margin-top: 30px
+    font-size: 15px
+    font-weight: 300
+  &__conditions
+    padding-top: $margin
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    text-align: right
+    padding-right: $pl
+    padding-left: $pl
+    &__header
+      font-size: 28px
+      font-weight: 400
+    &__body
+      margin: $margin 0
+      line-height: 17px
+  &__calc
+    background-color: white
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    padding: 0 40px
+    &__select
+      margin-top: $margin - 8
+      background-color: white
+      color: black
+      border: 1px solid $main_color
+      &__preview
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          right: -$pl
+          top: calc(50% + 1px)
+          transform: translateY(-50%)
+          border: 5px solid transparent
+          border-top: 10px solid $main_color
+          border-bottom: 0px solid transparent
+    &__price
+      margin-top: $margin - 8
+      text-align: center
+      &__value
+        white-space: nowrap
+        padding-left: $pl
+    &__block
+      margin: $margin - 8 -40px 0
+      padding-bottom: $margin - 8
+      display: flex
+      flex-direction: column
+      align-items: stretch
+      justify-content: center
+      background-color: $main_light_color
+      &__wrap
+        margin-left: 40px
+        margin-right: 40px
+        display: flex
+        flex-direction: column
+        align-items: stretch
+        justify-content: center
+        text-align: center
+      &__label
+        display: block
+        margin: $pl 0
+        position: relative
+        &:after
+          content: ''
+          position: absolute
+          bottom: -$pl - 25 / 2 - 10
+          right: 0
+          left: 0
+          height: 3px
+          background-color: white
+          z-index: 2
+        &__bold
+          font-size: 18px
+      &__input
+        position: relative
+        cursor: pointer
+        &
+          -webkit-appearance: none
+          width: 100%
+          margin: 5.5px 0
+        &:focus
+          outline: none
+        &::-webkit-slider-runnable-track
+          width: 100%
+          height: 32px
+          cursor: pointer
+          box-shadow: 0px 0px 0px #8fd5eb, 0px 0px 0px #a5ddef
+          background: #8fd5eb
+          border-radius: 0px
+          border: 0px solid #8fd5eb
+        &::-webkit-slider-thumb
+          box-shadow: 0px 0px 0px #c3e7f3, 0px 0px 0px #d8f0f7
+          border: 0px solid #c3e7f3
+          height: 42px
+          width: 25px
+          border-radius: 0px
+          background: rgba(255, 255, 255, 0)
+          cursor: pointer
+          -webkit-appearance: none
+          margin-top: -5.5px
+        &::-moz-range-track
+          width: 100%
+          height: 25px
+          cursor: pointer
+          box-shadow: 0px 0px 0px #8fd5eb, 0px 0px 0px #a5ddef
+          background: #8fd5eb
+          border-radius: 0px
+          border: 0px solid #8fd5eb
+        &::-moz-range-thumb
+          box-shadow: 0px 0px 0px #c3e7f3, 0px 0px 0px #d8f0f7
+          border: 0px solid #c3e7f3
+          height: 42px
+          width: 25px
+          border-radius: 0px
+          background: rgba(255, 255, 255, 0)
+          cursor: pointer
+        &::-ms-track
+          width: 100%
+          height: 25px
+          cursor: pointer
+          background: transparent
+          border-color: transparent
+          color: transparent
+        &::-ms-fill-lower
+          background: #1a738f
+          border: 0px solid #8fd5eb
+          border-radius: 0px
+          box-shadow: 0px 0px 0px #8fd5eb, 0px 0px 0px #a5ddef
+        &::-ms-fill-upper
+          background: #8fd5eb
+          border: 0px solid #8fd5eb
+          border-radius: 0px
+          box-shadow: 0px 0px 0px #8fd5eb, 0px 0px 0px #a5ddef
+        &::-ms-thumb
+          box-shadow: 0px 0px 0px #c3e7f3, 0px 0px 0px #d8f0f7
+          border: 0px solid #c3e7f3
+          height: 42px
+          width: 25px
+          border-radius: 0px
+          background: rgba(255, 255, 255, 0)
+          cursor: pointer
+          height: 25px
+
+
+        &:before,  &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          z-index: 3
+          transition: all 0.15s ease-out
+        &:before
+          left: 0
+          top: 50%
+          height: 4px
+          right: 100%
+          background-color: $main_color
+          transform: translateY(-50%)
+        &:after
+          right: calc(100% - 5px)
+          top: 0
+          border: 5px solid transparent
+          border-top: 10px solid $main_color
+      &__postinput
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        height: 30px
+        flex-grow: 1
+        flex-shrink: 1
+        >*
+          position: relative
+          span
+            white-space: nowrap
+            position: absolute
+            top: 20px
+            left: 50%
+            transform: translateX(-50%)
+            &:before
+              content: ''
+              bottom: calc(100% + 5px)
+              left: 50%
+              transform: translateX(-50%)
+              height: 10px
+              width: 1px
+              background-color: black
+              position: absolute
+  &__subtotal
+    display: flex
+    flex-direction: column
+    align-items: stratch
+    justify-content: center
+    &__block
+      padding: $pl / 2 0
+      background-color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      &:last-child
+        background-color: $main_ultra_light_color
+    &__title
+      padding: $pl / 4 0 $pl / 8
+    &__price
+      padding: $pl / 8 0 $pl / 4

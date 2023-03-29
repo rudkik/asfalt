@@ -1,0 +1,18 @@
+@import '../themes/_module'
+@import '../utils/_module'
+
+.langs
+  text-transform: uppercase
+  color: color('gray')
+  font-size: $size-little
+  a
+    height: $btn-height / 2
+    display: inline-flex
+    align-items: center
+    padding: 0 $mp-default / 2
+    &:first-child
+      padding-left: $mp-default
+    &:last-child
+      padding-right: $mp-default
+  &--current
+    color: color('black')

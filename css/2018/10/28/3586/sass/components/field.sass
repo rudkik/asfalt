@@ -1,0 +1,91 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.field
+  cursor: pointer
+  display: inline-flex
+  align-items: center
+  height: $field-height
+  width: 100%
+  max-width: 480px
+  font-size: $field-fsize
+  line-height: $field-height
+  padding-left: $mp-default * 2
+  padding-right: $mp-default * 2
+  color: color('black')
+  background-color: color('lightgray')
+  border: none !important
+  border-radius: 0
+  box-shadow: none !important
+  margin-top: $mp-default / 3
+  margin-bottom: $mp-default / 3
+  transition: all 0.3s ease-out
+  &:hover
+    background-color: darken(color('lightgray'), 15%)
+  &__extra
+    position: absolute
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 2
+    cursor: pointer
+    max-width: $mp-default * 2
+    color: color('main')
+    font-size: $size-normal
+    text-align: right
+    @include font-family('ProximaNova', 'SemiBold')
+    img
+      max-width: 100%
+  &__wrap
+    position: relative
+    width: 100%
+    max-width: 480px
+  &--little
+    width: 240px
+  &--invert
+    background-color: color('white')
+  &--nom
+    margin: 0
+  &--area
+    height: $field-height * 2 + $mp-default / 3 * 2
+    padding-top: $mp-default
+    padding-bottom: $mp-default
+    resize: none
+  &--checkbox
+    display: none
+    &:checked + label:after
+      content: ''
+    &__label
+      padding-left: $mp-default * 4
+      background-color: transparent
+      width: auto
+      position: relative
+      &:before
+        content: ''
+        border: 3px solid color('gray')
+        height: 36px
+        width: 36px
+      &:before, &:after
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+      &:after
+        height: 34px
+        width: 40px
+        background:
+          image: url('../img/icons/check.png')
+          position: right top
+          repeat: no-repeat
+      &--mr
+        padding-left: $mp-default * 7
+        @media screen and (max-width: 575px)
+          padding-left: $mp-default * 6
+  &--download
+    display: none
+    &__label
+      background:
+        image: url('../img/icons/download.png')
+        position: calc(100% - #{$mp-default}) center
+        size: 40px auto
+        repeat: no-repeat
+      padding-right: 60px

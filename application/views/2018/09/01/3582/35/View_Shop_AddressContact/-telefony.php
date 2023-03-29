@@ -1,0 +1,1 @@
+<?php echo Func::getContactHTMLRus($data->values, FALSE);?><br>

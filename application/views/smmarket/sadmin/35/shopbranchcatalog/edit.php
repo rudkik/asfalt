@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-9">
+        <div class="row record-input record-tab">
+            <div class="col-md-3 record-title"></div>
+            <div class="col-md-5" style="max-width: 250px;">
+                <span class="span-checkbox">
+                    <input name="is_public" <?php if ($data->values['is_public'] == 1) { echo ' value="1" checked'; }else{echo 'value="0"';} ?> type="checkbox" class="minimal">
+                    Показать рубрику
+                    <a href="#"><i class="fa fa-fw fa-info text-blue"></i></a>
+                </span>
+            </div>
+        </div>
+        <div class="row record-input record-list">
+            <div class="col-md-3 record-title">
+                <span>
+                    <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+                    Название
+                    <a href="#"><i class="fa fa-fw fa-info text-blue"></i></a>
+                </span>
+
+            </div>
+            <div class="col-md-9">
+                <input name="name" type="text" class="form-control" placeholder="Название" value="<?php echo htmlspecialchars($data->values['name']);?>">
+            </div>
+        </div>
+
+        <?php if ((Func::isShopMenu('shopbranchcatalog/index-all-root', array(), $siteData))
+        || (($data->values['shop_branch_type_id'] > 0) && (Func::isShopMenu('shopbranchcatalog/index-root?type='.$data->values['shop_branch_type_id'], array(), $siteData)))){ ?>
+            <div class="row record-input record-list">
+                <div class="col-md-3 record-title">
+                <span>
+                    <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+                    Родитель
+                    <a href="#"><i class="fa fa-fw fa-info text-blue"></i></a>
+                </span>
+
+                </div>
+                <div class="col-md-9">
+                    <select name="root_id" class="form-control select2" style="width: 100%;">
+                        <option value="0" data-id="0">Рубрика верхнего уровня</option>
+                        <?php echo trim($siteData->globalDatas['view::shopbranchcatalogs/list']); ?>
+                    </select>
+                </div>
+            </div>
+        <?php } ?>
+
+        <div class="row record-input record-tab">
+            <div class="col-md-3 record-title">
+                <span>
+                    Описание
+                    <a href="#"><i class="fa fa-fw fa-info text-blue"></i></a>
+                </span>
+
+            </div>
+            <div class="col-md-9 record-textarea">
+                <textarea name="info" placeholder="Описание..." rows="11" class="form-control"><?php echo $data->values['text'];?></textarea>
+            </div>
+        </div>
+
+        <?php if ((($data->values['shop_branch_type_id'] > 0) && (Func::isShopMenu('shopbranchcatalog/index-params?type='.$data->values['shop_branch_type_id'], array(), $siteData)))){ ?>
+            <div class="row record-input record-list margin-top-15px">
+                <div class="col-md-3 record-title">
+                    <span>
+                        Дополнительные <br>параметры
+                        <a href="#"><i class="fa fa-fw fa-info text-blue"></i></a>
+                    </span>
+
+                </div>
+                <div class="col-md-9">
+                    <?php
+                    $view = View::factory('cabinet/35/_addition/options');
+                    $view->siteData = $siteData;
+                    $view->data = $data;
+                    echo Helpers_View::viewToStr($view);
+                    ?>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="col-md-3">
+        <?php
+        $view = View::factory('smmarket/sadmin/35/_addition/files');
+        $view->siteData = $siteData;
+        $view->data = $data;
+        $view->columnSize = 12;
+        echo Helpers_View::viewToStr($view);
+        ?>
+    </div>
+</div>
+<div class="row">
+    <div hidden>
+        <input name="data_language_id" value="<?php echo $siteData->dataLanguageID; ?>">
+        <?php if($siteData->branchID > 0){ ?>
+            <input name="shop_branch_id" value="<?php echo $siteData->branchID; ?>">
+        <?php } ?>
+        <?php if($siteData->action != 'clone') { ?>
+            <input name="id" value="<?php echo Arr::path($data->values, 'id', 0);?>">
+        <?php } ?>
+        <?php if($siteData->superUserID > 0){ ?>
+            <input name="shop_id" value="<?php echo $siteData->shopID; ?>">
+        <?php } ?>
+    </div>
+
+    <div class="modal-footer text-center">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </div>
+</div>
+<script>
+    CKEDITOR.replace('info');
+</script>

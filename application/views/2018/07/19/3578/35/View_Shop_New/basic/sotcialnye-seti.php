@@ -1,0 +1,1 @@
+<a href="<?php echo Arr::path($data->values['options'], 'url', ''); ?>"><img class="" src="<?php echo $data->values['image_path']; ?>"></a>

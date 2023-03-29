@@ -1,0 +1,1 @@
+<?php echo $data->values['name']; ?> <strong><?php echo Func::getNumberStr($data->values['price']); ?> x <?php echo Func::getNumberStr($data->values['quantity']); ?> = <?php echo Func::getNumberStr($data->values['amount']); ?></strong> тг<br>

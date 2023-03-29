@@ -1,0 +1,49 @@
+<div class="box-typeahead">
+    <input id="shop_client_name" type="text" class="form-control typeahead" placeholder="Клиент" style="width: 100%" required>
+    <input id="shop_client_id" name="shop_client_id" value="0" style="display: none;">
+</div>
+<link rel="stylesheet" href="<?php echo $siteData->urlBasic; ?>/css/_component/typeahead/css/style.css">
+<script src="<?php echo $siteData->urlBasic; ?>/css/_component/typeahead/dist/bloodhound.min.js"></script>
+<script src="<?php echo $siteData->urlBasic; ?>/css/_component/typeahead/dist/typeahead.bundle.min.js"></script>
+<script src="<?php echo $siteData->urlBasic; ?>/css/_component/typeahead/dist/typeahead.jquery.min.js"></script>
+<script src="<?php echo $siteData->urlBasic; ?>/css/_component/typeahead/js/handlebars.js"></script>
+
+<script>
+    var bestPictures = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        prefetch: '/cash/shopclient/json?limit=10',
+        remote: {
+            url: '/cash/shopclient/json?name=%QUERY&limit=10&_fields[]=name&_fields[]=bin',
+            wildcard: '%QUERY'
+        }
+    });
+
+    field = $('#shop_client_name.typeahead');
+    field.typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    }, {
+        name: 'best-pictures',
+        display: 'name',
+        source: bestPictures,
+        templates: {
+            empty: [
+                '<div class="empty-message">Клиент не найден</div>'
+            ].join('\n'),
+            suggestion: Handlebars.compile('<div>{{name}} – {{bin}}</div>')
+        }
+    });
+
+    /**
+     *  для выбора элемента
+     *  id - параметр в json ответе
+     *  передаем в input
+     */
+    field.on('typeahead:select', function(e, selected) {
+        client = $('#shop_client_id');
+        client.val(selected.id);
+        client.attr('value', selected.id);
+    });
+</script>

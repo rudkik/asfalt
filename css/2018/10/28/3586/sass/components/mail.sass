@@ -1,0 +1,50 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.mail
+  background:
+    image: url('../img/icons/mail-bg.svg')
+    repeat: repeat
+    position: $mp-default * 2 0
+  padding: $mp-default
+  max-width: 480px
+  &__inner
+    padding: $mp-default * 2 - 2
+    background-color: color('white')
+    @media screen and (max-width: 991px)
+      padding: $mp-default * 1.4
+  &__addresses
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: $mp-default
+    @media screen and (max-width: 575px)
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+  &__address
+    margin: 0 $mp-default
+    transition: all 0.3s ease-out
+    @media screen and (max-width: 575px)
+      margin: 0 !important
+    &:after
+      content: ':'
+      margin-left: -2px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    &.current
+      color: color('main')
+  &__info
+    &__list
+      font-size: $size-normal
+      line-height: $size-normal * 1.75
+      @media screen and (max-width: 991px)
+        line-height: $size-normal * 1.4
+    &__item
+      white-space: nowrap
+
+  &__block
+    display: none
+    &.current
+      display: block

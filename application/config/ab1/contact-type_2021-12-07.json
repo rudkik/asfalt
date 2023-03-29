@@ -1,0 +1,787 @@
+{
+    "contract": [
+        {
+            "title": "Печать договора",
+            "bottom": "Печать договора",
+            "date_from": "17.03.2021",
+            "date_to": "12.09.2021",
+            "file": "contract_2021-03-26",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "goods_unit_one": {
+                    "key": "goods_unit_one",
+                    "title": "Цена в тенге, включая НДС за 1",
+                    "values": [
+                        "тонну",
+                        "кубометр",
+                        "штуку"
+                    ]
+                },
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                },
+                "contract_clause_4_2": {
+                    "key": "contract_clause_4_2",
+                    "title": "Пункт 4.2",
+                    "values": [
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем путем 100 %-ого предварительного платежа на счет Продавца в срок не позднее 25 числа предшествующего к отгрузке месяца. При этом отгрузка продукции производится в пределах размера денежных средств Покупателя находящихся на расчетном счете Поставщика, вне зависимости от заявленного месячного объема согласно п.2.3. Договора.",
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем, путем платежа на счет Продавца, в срок не позднее 25 числа после отгрузки месяца, выборка товара осуществляется с марта по декабрь {#year#} года."
+                    ]
+                },
+                "acting": {
+                    "key": "acting",
+                    "title": "действующего",
+                    "values": {
+                        "_1": "действующего",
+                        "_2": "действующей"
+                    }
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"40%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Договор поставки продукции</td>\n        <td width=\"35%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>\n",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center\"><b>ДОГОВОР ПОСТАВКИ ПРОДУКЦИИ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n\n    <table class=\"table\" style=\"width: 100%\">\n        <tr>\n            <td>г.Алматы</td>\n            <td style=\"text-align: right\"><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span></td>\n        </tr>\n    </table>\n<p style=\"text-align: justify;font-size: 11.1pt\"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Товарищество с ограниченной ответственностью «Асфальтобетон 1» (БИН 060440009474)</b>, именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и <br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span> (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>)</b>, именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, <span data-id=\"params.acting\" class=\"box-dynamic\">{#params.acting#}</span> на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящий Договор, о нижеследующем:</p>\n\n<p style=\"text-align: justify\"><b>1. Предмет договора</b><br>\n<b>1.1.</b> Поставщик обязуется в порядке и на условиях, определённых настоящим Договором и заявкой Покупателя, поставлять Продукцию - далее «Товар», а Покупатель обязуется принимать Товар и своевременно производить его оплату Поставщику.<br>\n<b>1.2.</b> Предметом настоящего Договора является продукция, производимая Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>2. Порядок отгрузки Товаров</b><br>\n<b>2.1.</b> Взвешивание, а также Отгрузка Товара производится уполномоченным представителем Покупателя, на основании отгрузочного талона, на промышленной базе Поставщика, находящейся по адресу: г.Алматы, ул.Серикова 20А и/или Алматинская область, Енбекшиказахский район, с.Байтерек, ул.Заводская д.14, при этом ответственность в виде штрафа за перегруз, согласно КоАП и иным нормативно-правовым актам РК, оплачивает Покупатель. Поставка Товара, осуществляется путем самовывоза, до места назначения.<br>\n<span style=\"font-size: 11.7pt\"><b>2.2.</b> Отгрузка Товара производится автотранспортом Поставщика и/или железнодорожным транспортом по соглашению Сторон на основании заявки, за отдельную оплату согласно выставленным счетам, с промышленной базы Поставщика, находящейся по адресу: г.Алматы, ул.Серикова 20А.</span><br>\n<b>2.3.</b> Покупатель в срок не позднее 25 числа предшествующего к отгрузке месяца, обязуется направлять ежемесячную заявку потребности в асфальтобетонных смесях / нефтебитумах с указанием типов и марок. Заявки направляются на электронную почту Поставщика <b style=\"text-decoration: underline\">sb@ab1.kz</b>.<br>\n<b>2.4.</b> Покупатель не позднее 10.00 часов предшествующего к отгрузке дня, направляет Поставщику ежедневную отгрузочную разнарядку путем устного или письменного уведомления на номер <b>+7 705-990-82-30</b>.<br>\n<b>2.5.</b> Непредставление Покупателем отгрузочной разнарядки и/или ежемесячной заявки в установленный срок дает Поставщику право отказаться от исполнения Договора.</p>\n\n<p style=\"text-align: justify\"><b>3. Качество и комплектность</b><br>\n<b>3.1.</b> Качество поставляемого Товара должно соответствовать действующим на территории Республики Казахстан ГОСТ, СТ-РК.<br>\n<b>3.2.</b> Подтверждением качества продукции со стороны Поставщика являются паспорт качества, сертификат соответствия, сертификат формы СT-KZ.<br>\n<b>3.3.</b> В случае обнаружения несоответствия качества отгруженного Товара п.3.1. Договора, Покупатель обязуется вызвать уполномоченного представителя Поставщика с целью участия в отборе проб и проведении лабораторных испытаний Товара, в качестве которого сомневается Покупатель, где в последующем составляется акт. Проведение лабораторных испытаний в аккредитованных лабораториях, а также участие в них представителя Поставщика являются строго обязательными условиями процедуры проверки качества.<br>\n<b>3.4.</b> В случае несоблюдения проверки качества Товара в соответствии с п.3.3. Договора Покупатель признает свои претензии необоснованными, и они не подлежат рассмотрению и принятию во внимание Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>4. Цена. Условия оплаты</b><br>\n<b>4.1. Цена в тенге, включая НДС за 1 <span data-id=\"params.goods_unit_one\" class=\"box-dynamic\">{#params.goods_unit_one#}</span> Товара:</b></p>"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 200px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n        <td style=\"width: 160px; text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Сумма (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n{#shop_client_contract_items.begin#}<tr>\n    <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n    <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n    <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n    <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n    <td data-id=\"amount\" style=\"text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.amount#}</td>\n</tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n<tr>\n    <td colspan=\"4\" style=\"text-align: right\"><b>Итого:</b></td>\n    <td style=\"text-align: right\"><span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span></td>\n</tr>\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>Сумма Договора составляет: <span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span> (<span data-id=\"contract.amount_str\" class=\"box-static\">{#contract.amount_str#}</span>) тенге.</b><br>\n<b>4.2.</b> <span data-id=\"params.contract_clause_4_2\" class=\"box-dynamic\">{#params.contract_clause_4_2#}</span><br>\n<b>4.3.</b> В случае повышения или снижения цен на сырье, ТЭР и прочее, Поставщик имеет право на корректировку (повышение или снижение) цен, о чем извещает Покупателя устно или письменно на электронную почту Покупателя. При этом Стороны заключают Дополнительное соглашение к Договору, в котором указываются новые измененные цены на Товар. В случае отказа Покупателя принять измененную цену, Поставщик имеет право расторгнуть Договор в одностороннем порядке. <br>\n<b>4.4.</b> В соответствии с пунктом 3, статьи 282 Гражданского Кодекса Республики Казахстан, в случае, если в течение срока действия Договора, Дополнительного соглашения, произойдёт колебание официального курса национальной валюты (тенге), и это колебание составит более 10% в сторону увеличения от средневзвешенного курса, установленного Национальным Банком Республики Казахстан, Поставщик имеет право в одностороннем порядке произвести индексацию стоимости Товара. Настоящий пункт договора не применяется на оплаченный согласно п.4.2 Товар.<br>\nНастоящий пункт Договора не применяется на оплаченный согласно п.4.2 Товар. Также настоящий пункт Договора не применяется на Товар, отгруженный по соглашению Сторон без предварительной оплаты (в кредит), п.4.2, до момента индексации Товара Поставщиком.<br>\n<b>4.5.</b> При исполнении всех условий настоящего Договора составляется и подписывается окончательный Акт сверки взаимных расчетов. В случае неподписания Покупателем Акта сверки в течение 10 календарных дней после представления его Поставщиком, Акт сверки считается принятым в редакции Поставщика.</p>\n\n<p style=\"text-align: justify\"><b>5. Ответственность Сторон</b><br>\n<b>5.1.</b> В случае не выборки Покупателем количества Товара определённого п.4.1. настоящего Договора и ежемесячной заявкой п.2.3., Покупатель обязуется в течение 5 (пяти) календарных дней после получения требования Поставщика, уплатить штраф в размере 5% от стоимости не выбранного Товара.<br>\n<b>5.2.</b> В случае нарушения Покупателем условий, предусмотренных  п.2.4 Договора, Продавец вправе отказать в поставке продукции.<br>\n<b>5.3.</b> В случае неисполнения обязательства Покупателем по оплате в срок, Поставщик имеет право взыскать пеню в размере 0,1% за каждый день просрочки, от суммы, подлежащей к оплате, но не более 10%.<br>\n<b>5.4.</b> Если Поставщик не выполнит своих обязательств по срокам поставки/недопоставки Товара, по не зависящим причинам от Покупателя, Покупатель вправе потребовать от Поставщика уплаты пени в размере 0,1% за каждый недопоставленный  день, но не более 10%.</p>\n\n<p style=\"text-align: justify\"><b>6. Порядок урегулирования споров</b><br>\n<b>6.1.</b> Претензионный (досудебный) порядок урегулирования споров по настоящему Договору является обязательным. Претензия должна быть предъявлена Стороной, интересы которой нарушены.<br>\n<b>6.2.</b> Сторона, получившая претензию, должна рассмотреть её и дать Стороне, направившей претензию ответ по существу в течение 10 (десяти) календарных дней в письменной форме.<br>\n<b>6.3.</b> Стороны договорились, что предпримут все возможное для разрешения споров, возникающих из настоящего Договора или в связи с ним, путём переговоров.<br>\n<b>6.4.</b> В случае невозможности разрешения споров путём переговоров Сторон, после реализации, предусмотренной в п.6.1/6.2 настоящего Договора процедуры, передают их на рассмотрение в Специализированный межрайонный экономический суд (СМЭС) г.Алматы.</p>\n\n<p style=\"text-align: justify\"><b>7. Форс-мажорные обстоятельства</b><br>\n<b>7.1.</b> Ни одна из Сторон не несёт ответственности за неисполнение либо ненадлежащее исполнение своих обязательств по настоящему Договору при условии, что их нарушение было обусловлено обстоятельствами непреодолимой силы, которые Стороны не могли предвидеть, не предотвратить разумными мерами, и которые возникли после заключения настоящего Договора (форс-мажор).<br>\n<b>7.2.</b> К обстоятельствам непреодолимой силы относятся: забастовки, стихийные бедствия, пожары, наводнения, землетрясения, иные стихийные бедствия и обстоятельства техногенного характера, если они непосредственно повлияли на выполнение настоящего Договора.<br>\n<b>7.3.</b> В случае наступления форс-мажорных обстоятельств, Сторона, для которой указанные выше обстоятельства наступили, обязана известить в течение 7 (семи) рабочих дней в письменной форме с последующим подтверждением этого в случае необходимости оригиналом документа, выданного официально уполномоченным на то органом.<br>\n<b>7.4.</b> Не уведомление или несвоевременное уведомление лишает Сторону права ссылаться на любое из вышеперечисленных обстоятельств как на основание, освобождающее от ответственности за неисполнение своих обязательств.<br>\n<b>7.5.</b> В случае если обстоятельства непреодолимой силы будут продолжать своё действие более 30 (тридцать) рабочих дней подряд, любая из Сторон вправе расторгнуть Договор в одностороннем порядке. В этом случае, стороны обязаны произвести взаиморасчёты за фактически выполненное по настоящему Договору, в течение 5 (пяти) рабочих дней до даты расторжения настоящего Договора.</p>\n\n<p style=\"text-align: justify\"><b>8. Дополнительные условия. Срок Договора.</b><br>\n<b>8.1.</b> При подписании настоящего Договора Стороны обязуются предоставить друг другу копии учредительных документов, для юридического лица: устав, свидетельство о государственной регистрации/перерегистрации, свидетельство о постановке на учет по НДС (если имеется), доверенность/приказ на уполномоченное лицо; для частного предпринимателя: свидетельство/уведомление о государственной регистрации ИП, удостоверение личности.<br>\n<b>8.2.</b> Настоящий Договор вступает в силу с момента его подписания обеими Сторонами и действует до полного исполнения всех своих обязательств, в том числе взаиморасчётов.<br>\n<b>8.3.</b> Пролонгация срока действия настоящего договора допускается, путём подписания сторонами дополнительного соглашения.<br>\n<b>8.4.</b> Настоящий Договор, может быть, расторгнут в случае существенного нарушения Договора одной из Сторон в соответствии со ст.476 Гражданского кодекса Республики Казахстан, путём письменного уведомления о расторжении Договора в одностороннем порядке.<br>\n<b>8.5.</b> В случае реорганизации, смены собственника и юридического адреса и иных реквизитов Стороны должны не позднее 5 (пяти) дней с момента наступления указанных выше случаев известить об этом друг друга в письменном виде.<br>\n<b>8.6.</b> Любые изменения и дополнения к настоящему Договору действительны лишь при условии, что они совершены в письменной форме, подписаны уполномоченными на то представителями Сторон и скреплены печатями.<br>\n<b>8.7.</b> Все условия настоящего Договора, а также содержание переговоров Сторон в ходе его подписания и реализации, являются строго конфиденциальными и разглашению третьим лицам не подлежат.<br>\n<b>8.8.</b> Настоящий Договор составлен в двух экземплярах на русском языке. Оба экземпляра идентичны и имеют одинаковую юридическую силу.</p>\n\n<p style=\"text-align: justify\"><b>9. Юридические адреса и банковские реквизиты Сторон</b><br>\nПоставщик: ТОО «Асфальтобетон 1», г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.<br>\nПокупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>.</p>\n\n<p><b>Подписи и печати Сторон:</b></p>\n\n<table style=\"width: 100%\">\n<tr>\n    <td style=\"width: 50%\"><b>Поставщик:</b></td>\n    <td style=\"width: 50%\"><b>Покупатель:</b></td>\n</tr>\n<tr>\n    <td style=\"width: 50%\">Исламов В.А.  _____________</td>\n    <td style=\"width: 50%\"><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n</tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        },
+        {
+            "title": "Печать договора",
+            "bottom": "Печать договора",
+            "date_from": "13.09.2021",
+            "date_to": "24.03.2222",
+            "file": "contract_2021-03-26",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "goods": {
+                    "key": "goods",
+                    "title": "Обязуется направлять ежемесячную заявку потребности в",
+                    "values": [
+                        "асфальтобетонных смесях",
+                        "нефтебитумах",
+                        "асфальтобетонных смесях / нефтебитумах",
+                        "бетоне"
+                    ]
+                },
+                "goods_unit_one": {
+                    "key": "goods_unit_one",
+                    "title": "Цена в тенге, включая НДС за 1",
+                    "values": [
+                        "тонну",
+                        "кубометр",
+                        "штуку"
+                    ]
+                },
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                },
+                "contract_clause_4_2": {
+                    "key": "contract_clause_4_2",
+                    "title": "Пункт 4.2",
+                    "values": [
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем путем 100 %-ого предварительного платежа на счет Продавца в срок не позднее 25 числа предшествующего к отгрузке месяца. При этом отгрузка продукции производится в пределах размера денежных средств Покупателя находящихся на расчетном счете Поставщика, вне зависимости от заявленного месячного объема согласно п.2.3. Договора.",
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем, путем платежа на счет Продавца, в срок не позднее 25 числа после отгрузки месяца, выборка товара осуществляется с марта по декабрь {#year#} года."
+                    ]
+                },
+                "acting": {
+                    "key": "acting",
+                    "title": "действующего",
+                    "values": {
+                        "_1": "действующего",
+                        "_2": "действующей"
+                    }
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"40%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Договор поставки продукции</td>\n        <td width=\"35%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>\n",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center\"><b>ДОГОВОР ПОСТАВКИ ПРОДУКЦИИ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n\n    <table class=\"table\" style=\"width: 100%\">\n        <tr>\n            <td>г.Алматы</td>\n            <td style=\"text-align: right\"><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span></td>\n        </tr>\n    </table>\n<p style=\"text-align: justify;font-size: 11.1pt\"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Товарищество с ограниченной ответственностью «Асфальтобетон 1» (БИН 060440009474)</b>, именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и <br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span> (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>)</b>, именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, <span data-id=\"params.acting\" class=\"box-dynamic\">{#params.acting#}</span> на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящий Договор, о нижеследующем:</p>\n\n<p style=\"text-align: justify\"><b>1. Предмет договора</b><br>\n<b>1.1.</b> Поставщик обязуется в порядке и на условиях, определённых настоящим Договором и заявкой Покупателя, поставлять Продукцию - далее «Товар», а Покупатель обязуется принимать Товар и своевременно производить его оплату Поставщику.<br>\n<b>1.2.</b> Предметом настоящего Договора является продукция, производимая Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>2. Порядок отгрузки Товаров</b><br>\n<b>2.1.</b> Взвешивание, а также Отгрузка Товара производится уполномоченным представителем Покупателя, на основании отгрузочного талона, на промышленной базе Поставщика, находящейся по адресу: г.Алматы, ул.Серикова 20А и/или Алматинская область, Енбекшиказахский район, с.Байтерек, ул.Заводская д.14, при этом ответственность в виде штрафа за перегруз, согласно КоАП и иным нормативно-правовым актам РК, оплачивает Покупатель. Поставка Товара, осуществляется путем самовывоза, до места назначения.<br>\n<span style=\"font-size: 11.7pt\"><b>2.2.</b> Отгрузка Товара производится автотранспортом Поставщика и/или железнодорожным транспортом по соглашению Сторон на основании заявки, за отдельную оплату согласно выставленным счетам, с промышленной базы Поставщика, находящейся по адресу: г.Алматы, ул.Серикова 20А.</span><br>\n<b>2.3.</b> Покупатель в срок не позднее 25 числа предшествующего к отгрузке месяца, обязуется направлять ежемесячную заявку потребности в <span data-id=\"params.goods\" class=\"box-dynamic\">{#params.goods#}</span> с указанием типов и марок. Заявки направляются на электронную почту Поставщика <b style=\"text-decoration: underline\">sb@ab1.kz</b>.<br>\n<b>2.4.</b> Покупатель не позднее 10.00 часов предшествующего к отгрузке дня, направляет Поставщику ежедневную отгрузочную разнарядку путем устного или письменного уведомления на номер <b>+7 705-990-82-30</b>.<br>\n<b>2.5.</b> Непредставление Покупателем отгрузочной разнарядки и/или ежемесячной заявки в установленный срок дает Поставщику право отказаться от исполнения Договора.</p>\n\n<p style=\"text-align: justify\"><b>3. Качество и комплектность</b><br>\n<b>3.1.</b> Качество поставляемого Товара должно соответствовать действующим на территории Республики Казахстан ГОСТ, СТ-РК.<br>\n<b>3.2.</b> Подтверждением качества продукции со стороны Поставщика являются паспорт качества, сертификат соответствия, сертификат формы СT-KZ.<br>\n<b>3.3.</b> В случае обнаружения несоответствия качества отгруженного Товара п.3.1. Договора, Покупатель обязуется вызвать уполномоченного представителя Поставщика с целью участия в отборе проб и проведении лабораторных испытаний Товара, в качестве которого сомневается Покупатель, где в последующем составляется акт. Проведение лабораторных испытаний в аккредитованных лабораториях, а также участие в них представителя Поставщика являются строго обязательными условиями процедуры проверки качества.<br>\n<b>3.4.</b> В случае несоблюдения проверки качества Товара в соответствии с п.3.3. Договора Покупатель признает свои претензии необоснованными, и они не подлежат рассмотрению и принятию во внимание Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>4. Цена. Условия оплаты</b><br>\n<b>4.1. Цена в тенге, включая НДС за 1 <span data-id=\"params.goods_unit_one\" class=\"box-dynamic\">{#params.goods_unit_one#}</span> Товара:</b></p>"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 200px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n        <td style=\"width: 160px; text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Сумма (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n{#shop_client_contract_items.begin#}<tr>\n    <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n    <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n    <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n    <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n    <td data-id=\"amount\" style=\"text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.amount#}</td>\n</tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n<tr>\n    <td colspan=\"4\" style=\"text-align: right\"><b>Итого:</b></td>\n    <td style=\"text-align: right\"><span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span></td>\n</tr>\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>Сумма Договора составляет: <span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span> (<span data-id=\"contract.amount_str\" class=\"box-static\">{#contract.amount_str#}</span>) тенге.</b><br>\n<b>4.2.</b> <span data-id=\"params.contract_clause_4_2\" class=\"box-dynamic\">{#params.contract_clause_4_2#}</span><br>\n<b>4.3.</b> В случае повышения или снижения цен на сырье, ТЭР и прочее, Поставщик имеет право на корректировку (повышение или снижение) цен, о чем извещает Покупателя устно или письменно на электронную почту Покупателя. При этом Стороны заключают Дополнительное соглашение к Договору, в котором указываются новые измененные цены на Товар. В случае отказа Покупателя принять измененную цену, Поставщик имеет право расторгнуть Договор в одностороннем порядке. <br>\n<b>4.4.</b> В соответствии с пунктом 3, статьи 282 Гражданского Кодекса Республики Казахстан, в случае, если в течение срока действия Договора, Дополнительного соглашения, произойдёт колебание официального курса национальной валюты (тенге), и это колебание составит более 10% в сторону увеличения от средневзвешенного курса, установленного Национальным Банком Республики Казахстан, Поставщик имеет право в одностороннем порядке произвести индексацию стоимости Товара.<br>\nНастоящий пункт Договора не применяется на оплаченный согласно п.4.2 Товар. Также настоящий пункт Договора не применяется на Товар, отгруженный по соглашению Сторон без предварительной оплаты (в кредит), п.4.2, до момента индексации Товара Поставщиком.<br>\n<b>4.5.</b> При исполнении всех условий настоящего Договора составляется и подписывается окончательный Акт сверки взаимных расчетов. В случае неподписания Покупателем Акта сверки в течение 10 календарных дней после представления его Поставщиком, Акт сверки считается принятым в редакции Поставщика.</p>\n\n<p style=\"text-align: justify\"><b>5. Ответственность Сторон</b><br>\n<b>5.1.</b> В случае не выборки Покупателем количества Товара определённого п.4.1. настоящего Договора и ежемесячной заявкой п.2.3., Покупатель обязуется в течение 5 (пяти) календарных дней после получения требования Поставщика, уплатить штраф в размере 5% от стоимости не выбранного Товара.<br>\n<b>5.2.</b> В случае нарушения Покупателем условий, предусмотренных  п.2.4 Договора, Продавец вправе отказать в поставке продукции.<br>\n<b>5.3.</b> В случае неисполнения обязательства Покупателем по оплате в срок, Поставщик имеет право взыскать пеню в размере 0,1% за каждый день просрочки, от суммы, подлежащей к оплате, но не более 10%.<br>\n<b>5.4.</b> Если Поставщик не выполнит своих обязательств по срокам поставки/недопоставки Товара, по не зависящим причинам от Покупателя, Покупатель вправе потребовать от Поставщика уплаты пени в размере 0,1% за каждый недопоставленный  день, но не более 10%.</p>\n\n<p style=\"text-align: justify\"><b>6. Порядок урегулирования споров</b><br>\n<b>6.1.</b> Претензионный (досудебный) порядок урегулирования споров по настоящему Договору является обязательным. Претензия должна быть предъявлена Стороной, интересы которой нарушены.<br>\n<b>6.2.</b> Сторона, получившая претензию, должна рассмотреть её и дать Стороне, направившей претензию ответ по существу в течение 10 (десяти) календарных дней в письменной форме.<br>\n<b>6.3.</b> Стороны договорились, что предпримут все возможное для разрешения споров, возникающих из настоящего Договора или в связи с ним, путём переговоров.<br>\n<b>6.4.</b> В случае невозможности разрешения споров путём переговоров Сторон, после реализации, предусмотренной в п.6.1/6.2 настоящего Договора процедуры, передают их на рассмотрение в Специализированный межрайонный экономический суд (СМЭС) г.Алматы.</p>\n\n<p style=\"text-align: justify\"><b>7. Форс-мажорные обстоятельства</b><br>\n<b>7.1.</b> Ни одна из Сторон не несёт ответственности за неисполнение либо ненадлежащее исполнение своих обязательств по настоящему Договору при условии, что их нарушение было обусловлено обстоятельствами непреодолимой силы, которые Стороны не могли предвидеть, не предотвратить разумными мерами, и которые возникли после заключения настоящего Договора (форс-мажор).<br>\n<b>7.2.</b> К обстоятельствам непреодолимой силы относятся: забастовки, стихийные бедствия, пожары, наводнения, землетрясения, иные стихийные бедствия и обстоятельства техногенного характера, если они непосредственно повлияли на выполнение настоящего Договора.<br>\n<b>7.3.</b> В случае наступления форс-мажорных обстоятельств, Сторона, для которой указанные выше обстоятельства наступили, обязана известить в течение 7 (семи) рабочих дней в письменной форме с последующим подтверждением этого в случае необходимости оригиналом документа, выданного официально уполномоченным на то органом.<br>\n<b>7.4.</b> Не уведомление или несвоевременное уведомление лишает Сторону права ссылаться на любое из вышеперечисленных обстоятельств как на основание, освобождающее от ответственности за неисполнение своих обязательств.<br>\n<b>7.5.</b> В случае если обстоятельства непреодолимой силы будут продолжать своё действие более 30 (тридцать) рабочих дней подряд, любая из Сторон вправе расторгнуть Договор в одностороннем порядке. В этом случае, стороны обязаны произвести взаиморасчёты за фактически выполненное по настоящему Договору, в течение 5 (пяти) рабочих дней до даты расторжения настоящего Договора.</p>\n\n<p style=\"text-align: justify\"><b>8. Дополнительные условия. Срок Договора.</b><br>\n<b>8.1.</b> При подписании настоящего Договора Стороны обязуются предоставить друг другу копии учредительных документов, для юридического лица: устав, свидетельство о государственной регистрации/перерегистрации, свидетельство о постановке на учет по НДС (если имеется), доверенность/приказ на уполномоченное лицо; для частного предпринимателя: свидетельство/уведомление о государственной регистрации ИП, удостоверение личности.<br>\n<b>8.2.</b> Настоящий Договор вступает в силу с момента его подписания обеими Сторонами и действует до полного исполнения всех своих обязательств, в том числе взаиморасчётов.<br>\n<b>8.3.</b> Пролонгация срока действия настоящего договора допускается, путём подписания сторонами дополнительного соглашения.<br>\n<b>8.4.</b> Настоящий Договор, может быть, расторгнут в случае существенного нарушения Договора одной из Сторон в соответствии со ст.476 Гражданского кодекса Республики Казахстан, путём письменного уведомления о расторжении Договора в одностороннем порядке.<br>\n<b>8.5.</b> В случае реорганизации, смены собственника и юридического адреса и иных реквизитов Стороны должны не позднее 5 (пяти) дней с момента наступления указанных выше случаев известить об этом друг друга в письменном виде.<br>\n<b>8.6.</b> Любые изменения и дополнения к настоящему Договору действительны лишь при условии, что они совершены в письменной форме, подписаны уполномоченными на то представителями Сторон и скреплены печатями.<br>\n<b>8.7.</b> Все условия настоящего Договора, а также содержание переговоров Сторон в ходе его подписания и реализации, являются строго конфиденциальными и разглашению третьим лицам не подлежат.<br>\n<b>8.8.</b> Настоящий Договор составлен в двух экземплярах на русском языке. Оба экземпляра идентичны и имеют одинаковую юридическую силу.</p>\n\n<p style=\"text-align: justify\"><b>9. Юридические адреса и банковские реквизиты Сторон</b><br>\nПоставщик: ТОО «Асфальтобетон 1», г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.<br>\nПокупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>.</p>\n\n<p><b>Подписи и печати Сторон:</b></p>\n\n<table style=\"width: 100%\">\n<tr>\n    <td style=\"width: 50%\"><b>Поставщик:</b></td>\n    <td style=\"width: 50%\"><b>Покупатель:</b></td>\n</tr>\n<tr>\n    <td style=\"width: 50%\">Исламов В.А.  _____________</td>\n    <td style=\"width: 50%\"><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n</tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        },
+        {
+            "title": "01.01.2000",
+            "bottom": "16.03.2021",
+            "date_from": "01.01.2000",
+            "date_to": "16.03.2021",
+            "file": "contract",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "branch_address": {
+                    "key": "branch_address",
+                    "title": "Поставщика, находящейся по адресу",
+                    "values": [
+                        "г.Алматы, ул.Серикова 20А",
+                        "Алматинкая область, Енбекшиказахский район, с.Байтерек, улица Заводская, дом 14, Филиал АБиКМ"
+                    ]
+                },
+                "goods": {
+                    "key": "goods",
+                    "title": "Обязуется направлять ежемесячную заявку потребности в",
+                    "values": [
+                        "асфальтобетонных смесях",
+                        "дорожных нефтебитумах",
+                        "асфальтобетонных смесях или дорожных нефтебитумов",
+                        "бетоне"
+                    ]
+                },
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                },
+                "contract_clause_4_2": {
+                    "key": "contract_clause_4_2",
+                    "title": "Пункт 4.2",
+                    "values": [
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем путем 100 %-ого предварительного платежа на счет Продавца в срок не позднее 25 числа предшествующего к отгрузке месяца. При этом отгрузка продукции производится в пределах размера денежных средств Покупателя находящихся на расчетном счете Поставщика, вне зависимости от заявленного месячного объема согласно п.2.3. Договора.",
+                        "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем, путем платежа на счет Продавца, в срок не позднее 25 числа после отгрузки месяца, выборка товара осуществляется с марта по декабрь {#year#} года."
+                    ]
+                },
+                "goods_type": {
+                    "key": "goods_type",
+                    "title": "На поставку",
+                    "values": [
+                        "асфальтобетонных смесей",
+                        "бетона",
+                        "дорожных нефтебитумов",
+                        "асфальтобетонных смесях или дорожных нефтебитумов"
+                    ]
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"40%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Договор поставки продукции</td>\n        <td width=\"35%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center\"><b>ДОГОВОР ПОСТАВКИ ПРОДУКЦИИ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n\n    <table class=\"table\" style=\"width: 100%\">\n        <tr>\n            <td>г.Алматы</td>\n            <td style=\"text-align: right\"><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span></td>\n        </tr>\n    </table>\n<p style=\"text-align: justify;font-size: 11.1pt\"><b>Товарищество с ограниченной ответственностью «Асфальтобетон 1» (БИН 060440009474)</b>, именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и <br><b><span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span> (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>)</b>, именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, действующего на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящий Договор, о нижеследующем:</p>\n\n<p style=\"text-align: justify\"><b>1. Предмет договора</b><br>\n<b>1.1.</b> Поставщик обязуется в порядке и на условиях, определённых настоящим Договором и заявкой Покупателя, поставлять Продукцию - далее «Товар», а Покупатель обязуется принимать Товар и своевременно производить его оплату Поставщику.<br>\n<b>1.2.</b> Предметом настоящего Договора является продукция, производимая Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>2. Порядок отгрузки Товаров</b><br>\n<b>2.1.</b> Взвешивание, а также Отгрузка Товара производится уполномоченным представителем Покупателя, на основании отгрузочного талона, на промышленной базе Поставщика, находящейся по адресу: <span data-id=\"params.branch_address\" class=\"box-dynamic\">{#params.branch_address#}</span>, при этом ответственность в виде штрафа за перегруз, согласно КоАП и иным нормативно-правовым актам РК, оплачивает Покупатель. Поставка Товара, осуществляется путем самовывоза, до места назначения.<br>\n<span style=\"font-size: 11.7pt\"><b>2.2.</b> Отгрузка Товара производится автотранспортом Поставщика и/или железнодорожным транспортом по соглашению Сторон на основании заявки, за отдельную оплату согласно выставленным счетам, с промышленной базы Поставщика, находящейся по адресу: <span data-id=\"params.branch_address\" class=\"box-dynamic\">{#params.branch_address#}</span>.</span><br>\n<b>2.3.</b> Покупатель в срок не позднее 25 числа предшествующего к отгрузке месяца, обязуется направлять ежемесячную заявку потребности в <span data-id=\"params.goods\" class=\"box-dynamic\">{#params.goods#}</span> с указанием их типов и марок. Заявки направляются с указанием, ответственного за приемку Товара, подписываются уполномоченными лицами Сторон и скрепляются печатями в каждом случае.<br>\n<b>2.4.</b> Покупатель не позднее 10.00 часов предшествующего к отгрузке дня, направляет ежедневную отгрузочную разнарядку (в соответствии с установленной формой) на поставку <span data-id=\"params.goods_type\" class=\"box-dynamic\">{#params.goods_type#}</span>.<br>\n<b>2.5.</b> Непредставление Покупателем отгрузочной разнарядки и/или ежемесячной заявки в установленный срок дает Поставщику право отказаться от исполнения Договора.</p>\n\n<p style=\"text-align: justify\"><b>3. Качество и комплектность</b><br>\n<b>3.1.</b> Качество поставляемого Товара должно соответствовать действующим на территории Республики Казахстан ГОСТ, СТ-РК.<br>\n<b>3.2.</b> Подтверждением качества продукции со стороны Поставщика являются паспорт качества, декларация соответствия ТС, сертификат соответствия.<br>\n<b>3.3.</b> В случае обнаружения несоответствия качества отгруженного Товара п.3.1. Договора, Покупатель обязуется вызвать уполномоченного представителя Поставщика с целью участия в отборе проб и проведении лабораторных испытаний Товара, в качестве которого сомневается Покупатель, где в последующем составляется акт. Проведение лабораторных испытаний в аккредитованных лабораториях, а также участие в них представителя Поставщика являются строго обязательными условиями процедуры проверки качества.<br>\n<b>3.4.</b> В случае несоблюдения проверки качества Товара в соответствии с п.3.3. Договора Покупатель признает свои претензии необоснованными, и они не подлежат рассмотрению и принятию во внимание Поставщиком.</p>\n\n<p style=\"text-align: justify\"><b>4. Цена. Условия оплаты</b><br>\n<b>4.1. Цена в тенге, включая НДС за 1 тонну Товара:</b></p>"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 200px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n        <td style=\"width: 130px; text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Сумма (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n{#shop_client_contract_items.begin#}<tr>\n    <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n    <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n    <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n    <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n    <td data-id=\"amount\" style=\"text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.amount#}</td>\n</tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n<tr>\n    <td colspan=\"4\" style=\"text-align: right\"><b>Итого:</b></td>\n    <td style=\"text-align: right\"><span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span></td>\n</tr>\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>Сумма Договора составляет: <span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span> <span data-id=\"contract.amount_str\" class=\"box-static\">({#contract.amount_str#}</span>) тенге.</b><br>\n<b>4.2.</b> <span data-id=\"params.contract_clause_4_2\" class=\"box-dynamic\">{#params.contract_clause_4_2#}</span><br>\n<b>4.3.</b> В случае повышения или снижения цен на сырье, ТЭР и прочее, Поставщик имеет право на корректировку (повышение или снижение) цен, о чем извещает Покупателя. В случае отказа Покупателя принять изменённую цену, Поставщик имеет право расторгнуть Договор в одностороннем порядке.<br>\n<b>4.4.</b> В соответствии с пунктом 3, статьи 282 Гражданского Кодекса Республики Казахстан, в случае, если в течение срока действия Договора, Дополнительного соглашения, произойдёт колебание официального курса национальной валюты (тенге), и это колебание составит более 10% в сторону увеличения от средневзвешенного курса, установленного Национальным Банком Республики Казахстан, Поставщик имеет право в одностороннем порядке произвести индексацию стоимости Товара. Настоящий пункт договора не применяется на оплаченный согласно п.4.2 Товар.<br>\n<b>4.5.</b> При исполнении всех условий настоящего Договора составляется и подписывается окончательный акт сверки.</p>\n\n<p style=\"text-align: justify\"><b>5. Ответственность Сторон</b><br>\n<b>5.1.</b> В случае не выборки Покупателем количества товара определённого п.4.1. настоящего Договора и ежемесячной заявкой п.2.3., Покупатель обязуется в течение 5(пять) календарных дней после получения требования Поставщика, уплатить штраф в размере 5% от стоимости не выбранного Товара.<br>\n<b>5.2.</b> В случае нарушения Покупателем условий, предусмотренных  2.4 Договора, Продавец вправе отказать в поставке продукции.<br>\n<b>5.3.</b> В случае неисполнения обязательства Покупателем по оплате в срок, Поставщик имеет право взыскать пеню в размере 0,1% за каждый день просрочки, от суммы, подлежащей к оплате, но не более 10%.<br>\n<b>5.4.</b> Если Поставщик не выполнит своих обязательств по срокам поставки/недопоставки Товара, по не зависящим причинам от Покупателя, Покупатель вправе потребовать от Поставщика уплаты пени в размере 0,1% за каждый недопоставленный  день, но не более 10%.</p>\n\n<p style=\"text-align: justify\"><b>6. Порядок урегулирования споров</b><br>\n<b>6.1.</b> Претензионный (досудебный) порядок урегулирования споров по настоящему Договору является обязательным. Претензия должна быть предъявлена Стороной, интересы которой нарушены.<br>\n<b>6.2.</b> Сторона, получившая претензию, должна рассмотреть её и дать Стороне, направившей претензию ответ по существу в течение 10 (десяти) календарных дней в письменной форме.<br>\n<b>6.3.</b> Стороны договорились, что предпримут все возможное для разрешения споров, возникающих из настоящего Договора или в связи с ним, путём переговоров.<br>\n<b>6.4.</b> В случае невозможности разрешения споров путём переговоров стороны после реализации, предусмотренной в п.6.1/6.2 настоящего Договора процедуры, передают их на рассмотрение в Специализированный межрайонный экономический суд (СМЭС) г.Алматы.</p>\n\n<p style=\"text-align: justify\"><b>7. Форс-мажорные обстоятельства</b><br>\n<b>7.1.</b> Ни одна из Сторон не несёт ответственности за неисполнение либо ненадлежащее исполнение своих обязательств по настоящему Договору при условии, что их нарушение было обусловлено обстоятельствами непреодолимой силы, которые Стороны не могли предвидеть, не предотвратить разумными мерами, и которые возникли после заключения настоящего Договора (форс-мажор).<br>\n<b>7.2.</b> К обстоятельствам непреодолимой силы относятся: забастовки, стихийные бедствия, пожары, наводнения, землетрясения, иные стихийные бедствия и обстоятельства техногенного характера, если они непосредственно повлияли на выполнение настоящего Договора.<br>\n<b>7.3.</b> В случае наступления форс-мажорных обстоятельств, Сторона, для которой указанные выше обстоятельства наступили, обязана известить в течение 7 (семи) рабочих дней в письменной форме с последующим подтверждением этого в случае необходимости оригиналом документа, выданного официально уполномоченным на то органом.<br>\n<b>7.4.</b> Не уведомление или несвоевременное уведомление лишает Сторону права ссылаться на любое из вышеперечисленных обстоятельств как на основание, освобождающее от ответственности за неисполнение своих обязательств.<br>\n<b>7.5.</b> В случае если обстоятельства непреодолимой силы будут продолжать своё действие более 30 (тридцать) рабочих дней подряд, любая из Сторон вправе расторгнуть Договор в одностороннем порядке. В этом случае, стороны обязаны произвести взаиморасчёты за фактически выполненное по настоящему Договору, в течение 5(пять) рабочих дней до даты расторжения настоящего Договора.</p>\n\n<p style=\"text-align: justify\"><b>8. Дополнительные условия. Срок Договора.</b><br>\n<b>8.1.</b> При подписании настоящего договора стороны обязуются предоставить друг другу копии следующих учредительных документов, для юридического лица (справку о зарегистрированном юридическом лице, филиале или представительстве с портала электронного правительства egov.kz свидетельство о государственной регистрации/перерегистрации, свидетельство налогоплательщика, свидетельство о постановке на учёт по НДС, устав), для частного предпринимателя (свидетельство о государственной регистрации ИП, удостоверение личности).<br>\n<b>8.2.</b> Настоящий Договор вступает в силу с момента его подписания обеими Сторонами и действует до полного исполнения всех своих обязательств, в том числе взаиморасчётов.<br>\n<b>8.3.</b> Пролонгация срока действия настоящего договора допускается, путём подписания сторонами дополнительного соглашения.<br>\n<b>8.4.</b> Настоящий Договор, может быть, расторгнут в случае существенного нарушения Договора одной из Сторон в соответствии со ст.476 ГК РК, путём письменного уведомления о расторжении Договора в одностороннем порядке.<br>\n<b>8.5.</b> В случае реорганизации, смены собственника и юридического адреса и иных реквизитов стороны должны не позднее 5 (пяти) дней с момента наступления указанных выше случаев известить об этом друг друга в письменном виде.<br>\n<b>8.6.</b> Любые изменения и дополнения к настоящему Договору действительны лишь при условии, что они совершены в письменной форме, подписаны уполномоченными на то представителями Сторон и скреплены печатями.<br>\n<b>8.7.</b> Все условия настоящего Договора, а также содержание переговоров Сторон в ходе его подписания и реализации, являются строго конфиденциальными и разглашению третьим лицам не подлежат.<br>\n<b>8.8.</b> Настоящий Договор составлен в двух экземплярах на русском языке. Оба экземпляра идентичны и имеют одинаковую юридическую силу.</p>\n\n<p style=\"text-align: justify\"><b>9. Юридические адреса и банковские реквизиты Сторон</b><br>\nПоставщик: ТОО «Асфальтобетон 1», г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.<br>\nПокупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>.</p>\n\n<p><b>Подписи и печати сторон:</b></p>\n\n<table style=\"width: 100%\">\n<tr>\n    <td style=\"width: 50%\"><b>Поставщик:</b></td>\n    <td style=\"width: 50%\"><b>Покупатель:</b></td>\n</tr>\n<tr>\n    <td style=\"width: 50%\">Исламов В.А.  _____________</td>\n    <td style=\"width: 50%\"><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n</tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        },
+        {
+            "title": "Печать договора ЖБИ",
+            "bottom": "Печать договора",
+            "date_from": "01.01.2000",
+            "date_to": "25.03.2222",
+            "file": "contract_zhbi",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "contract_clause_4_2": {
+                    "key": "contract_clause_4_2",
+                    "title": "Пункт 4.2",
+                    "values": {
+                        "0": "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем путем 100 %-ого предварительного платежа на счет Продавца в срок не позднее 25 числа предшествующего к отгрузке месяца. При этом отгрузка продукции производится в пределах размера денежных средств Покупателя находящихся на расчетном счете Поставщика, вне зависимости от заявленного месячного объема согласно п.2.3. Договора.",
+                        "1": "Отгрузка товара по настоящему Договору предусматривает оплату за товар Покупателем, путем платежа на счет Продавца, в срок не позднее 25 числа после отгрузки месяца, выборка товара осуществляется с марта по декабрь {#year#} года.",
+                        "_1": "Поставка Продукции осуществляется на условиях 100% предоплаты."
+                    }
+                },
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": {
+                        "_1": "тонн",
+                        "_2": "штука",
+                        "_3": "кубометр"
+                    }
+                },
+                "acting": {
+                    "key": "acting",
+                    "title": "действующего",
+                    "values": {
+                        "_1": "действующего",
+                        "_2": "действующей"
+                    }
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"40%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Договор поставки продукции</td>\n        <td width=\"35%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}.</td></tr>\n</table>",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center\"><b>ДОГОВОР ПОСТАВКИ ПРОДУКЦИИ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n\n<table class=\"table\" style=\"width: 100%\">\n    <tr>\n        <td>г.Алматы</td>\n        <td style=\"text-align: right\"><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span></td>\n    </tr>\n</table>\n<p style=\"text-align: justify\"><b>Товарищество с ограниченной ответственностью «Асфальтобетон 1» (БИН 060440009474)</b>, именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и <br><b><span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span> (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>)</b>, именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, <span data-id=\"params.acting\" class=\"box-dynamic\">{#params.acting#}</span> на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящий Договор, о нижеследующем:</p>\n\n<p style=\"text-align: justify\"><b>1. Предмет договора</b><br>\n<b>1.1.</b> Поставщик обязуется изготовить и поставить, а Покупатель принять и оплатить железобетонные изделия (далее – Продукция) в порядке и на условиях, установленных настоящим Договором.<br>\n<b>1.2.</b> Количество, ассортимент и цена Продукции определяются в порядке, установленном в разделе 4 настоящего Договора.</p>\n\n<p style=\"text-align: justify\"><b>2. Качество продукции</b><br>\n<b>2.1.</b> Качество и маркировка Продукции должны соответствовать требованиям ГОСТ, ТУ и обеспечивать сохранность Продукции при обычных условиях хранения, транспортировки и эксплуатации.<br>\n<b>2.2.</b> Поставляемая Продукция сопровождается паспортом качества.<br>\n<b>2.3.</b> При обнаружении Покупателем скрытых недостатков либо повреждений при приемке Продукции (п.2 ст.466 Гражданского Кодекса РК), Поставщик  немедленно приостанавливает погрузку/выгрузку для принятия совместного решения либо составления акта несоответствия с участием уполномоченного представителя.</p>\n\n<p style=\"text-align: justify\"><b>3. Условия поставки продукции</b><br>\n<b>3.1.</b> Поставщик приступает к изготовлению Продукции в течение 3 (трёх) рабочих дней с момента поступления 100% предоплаты на свой расчётный счёт. <br>\n<b>3.2.</b> Способ доставки продукции определяется Покупателем собственным автомобильным транспортом (самовывозом), приспособленным для перевозки железобетонных изделий.<br>\n<b>3.3.</b> Транспортировка железобетонных изделий автомобильным транспортом осуществляется Покупателем согласно техническим условиям погрузки и размещения груза на автомобильном транспорте.<br>\n<b>3.4.</b> Обязанность Поставщика по поставке товара считается исполненной, а право собственности на товар и риск его случайной гибели считаются перешедшими к Покупателю в момент фактической передачи Поставщиком товара Покупателю, определяемый как момент подписания сторонами товарной накладной на этот товар или передаточного документа (Акт приема передачи).<br>\n<b>3.5.</b> Отпуск Продукции осуществляется при предъявлении доверенности Покупателя и документа, удостоверяющего личность представителя Покупателя.</p>\n\n<p style=\"text-align: justify\"><b>4. Цена. Условия оплаты</b><br>\n<b>4.1.</b> Цена в тенге, включая НДС:</p>\n\n"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 200px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n        <td style=\"width: 160px; text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Сумма (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n{#shop_client_contract_items.begin#}<tr>\n    <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n    <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n    <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n    <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n    <td data-id=\"amount\" style=\"text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.amount#}</td>\n</tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n<tr>\n    <td colspan=\"4\" style=\"text-align: right\"><b>Итого:</b></td>\n    <td style=\"text-align: right\"><span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span></td>\n</tr>\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>Сумма Договора составляет: <span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span> <span data-id=\"contract.amount_str\" class=\"box-static\">({#contract.amount_str#}</span>) тенге.</b><br>\n<b>4.2.</b> <span data-id=\"params.contract_clause_4_2\" class=\"box-dynamic\">{#params.contract_clause_4_2#}</span></p>\n\n<p style=\"text-align: justify\"><b>5. Ответственность Сторон</b><br>\n<b>5.1.</b> Стороны по настоящему Договору несут взаимную ответственность за неисполнение либо ненадлежащее исполнение обязательств в соответствии с действующим законодательством Республики Казахстан.<br>\n<b>5.2.</b> За нарушение сроков поставки Продукции по настоящему Договору Поставщик уплачивает Покупателю неустойку в размере 0.1% от стоимости непоставленной в срок Продукции за каждый день просрочки. Оплата неустойки осуществляется только при предъявлении письменного требования Покупателя.<br>\n<b>5.3.</b> За несвоевременную оплату Продукции по настоящему Договору Покупатель уплачивает Поставщику пеню в размере 0.1% от стоимости неоплаченной в срок Продукции за каждый день просрочки платежа. Оплата неустойки осуществляется только при предъявлении письменного требования Поставщика.</p>\n\n<p style=\"text-align: justify\"><b>6. Порядок урегулирования споров</b><br>\n<b>6.1.</b> Претензии по очевидным дефектам и повреждениям продукции принимаются только при приемке Продукции на основании п.3.5/3.6 настоящего Договора.<br>\n<b>6.2.</b> Стороны договорились, что предпримут все возможное для разрешения споров, возникающих из настоящего Договора или в связи с ним, путём переговоров.<br>\n<b>6.3.</b> В случае невозможности разрешения споров путём переговоров стороны после реализации, предусмотренной в п.6.1/6.2 настоящего Договора процедуры, передают их на рассмотрение в Специализированный межрайонный экономический суд (СМЭС) г.Алматы.</p>\n\n<p style=\"text-align: justify\"><b>7. Форс-мажорные обстоятельства</b><br>\n<b>7.1.</b> Ни одна из Сторон не несёт ответственности за неисполнение либо ненадлежащее исполнение своих обязательств по настоящему Договору при условии, что их нарушение было обусловлено обстоятельствами непреодолимой силы, которые Стороны не могли предвидеть, не предотвратить разумными мерами, и которые возникли после заключения настоящего Договора (форс-мажор).<br>\n<b>7.2.</b> К обстоятельствам непреодолимой силы относятся: забастовки, стихийные бедствия, пожары, наводнения, землетрясения, иные стихийные бедствия и обстоятельства техногенного характера, если они непосредственно повлияли на выполнение настоящего Договора.<br>\n<b>7.3.</b> В случае наступления форс-мажорных обстоятельств, Сторона, для которой указанные выше обстоятельства наступили, обязана известить в течение 7 (семи) рабочих дней в письменной форме с последующим подтверждением этого в случае необходимости оригиналом документа, выданного официально уполномоченным на то органом.<br>\n<b>7.4.</b> Не уведомление или несвоевременное уведомление лишает Сторону права ссылаться на любое из вышеперечисленных обстоятельств как на основание, освобождающее от ответственности за неисполнение своих обязательств.<br>\n<b>7.5.</b> В случае если обстоятельства непреодолимой силы будут продолжать своё действие более 30 (тридцати) рабочих дней подряд, любая из Сторон вправе расторгнуть Договор в одностороннем порядке. В этом случае, стороны обязаны произвести взаиморасчёты за фактически выполненное по настоящему Договору, в течение 5 (пяти) рабочих дней до даты расторжения настоящего Договора.</p>\n\n<p style=\"text-align: justify\"><b>8. Дополнительные условия. Срок Договора.</b><br>\n<b>8.1.</b> При подписании настоящего договора стороны обязуются предоставить друг другу копии следующих учредительных документов, для юридического лица (справку о зарегистрированном юридическом лице, филиале или представительстве с портала электронного правительства egov.kz свидетельство о государственной регистрации/перерегистрации, свидетельство налогоплательщика, свидетельство о постановке на учёт по НДС, устав), для частного предпринимателя (свидетельство о государственной регистрации ИП, удостоверение личности).<br>\n<b>8.2.</b> Настоящий Договор вступает в силу с момента его подписания обеими Сторонами и действует до полного исполнения всех своих обязательств, в том числе взаиморасчётов.<br>\n<b>8.3.</b> Пролонгация срока действия настоящего Договора допускается, путём подписания сторонами дополнительного соглашения.<br>\n<b>8.4.</b> В случае реорганизации, смены собственника и юридического адреса и иных реквизитов стороны должны не позднее 5 (пяти) дней с момента наступления указанных выше случаев известить об этом друг друга в письменном виде.<br>\n<b>8.5.</b> Любые изменения и дополнения к настоящему Договору действительны лишь при условии, что они совершены в письменной форме, подписаны уполномоченными на то представителями Сторон и скреплены печатями.<br>\n<b>8.6.</b> Все условия настоящего Договора, а также содержание переговоров Сторон в ходе его подписания и реализации, являются строго конфиденциальными и разглашению третьим лицам не подлежат.<br>\n<b>8.7.</b> Настоящий Договор составлен в двух экземплярах на русском языке. Оба экземпляра идентичны и имеют одинаковую юридическую силу.</p>\n\n<p style=\"text-align: justify\"><b>9. Юридические адреса и банковские реквизиты Сторон</b><br>\nПоставщик: ТОО «Асфальтобетон 1», г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.<br>\nПокупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>.</p>\n\n<p><b>Подписи и печати сторон:</b></p>\n\n<table style=\"width: 100%\">\n<tr>\n    <td style=\"width: 50%\"><b>Поставщик:</b></td>\n    <td style=\"width: 50%\"><b>Покупатель:</b></td>\n</tr>\n<tr>\n    <td style=\"width: 50%\">Исламов В.А.  _____________</td>\n    <td style=\"width: 50%\"><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n</tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        }
+    ],
+    "agreement": [
+        {
+            "title": "Печать изменение цены",
+            "bottom": "Печать",
+            "date_from": "01.01.2000",
+            "date_to": "01.01.2222",
+            "file": "agreement_1",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"45%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Соглашение об изменении и дополнении договора</td>\n        <td width=\"30%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center;\"><b>СОГЛАШЕНИЕ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n<p style=\"text-align: center;\"><b>об изменении и дополнении договора поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at\" class=\"box-static\">{#contract_root.from_at#}</span></b></p>\n<table style=\"width: 100%; margin-bottom: 20px\"><tr><td><b>г.Алматы</b></td><td style=\"text-align: right;\"><b><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span><b></td></tr></table>\n\n<p style=\"text-align: justify\"><b>         Товарищество с ограниченной ответственностью «Асфальтобетон 1»</b>, (БИН 060440009474), именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и\n<br><b>         <span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span></b>, (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>), именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, действующего на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящее Соглашение о нижеследующем:</p>\n<p style=\"text-align: justify\"><b>1.</b> ПОСТАВЩИК и ПОКУПАТЕЛЬ пришли к соглашению изменить и дополнить договор поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at_rus\" class=\"box-static\">{#contract_root.from_at_rus#}</span> (далее по тексту – Договор).<br>\n<b>2.</b> Изменить и дополнить п.4.1. Договора текстом следующего содержания:<br>\n<b>Стоимость 1 тонны, включая НДС, с <span data-id=\"contract.from_at\" class=\"box-static\">{#contract.from_at#}</span> составляет:</b></p>"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 360px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n    {#shop_client_contract_items.begin#}<tr>\n        <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n        <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n        <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n        <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n    </tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>3.</b> Остальные условия Договора, остаются неизменными, и Стороны подтверждают по ним свои обязательства.<br>\n<b>4.</b> Настоящее Соглашение составлено в двух подлинных экземплярах по одному для каждой из Сторон.<br>\n<b>5.</b> Настоящее Соглашение вступает в силу с <span data-id=\"contract.from_at\" class=\"box-static\">{#contract.from_at#}</span></p>\n<p style=\"text-align: justify\"><b>6.</b> Юридические адреса и банковские реквизиты Сторон</b></p>\n<p style=\"text-align: justify\"><b>Поставщик: ТОО «Асфальтобетон 1»</b>, г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.</p>\n<p style=\"text-align: justify\"><b>Покупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span></b>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>.</p>\n<p style=\"text-align: justify\"><b>Подписи и печати сторон:</b></p>\n\n<table style=\"width: 100%\">\n    <tr>\n        <td><b>Поставщик:</b></td>\n        <td><b>Покупатель:</b></td>\n    </tr>\n    <tr>\n        <td>Исламов В.А.  _____________</td>\n        <td><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n    </tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        },
+        {
+            "title": "Печать дополнения товаров",
+            "bottom": "Печать",
+            "date_from": "01.01.2000",
+            "date_to": "01.01.2222",
+            "file": "agreement_2",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"45%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Соглашение об изменении и дополнении договора</td>\n        <td width=\"30%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center;\"><b>СОГЛАШЕНИЕ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n<p style=\"text-align: center;\"><b>об изменении и дополнении договора поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at\" class=\"box-static\">{#contract_root.from_at#}</span></b></p>\n<table style=\"width: 100%; margin-bottom: 20px\"><tr><td><b>г.Алматы</b></td><td style=\"text-align: right;\"><b><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span><b></td></tr></table>\n\n<p style=\"text-align: justify\"><b>         Товарищество с ограниченной ответственностью «Асфальтобетон 1»</b>, (БИН 060440009474), именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и\n<br><b>         <span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span></b>, (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>), именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, действующего на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящее Соглашение о нижеследующем:</p>\n<p style=\"text-align: justify\"><b>1.</b> ПОСТАВЩИК и ПОКУПАТЕЛЬ в связи с увеличением объемов пришли к соглашению дополнить договор поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at_rus\" class=\"box-static\">{#contract_root.from_at_rus#}</span> (далее по тексту – Договор).<br>\n<b>2.</b> Дополнить п.4.1. Договора текстом следующего содержания:</b></p>"
+                    },
+                    {
+                        "type": "goods",
+                        "text": "<table class=\"table\" style=\"width: 100%; border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\" cellpadding=\"5\">\n    <tr>\n        <td style=\"width: 40px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>№</b></td>\n        <td style=\"width: 200px;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Наименование товара</b></td>\n        <td style=\"width: 140px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Кол-во (<span data-id=\"params.goods_unit\" class=\"box-dynamic\">{#params.goods_unit#}</span>)</b></td>\n        <td style=\"width: 100px; text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Цена (тенге)</b></td>\n        <td style=\"width: 160px; text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;border-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\"><b>Сумма (тенге)</b></td>\n    </tr>{#shop_branches.begin#}\n    <tr>\n        <td colspan=\"5\" style=\"text-align: center;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_branches.address#}</td>\n    </tr>\n    {#shop_client_contract_items.begin#}<tr>\n        <td style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">#index#</td>\n        <td style=\"border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.name#}</td>\n        <td data-id=\"quantity\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.quantity#}</td>\n        <td data-id=\"price\" style=\"text-align: right;border-right-width:0.1px;border-right-style:solid;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.price#}</td>\n        <td data-id=\"amount\" style=\"text-align: right;border-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\">{#shop_client_contract_items.amount#}</td>\n    </tr>{#shop_client_contract_items.end#}{#shop_branches.end#}\n    <tr>\n        <td colspan=\"4\" style=\"text-align: right\"><b>Итого:</b></td>\n        <td style=\"text-align: right\"><span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span></td>\n    </tr>\n</table>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: justify\"><b>Сумма дополнительного соглашения составляет: <span data-id=\"contract.amount\" class=\"box-static\">{#contract.amount#}</span> (<span data-id=\"contract.amount_str\" class=\"box-static\">({#contract.amount_str#}</span>) тенге.</b><br>\n<b>3.</b> Остальные условия Договора, остаются неизменными, и Стороны подтверждают по ним свои обязательства.<br>\n<b>4.</b> Настоящее Соглашение составлено в двух подлинных экземплярах по одному для каждой из Сторон.</p>\n<p style=\"text-align: justify\"><b>5.</b> Юридические адреса и банковские реквизиты Сторон</b></p>\n<p style=\"text-align: justify\"><b>Поставщик: ТОО «Асфальтобетон 1»</b>, г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.</p>\n<p style=\"text-align: justify\"><b>Покупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span></b>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>.</p>\n<p style=\"text-align: justify\"><b>Подписи и печати сторон:</b></p>\n\n<table style=\"width: 100%\">\n    <tr>\n        <td><b>Поставщик:</b></td>\n        <td><b>Покупатель:</b></td>\n    </tr>\n    <tr>\n        <td>Исламов В.А.  _____________</td>\n        <td><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n    </tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        },
+        {
+            "title": "Печать дополнения договора",
+            "bottom": "Печать",
+            "date_from": "01.01.2000",
+            "date_to": "01.01.2222",
+            "file": "agreement_3",
+            "contract_template_others": {
+                "contract.number": "Номер договора",
+                "contract.from_at": "Начала договора",
+                "contract.amount": "Сумма договора",
+                "client.name_1c": {
+                    "name": "Клиент (сокращенное название)",
+                    "url": "shopclient",
+                    "field": "name_1c"
+                },
+                "client.name_complete": {
+                    "name": "Клиент (полное название)",
+                    "url": "shopclient",
+                    "field": "name_complete"
+                },
+                "client.bin": {
+                    "name": "БИН",
+                    "url": "shopclient",
+                    "field": "bin"
+                },
+                "client.address": {
+                    "name": "Юридический адрес клиента",
+                    "url": "shopclient",
+                    "field": "address"
+                },
+                "client.account": {
+                    "name": "Расчетный счет",
+                    "url": "shopclient",
+                    "field": "account"
+                },
+                "client.bik": {
+                    "name": "БИК",
+                    "url": "shopclient",
+                    "field": "bik"
+                },
+                "client.bank": {
+                    "name": "Название банка",
+                    "url": "shopclient",
+                    "field": "bank"
+                },
+                "client.director": {
+                    "name": "ФИО директора (сокращенное)",
+                    "url": "shopclient",
+                    "field": "director"
+                },
+                "client.director_complete": {
+                    "name": "ФИО директора (полное)",
+                    "url": "shopclient",
+                    "field": "director_complete"
+                },
+                "client.director_position": {
+                    "name": "Должность директора",
+                    "url": "shopclient",
+                    "field": "director_position"
+                },
+                "client.charter": {
+                    "name": "Действующий на основании",
+                    "url": "shopclient",
+                    "field": "charter"
+                }
+            },
+            "contract_template_params": {
+                "goods_unit": {
+                    "key": "goods_unit",
+                    "title": "Кол-во",
+                    "values": [
+                        "тонн",
+                        "штука",
+                        "кубометр"
+                    ]
+                }
+            },
+            "header": "<table cellpadding=\"5\" style=\"\nborder-top-color:#999999;border-top-width:0.1px;border-top-style:solid;\nborder-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\nborder-bottom-color:#999999;border-bottom-width:0.1px;border-bottom-style:solid;\nborder-left-color:#999999;border-left-width:0.1px;border-left-style:solid;\ncolor: #rgba(0, 0, 0, 0.8);\">\n    <tr>\n        <td width=\"25%\" style=\"border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ТОО «Асфальтобетон 1»</td>\n        <td width=\"45%\" style=\"text-align: center; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">Соглашение об изменении и дополнении договора</td>\n        <td width=\"30%\" style=\"text-align: right; border-right-color:#999999;border-right-width:0.1px;border-right-style:solid;\">ПТО&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Стр. {#page#} из {#pages#}</td></tr>\n</table>",
+            "contract_templates": {
+                "body": [
+                    {
+                        "type": "text",
+                        "text": "<p style=\"text-align: center;\"><b>СОГЛАШЕНИЕ №<span data-id=\"contract.number\" class=\"box-static\">{#contract.number#}</span></b></p>\n<p style=\"text-align: center;\"><b>об изменении и дополнении договора поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at\" class=\"box-static\">{#contract_root.from_at#}</span></b></p>\n<table style=\"width: 100%; margin-bottom: 20px\"><tr><td><b>г.Алматы</b></td><td style=\"text-align: right;\"><b><span data-id=\"contract.from_at_rus\" class=\"box-static\">{#contract.from_at_rus#}</span><b></td></tr></table>\n<p style=\"text-align: justify\"><b>         Товарищество с ограниченной ответственностью «Асфальтобетон 1»</b>, (БИН 060440009474), именуемое в дальнейшем Поставщик, в лице генерального директора Исламова Вариса Абубакировича, действующего на основании Устава, с одной стороны, и\n<br><b>         <span data-id=\"client.name_complete\" class=\"box-static\">{#client.name_complete#}</span></b>, (БИН <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>), именуемое в дальнейшем Покупатель, в лице <span data-id=\"client.director_position\" class=\"box-static\">{#client.director_position#}</span> <span data-id=\"client.director_complete\" class=\"box-static\">{#client.director_complete#}</span>, действующего на основании <span data-id=\"client.charter\" class=\"box-static\">{#client.charter#}</span>, с другой стороны, при совместном упоминании именуемые «Стороны», заключили настоящее Соглашение о нижеследующем:</p>\n<p style=\"text-align: justify\"><b>1.</b> В соответствии с п.1 ст.401 ГК РК  (далее - \"Кодекс\") стороны договорились изменить <b>п.4.2 «Цена. Условия оплаты»</b> Договора поставки №<span data-id=\"contract_root.number\" class=\"box-static\">{#contract_root.number#}</span> от <span data-id=\"contract_root.from_at_rus\" class=\"box-static\">{#contract_root.from_at_rus#}</span>, и пришли к соглашению о новых условиях оплаты Товара с отсрочкой (или: в рассрочку) платежа:\n<br>Отгрузка товара по настоящему Договору предусматривает оплату с рассрочкой платежа согласно гарантийного письма исх.№21 от 20.05.2020 года сроком оплаты до 03.06.2020 года на сумму 13 550 000.00 (тринадцать миллионов пятьсот пятьдесят тысяч) тенге.\n<b>2.</b> Остальные условия Договора, остаются неизменными, и Стороны подтверждают по ним свои обязательства.<br>\n<b>3.</b> Настоящее Соглашение составлено в двух подлинных экземплярах по одному для каждой из Сторон.<br>\n<b>4.</b> Настоящее Соглашение вступает в силу с <span data-id=\"contract.from_at\" class=\"box-static\">{#contract.from_at#}</span> года</p>\n<p style=\"text-align: justify\"><b>5.</b> Юридические адреса и банковские реквизиты Сторон</b></p>\n<p style=\"text-align: justify\"><b>Поставщик: ТОО «Асфальтобетон 1»</b>, г.Алматы, ул.Серикова, 20А, БИН 060440009474, ИИК KZ906017131000030374, в АО «Народный Банк Казахстана», БИК HSBKKZKX.</p>\n<p style=\"text-align: justify\"><b>Покупатель: <span data-id=\"client.name_1c\" class=\"box-static\">{#client.name_1c#}</span></b>, <span data-id=\"client.address\" class=\"box-static\">{#client.address#}</span>, БИН/ИИН: <span data-id=\"client.bin\" class=\"box-static\">{#client.bin#}</span>, ИИК: <span data-id=\"client.account\" class=\"box-static\">{#client.account#}</span>, БИК: <span data-id=\"client.bik\" class=\"box-static\">{#client.bik#}</span>, в <span data-id=\"client.bank\" class=\"box-static\">{#client.bank#}</span>.</p>\n<p style=\"text-align: justify\"><b>Подписи и печати сторон:</b></p>\n\n<table style=\"width: 100%\">\n    <tr>\n        <td><b>Поставщик:</b></td>\n        <td><b>Покупатель:</b></td>\n    </tr>\n    <tr>\n        <td>Исламов В.А.  _____________</td>\n        <td><span data-id=\"client.director\" class=\"box-static\">{#client.director#}</span>  _____________</td>\n    </tr>\n</table>"
+                    }
+                ]
+            },
+            "footer": "<hr><br>ФАБ 016—01-05"
+        }
+    ]
+}
+
+{
+    "pg_xml": "\u003C?xml version=\"1.0\" encoding=\"utf-8\"?\u003E\n\u003Crequest\u003E\u003Cpg_order_id\u003E59892\u003C/pg_order_id\u003E\u003Cpg_payment_id\u003E537657013\u003C/pg_payment_id\u003E\u003Cpg_amount\u003E18750\u003C/pg_amount\u003E\u003Cpg_currency\u003EKZT\u003C/pg_currency\u003E\u003Cpg_net_amount\u003E18750\u003C/pg_net_amount\u003E\u003Cpg_ps_amount\u003E18750\u003C/pg_ps_amount\u003E\u003Cpg_ps_full_amount\u003E19256.25\u003C/pg_ps_full_amount\u003E\u003Cpg_ps_currency\u003EKZT\u003C/pg_ps_currency\u003E\u003Cpg_payment_system\u003EP2PKKBACQUIRING\u003C/pg_payment_system\u003E\u003Cpg_description\u003EПогашение к заявке 59892\u003C/pg_description\u003E\u003Cpg_result\u003E1\u003C/pg_result\u003E\u003Cpg_payment_date\u003E2021-12-07 08:13:06\u003C/pg_payment_date\u003E\u003Cpg_can_reject\u003E0\u003C/pg_can_reject\u003E\u003Cpg_user_phone\u003E77773930821\u003C/pg_user_phone\u003E\u003Cpg_need_phone_notification\u003E0\u003C/pg_need_phone_notification\u003E\u003Cpg_user_contact_email\u003E1.lawyer@mail.ru\u003C/pg_user_contact_email\u003E\u003Cpg_need_email_notification\u003E1\u003C/pg_need_email_notification\u003E\u003Cpg_captured\u003E1\u003C/pg_captured\u003E\u003Cpg_card_pan\u003E5483-19XX-XXXX-8462\u003C/pg_card_pan\u003E\u003Cpg_card_exp\u003E02/24\u003C/pg_card_exp\u003E\u003Cpg_card_owner\u003EAigerim Kalibekova\u003C/pg_card_owner\u003E\u003Cpg_auth_code\u003E289182\u003C/pg_auth_code\u003E\u003Cpg_card_brand\u003EMC\u003C/pg_card_brand\u003E\u003Cpg_salt\u003EbKi7MgM5hzCJfySa\u003C/pg_salt\u003E\u003Cpg_sig\u003E2dc827e1ec6a73256496e4a591475679\u003C/pg_sig\u003E\u003C/request\u003E\n"
+}

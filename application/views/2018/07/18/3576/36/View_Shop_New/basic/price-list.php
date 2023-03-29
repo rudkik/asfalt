@@ -1,0 +1,1 @@
+<a href="<?php echo Arr::path($data->values['options'], 'price_list.file', '') ?>"><img class="" src="<?php echo $siteData->urlBasic;?>/css/<?php echo $siteData->shopShablonPath;?>/img/pdf.png"><span>Download <br> Pricelist</span></a>

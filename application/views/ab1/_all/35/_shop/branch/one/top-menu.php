@@ -1,0 +1,1 @@
+<li class="header"><a href="<?php echo $siteData->getCurrentURL(); ?><?php echo URL::query(array('shop_branch_id' => 0, 'shop_main_branch_id' => $data->values['id']));?>" style="font-size: 18px"><?php echo $data->values['name'];?></a></li>

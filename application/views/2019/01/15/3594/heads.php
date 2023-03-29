@@ -1,0 +1,33 @@
+<?php
+return array(
+    3594 => array(
+        '/' => array(
+            35 => array(
+                'site_title' => 'Unisol.kz - Разработка | Автоматизация | Оптимизация', 
+                'site_keywords' => '', 
+                'site_description' => 'Unisol.kz - Разработка | Автоматизация | Оптимизация', ), ), 
+        '/portfolio' => array(
+            35 => array(
+                'site_title' => 'Портфолио', 
+                'site_keywords' => '', 
+                'site_description' => '', ), ), 
+        '/cost-of-work' => array(
+            35 => array(
+                'site_title' => 'Стоимость работ', 
+                'site_keywords' => '', 
+                'site_description' => '', ), ), 
+        '/articles' => array(
+            35 => array(
+                'site_title' => 'Статьи', 
+                'site_keywords' => '', 
+                'site_description' => '', ), ), 
+        '/contacts' => array(
+            35 => array(
+                'site_title' => 'Контакты', 
+                'site_keywords' => '', 
+                'site_description' => '', ), ), 
+        '/article' => array(
+            35 => array(
+                'site_title' => '', 
+                'site_keywords' => '', 
+                'site_description' => '', ), ), ), );

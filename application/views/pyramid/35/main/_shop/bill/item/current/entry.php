@@ -1,0 +1,1 @@
+<?php echo trim($data['view::_shop/bill/item/list/current/entry']); ?>

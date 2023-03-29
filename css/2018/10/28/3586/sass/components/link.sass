@@ -1,0 +1,27 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.link
+  font-size: $size-normal
+  color: color('black')
+  border-bottom: 1px solid color('black')
+  @include font-family('ProximaNova', 'Regular')
+  &--inherit
+    font-size: inherit
+    color: inherit
+  &__block
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    margin: $mp-default 0
+    @media screen and (max-width: 767px)
+      margin-right: $mp-default * 2
+      margin-left: $mp-default * 2
+    >*
+      margin: 4px 0
+  &__main
+    color: color('main')
+    border-bottom: 1px solid color('main')
+  &__little
+    font-size: $size-little + 2
+  &--smb
+    @include font-family('ProximaNova', 'SemiBold')

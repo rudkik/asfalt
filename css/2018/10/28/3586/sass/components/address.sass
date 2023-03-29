@@ -1,0 +1,20 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.addresses
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+.address
+  display: flex
+  align-items: center
+  margin: $mp-default / 2 0
+  &:first-child
+    margin-top: $mp-default
+  &:last-child
+    margin-bottom: $mp-default
+  &__text
+    max-width: 300px
+    margin-top: $mp-default
+    margin-bottom: $mp-default
+  &__add
+    margin-left: $mp-default * 4

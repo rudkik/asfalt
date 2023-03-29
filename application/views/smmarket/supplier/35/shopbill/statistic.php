@@ -1,0 +1,1 @@
+{y: '<?php echo $data->values['bill_date']; ?>', count: <?php echo $data->values['bill_count']; ?>, amount: <?php echo $data->values['bill_amount']; ?>},

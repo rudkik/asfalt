@@ -1,0 +1,62 @@
+@import '../themes/_module'
+@import '../utils/_module'
+%btn
+  display: inline-flex
+  align-items: center
+  font-size: $btn-fsize
+  height: $field-height
+  max-width: 400px
+  border: $border-width solid color('main')
+  text-transform: uppercase
+  padding: 0 $mp-default * 4
+  white-space: nowrap
+  transition: all 0.3s ease-out
+  box-shadow: none !important
+  border-radius: 0 !important
+  background: none !important
+  background-color: color('main') !important
+  -moz-appearance: none
+  -webkit-appearance: none
+  -ms-appearance: none
+  appearance: none
+  @include font-family('ProximaNova', 'SemiBold')
+  &:hover
+    border-color: darken(color('main'), 15%) !important
+    background-color: darken(color('main'), 15%) !important
+  @media screen and (max-width: 575px)
+    padding: 0 $mp-default
+    width: 100%
+    justify-content: center
+
+
+.btn
+  @extend %btn
+  &--invert
+    background-color: white
+    &:hover
+      border-color: color('main')
+      background-color: color('main')
+  &--noupper
+    text-transform: none
+  &--reg
+    @include font-family('ProximaNova', 'Regular')
+  &--field-sz
+    font-size: $field-fsize
+  &--slim
+    height: $btn-height
+  &--fixed
+    padding: 0 !important
+    justify-content: center
+    width: 360px
+    max-width: 100%
+    @media screen and (max-width: 991px)
+      width: 330px
+    @media screen and (max-width: 575px)
+      width: 290px
+    &--min
+      width: 300px
+  &--p
+    &-little
+      padding: 0 $mp-default
+    &-medium
+      padding: 0 $mp-default * 2

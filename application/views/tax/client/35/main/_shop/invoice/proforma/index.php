@@ -1,0 +1,1 @@
+<?php echo trim($data['view::_shop/invoice/proforma/list/index']); ?>

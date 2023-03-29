@@ -1,0 +1,1 @@
+<li><a href="<?php echo $siteData->urlBasic; ?>/sector-rubric?id=<?php echo $data->values['id']; ?>&sector=<?php echo $data->values['shop_id']; ?>"><?php echo $data->values['name']; ?></a></li>

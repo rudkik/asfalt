@@ -1,0 +1,7 @@
+<?php
+$i = 0;
+foreach ($data['view::_shop/receive/item/one/esf']->childs as $value) {
+    $i++;
+    echo str_replace('$index$', $i, $value->str);
+}
+?>

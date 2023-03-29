@@ -1,0 +1,2 @@
+<h1><a href="<?php echo $siteData->urlBasic; ?>/event/documents?id=<?php echo $data->values['id']; ?>">Презентации</a></h1>
+<span><a href="<?php echo $siteData->urlBasic; ?>/event?id=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a> / Презентации </span>

@@ -1,0 +1,1 @@
+<?php echo trim($siteData->replaceDatas['view::View_Shop_Cars\-trucks-mashiny']); die; ?>

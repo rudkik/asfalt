@@ -1,0 +1,24 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.step
+  background-color: color('lightgray')
+  position: relative
+  margin: 0 $mp-default * 1.5
+  max-width: 400px
+  @media screen and (max-width: 991px)
+    margin: $mp-default * 0.75 auto
+  &__num
+    position: absolute
+    font-size: 120px
+    line-height: 70px
+    color: color('white')
+    left: $mp-default
+    top: 0
+    @include font-family('ProximaNova', 'Bold')
+  &__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding: ($mp-default * 2 + $mp-default / 3 * 2) $mp-default * 1.7 $mp-default * 4
+    

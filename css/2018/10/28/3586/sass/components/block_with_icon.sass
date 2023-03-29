@@ -1,0 +1,19 @@
+@import '../themes/_module'
+@import '../utils/_module'
+$icon-width: 46px
+.block_with_icon
+  &__icon
+    display: inline-flex
+    align-items: center
+    max-width: $icon-width
+    position: absolute
+    top: 0
+    left: 0
+    height: $size-block-title + 4
+    img
+      max-width: 100%
+  &__text
+    padding-left: $icon-width + $mp-default
+  &__block
+    position: relative
+    margin: $mp-default * 1.5 0 $mp-default * 1.25

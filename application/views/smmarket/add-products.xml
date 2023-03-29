@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <suplier_id>ID поставщика (предоставляется нами)</suplier_id>
+    <products>
+        <product>
+            <id>ID записи (уникальное значение)</id>
+            <price type="a">Цена для торговых точек категории А</price>
+            <price type="b">Цена для торговых точек категории В</price>
+            <price type="b+">Цена для торговых точек категории В+</price>
+            <price type="c">Цена для торговых точек категории В+</price>
+            <price type="horeca">Цена для торговых точек категории Horeca</price>
+            <price type="market">Цена для торговых точек категории рынки и базары</price>
+
+            <data>
+                <name>Название продукции</name>
+                <text>Описание товара</text>
+                <images>
+                    <image>Ссылка на фотографию продукции</image>
+                    ...
+                    <image>Ссылка на фотографию продукции</image>
+                </images>
+                Любые другие параметры
+            </data>
+        </product>
+        ...
+        <product>
+            <id>ID записи (уникальное значение)</id>
+            <price type="a">Цена для торговых точек категории А</price>
+            <price type="b">Цена для торговых точек категории В</price>
+            <price type="b+">Цена для торговых точек категории В+</price>
+            <price type="c">Цена для торговых точек категории В+</price>
+            <price type="horeca">Цена для торговых точек категории Horeca</price>
+            <price type="market">Цена для торговых точек категории рынки и базары</price>
+            <is_delete>Если удалить запись надо, то 1 иначе 0 или не добавлять данный параметр</is_delete>
+            <data>
+                <name>Название продукции</name>
+                <text>Описание товара</text>
+                <images>
+                    <image>Ссылка на фотографию продукции</image>
+                    ...
+                    <image>Ссылка на фотографию продукции</image>
+                </images>
+                Любые другие параметры
+            </data>
+        </product>
+    </products>
+</data>
+
+Ответ от сервера.
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <result status="1">Зарос выполнен</result>
+    или
+    <result status="0">Текст ошибки</result>
+</data>

@@ -1,0 +1,23 @@
+<?php defined('SYSPATH') or die('No direct script access.');
+return array(
+    '/en/room-cottage.html?iframe=true&width=700&height=500' => '/en/room?id=4017',
+    '/en/room-luxe-mobile.html' => '/en/room?id=3769',
+    '/en/room-standard.html?iframe=true&width=700&height=500' => '/en/room?id=3720',
+    '/en/about-swimming-pools-mobile.html' => '/en/water',
+    '/en/index-en.html' => '/en',
+    '/en/about-thermal-water.html' => '/en/water',
+    '/en/room-semi-luxe-mobile-en.html' => '/en/room?id=3769',
+    '/en/room-cottage-mobile-en.html' => '/en/room?id=4017',
+    '/en/room-luxe-en.html?iframe=true&width=700&height=500' => '/en/room?id=3769',
+    '/en/room-standard-mobile-en.html' => '/en/room?id=3720',
+    '/ewExternalFiles/Кафе Кара Дала Меню 2018-H1.pdf' => '/files/2/2018/09/20/3749/3749.pdf',
+    '/fr/room-cottage-mobile-fr.html' => '/en/room?id=4017',
+    '/fr/room-luxe-mobile-fr.html' => '/en/room?id=3769',
+    '/fr/room-standard-fr.html?iframe=true&width=700&height=500' => '/en/room?id=3720',
+    '/fr/mobile-fr.html' => '/en',
+    '/en/mobile-en.html' => '/en',
+    '/en/room-cottage-en.html?iframe=true&width=700&height=500' => '/en/room?id=4017',
+    '/en/room-luxe-mobile-en.html' => '/en/room?id=3769',
+    '/en/room-semi-luxe-en.html?iframe=true&width=700&height=500' => '/en/room?id=3769',
+    '/en/room-standard-en.html?iframe=true&width=700&height=500' => '/en/room?id=3720',
+);

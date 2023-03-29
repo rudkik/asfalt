@@ -1,0 +1,13 @@
+<tr>
+    <td><?php echo $data->values['name']; ?></td>
+    <td><?php echo $data->getElementValue('shop_id'); ?></td>
+    <td class="text-right"><?php echo Func::getNumberStr($data->values['tariff'], true, 2, false); ?></td>
+    <td class="text-right"><?php echo Func::getNumberStr($data->values['tariff_holiday'], true, 2, false); ?></td>
+    <td>
+        <ul class="list-inline tr-button <?php if ($data->values['is_delete'] == 1) { echo ' un-'; } ?>delete">
+            <li><a href="<?php echo Func::getFullURL($siteData, '/shopballastdistance/edit', array('id' => 'id'), array('shop_branch_id' => $data->values['shop_id']), $data->values); ?>" class="link-blue"><i class="fa fa-edit margin-r-5"></i> Изменить</a></li>
+            <li class="tr-remove"><a href="<?php echo Func::getFullURL($siteData, '/shopballastdistance/del', array('id' => 'id'), array('shop_branch_id' => $data->values['shop_id']), $data->values); ?>" class="link-red text-sm"><i class="fa fa-remove margin-r-5"></i> Удалить</a></li>
+            <li class="tr-un-remove"><a href="<?php echo Func::getFullURL($siteData, '/shopballastdistance/del', array('id' => 'id'), array('shop_branch_id' => $data->values['shop_id'], 'is_undel' => 1), $data->values); ?>" class="link-red text-sm"><i class="fa fa-reply margin-r-5"></i> Восстановить</a></li>
+        </ul>
+    </td>
+</tr>

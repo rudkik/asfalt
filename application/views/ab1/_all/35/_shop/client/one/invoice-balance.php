@@ -1,0 +1,2 @@
+<span>Итоговый баланс</span> <label style="font-size: 18px"><?php echo Func::getNumberStr($data->values['balance'], TRUE, 2, FALSE);?></label> тг<br>
+<span>Наличные</span> <label style="font-size: 18px"><?php echo Func::getNumberStr($data->values['balance_cache'], TRUE, 2, FALSE);?></label> тг<br>

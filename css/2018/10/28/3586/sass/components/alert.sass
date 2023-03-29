@@ -1,0 +1,30 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.alert
+  width: 100%
+  display: block
+  padding: $mp-default / 3 * 2 $mp-default * 2 $mp-default * 2 - $mp-default / 3
+  padding-right: $mp-default * 5
+  background-color: color('lightgray')
+  position: relative
+  @media screen and (max-width: 575px)
+    padding: $mp-default / 3 $mp-default * 2.1 $mp-default $mp-default
+  &__close
+    cursor: pointer
+    position: absolute
+    right: $mp-default * 1.25
+    top: $mp-default * 1.25
+    height: 26px
+    width: 26px
+    filter: grayscale(1)
+    transition: all 0.2s ease-out
+    background:
+      image: url('../img/icons/close.png')
+      position: center center
+      repeat: no-repeat
+      size: cover
+    &:hover
+      filter: grayscale(0)
+  &.close
+    transition: all 0.2s ease-out
+    opacity: 0

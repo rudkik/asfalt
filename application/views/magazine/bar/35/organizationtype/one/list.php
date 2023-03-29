@@ -1,0 +1,1 @@
+<option value="<?php echo $data->values['id'];?>" data-id="<?php echo $data->values['id'];?>" data-is_bin="<?php echo $data->values['is_bin'];?>"><?php echo $data->values['name'];?></option>

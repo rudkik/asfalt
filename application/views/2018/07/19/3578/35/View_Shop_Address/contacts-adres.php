@@ -1,0 +1,1 @@
+<li><span><?php echo Helpers_Address::getAddressStr($siteData, $data->values, ', '); ?></span></li>

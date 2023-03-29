@@ -1,0 +1,202 @@
+@import '../_vars.sass'
+.catalog
+  &__wrap
+    width: 100%
+    padding: 1px $pl * 2
+    overflow-x: hidden
+    overflow-y: auto
+    @media screen and (max-width: 991px)
+      padding-left: 0
+      padding-right: 0
+    .fix420
+      @media screen and (max-width: 419px)
+        flex-basis: 100%
+        max-width: 100%
+    .fix420margin
+      @media screen and (max-width: 419px)
+        margin-top: $pl / 2
+        margin-bottom: $pl / 2
+  &__switch
+    &__wrap
+      margin-top: $margin
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+    &__radio
+      margin-right: 15px
+      margin-bottom: 15px
+      &__input
+        &:checked + label
+          color: white
+          background-color: $main_color
+        &[type="radio"]
+          display: none
+      &__text
+        display: inline-block
+        background-color: white
+        border: 1px solid $main_color
+        color: $main_color
+        transition: all 0.1s ease-in
+        &:hover
+          color: white
+          background-color: $main_light_color
+          border-color: $main_light_color
+    &__sort
+      z-index: 2
+      display: flex
+      align-items: center
+      position: relative
+      color: black
+      background-color: white
+      border: 1px solid black
+      padding-left: $pl / 2
+      padding-right: $pl / 2 + 15
+      transition: all 0.1s ease-in
+      &:hover
+        color: white
+        background-color: $main_light_color
+        border-color: $main_light_color
+        &:after
+          border-bottom-color: $main_dark_color
+          border-top-color: $main_dark_color
+      &:after
+        content: ''
+        position: absolute
+        right: $pl / 2
+        top: calc(50% + 1px)
+        transform: translateY(-50%)
+        border: 5px solid transparent
+        border-top: 10px solid $main_color
+        border-bottom: 0px solid transparent
+        transition: all 0.1s linear
+      &.active
+        &:after
+          border-top:
+            width: 0px
+            color: transparent
+          border-bottom:
+            width: 10px
+            color: $main_color
+        ul
+          display: flex
+      &__list
+        display: none
+        flex-direction: column
+        max-height: 160px
+        overflow-y: auto
+        z-index: 3
+        position: absolute
+        left: -1px
+        top: 100%
+        width: auto
+        text-align: left
+        border: 1px solid black
+        &__item
+          width: auto
+          max-width: 200px
+          padding: 0
+          background-color: white
+          color: black
+          overflow: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+      &__radio
+        &__input
+          display: none
+          &:checked + label
+            color: white
+            background-color: $main_color
+          &[type="radio"]
+            display: none
+        &__text
+          display: inline-block
+          padding: 0 $pl / 2
+          width: 100%
+          height: auto
+          background-color: white
+          transition: all 0.1s ease-in
+          &:hover
+            color: white
+            background-color: $main_light_color
+            border-color: $main_light_color
+  &__product
+    &__wrap
+      text-align: right
+      width: 200%
+      margin-bottom: 60px
+      &_block
+        transition: all 0.1s ease
+        @media screen and (max-width: 991px)
+          margin-bottom: $margin
+        *
+          transition: all 0.1s ease
+    &__title
+      background-color: $main_color
+      line-height: 60px
+      font-size: 24px
+      color: white
+      margin-right: -15px
+      white-space: nowrap
+      padding-right: $pl
+      .col-6
+        display: flex
+        align-items: center
+      &__model
+        @media screen and (max-width: 991px)
+          text-align: left
+          padding-left: $pl
+        span
+          font-weight: 700
+      &__lease
+        border-color: white
+        &__wrap
+        &:before
+          border-left-color: white
+        &:after
+          border-left-color: $main_color !important
+    &__tth
+      padding-top: 25px
+      padding-bottom: 50px
+      padding-right: 15px
+      @media screen and (max-width: 419px)
+        padding-bottom: 0
+      &__wrap
+        background-color: $main_light_color
+        margin-right: -15px
+        @media screen and (max-width: 991px)
+          height: calc(100% - 60px)
+          >.row
+            height: 100%
+            >.col-6
+              display: flex
+              flex-direction: column
+              align-items: flex-end
+              justify-content: space-between
+        @media screen and (max-width: 419px)
+          padding-top: 120px
+      &__more_info
+        transform: translateY(50%)
+        margin-right: 15px
+      span
+        font-weight: 700
+        white-space: nowrap
+    &__preview_img
+      position: relative
+      left: -50%
+      @media screen and (max-width: 991px)
+        height: calc(100% - 60px)
+        margin-top: 60px
+        padding-top: $pl / 2
+        padding-bottom: $pl / 2
+        background-color: $main_light_color
+        flex-basis: calc(50% - 30px)
+        margin-left: 15px
+      @media screen and (max-width: 419px)
+        transform: translateX(-25%)
+        max-height: 120px
+        margin-top: 120px
+      img
+        display: none
+        max-width: 50%
+    &__zi
+      z-index: 2

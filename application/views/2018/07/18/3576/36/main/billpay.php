@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::View_Hotel_Shop_Bill\billpay']); ?>

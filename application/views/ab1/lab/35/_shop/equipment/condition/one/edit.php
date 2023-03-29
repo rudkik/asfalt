@@ -1,0 +1,92 @@
+<div class="row record-input record-list">
+    <div class="col-md-3 record-title"></div>
+    <div class="col-md-9">
+        <label class="span-checkbox">
+            <input name="is_public" value="0" style="display: none;">
+            <input name="is_public" <?php if (Arr::path($data->values, 'is_public', '1') == 1) { echo ' value="1" checked'; }else{echo 'value="0"';} ?> type="checkbox" class="minimal">
+            Показать
+        </label>
+    </div>
+</div>
+<div class="row record-input record-list">
+    <div class="col-md-3 record-title">
+        <label>
+            <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+            Дата фиксации состояния
+        </label>
+    </div>
+    <div class="col-md-3">
+        <input name="date" type="datetime"  date-type="date"  class="form-control" placeholder="Дата фиксации состояния" required value="<?php echo Helpers_DateTime::getDateTimeFormatRus('date'); ?>">
+    </div>
+</div>
+<div class="row record-input record-list">
+    <div class="col-md-3 record-title">
+        <label>
+            <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+            Оборудование
+        </label>
+    </div>
+    <div class="col-md-9">
+        <select id="shop_equipment_id" name="shop_equipment_id" class="form-control select2" required style="width: 100%;">
+            <option value="0" data-id="0">Без значения</option>
+            <?php echo $siteData->globalDatas['view::_shop/equipment/list/list']; ?>
+        </select>
+    </div>
+</div>
+<div class="row record-input record-list">
+    <div class="col-md-3 record-title">
+        <label>
+            <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+            Отдел нахождения оборудования
+        </label>
+    </div>
+    <div class="col-md-9">
+        <select id="shop_worker_department_id" name="shop_worker_department_id" class="form-control select2" required style="width: 100%;">
+            <option value="0" data-id="0">Без значения</option>
+            <?php echo $siteData->globalDatas['view::_shop/worker/department/list/list']; ?>
+        </select>
+    </div>
+</div>
+<div class="row record-input record-list">
+    <div class="col-md-3 record-title">
+        <label>
+            <sup><i class="fa fa-fw fa-asterisk text-red"></i></sup>
+            Состояние оборудования на текущий момент времени
+        </label>
+    </div>
+    <div class="col-md-9">
+        <select id="shop_equipment_state_id" name="shop_equipment_state_id" class="form-control select2" required style="width: 100%;">
+            <option value="0" data-id="0">Без значения</option>
+            <?php echo $siteData->globalDatas['view::_shop/equipment/state/list/list']; ?>
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div hidden>
+        <?php if($siteData->action != 'clone') { ?>
+            <input name="id" value="<?php echo Arr::path($data->values, 'id', 0);?>">
+        <?php } ?>
+    </div>
+    <div class="modal-footer text-center">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </div>
+</div>
+
+<script>
+    $( document ).ready(function() {
+        $(".button").click(function(){
+            $( "input, select" ).each( function(){
+                var $this = $( this );
+                var value = $this.val();
+                $this.removeClass( {'border: 2px solid red !important;'} );
+                if ( value.length == 0 )
+                {
+                    $this.addClass( {'border: 2px solid red !important;'} );
+                }
+            });
+        });
+        $( "input,select" ).focus( function(){
+            $( this ).removeClass( {'border: 2px solid red !important;'} );
+        })
+    });
+</script>

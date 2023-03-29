@@ -1,0 +1,16 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.breadcrumbs
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  flex-wrap: wrap
+  font-size: $size-normal - 4
+  line-height: $size-normal
+  padding: $mp-default / 2 0
+  &__link
+    white-space: nowrap
+    &:before
+      content: '\00a0›\00a0'
+    &:first-child:before
+      content: none

@@ -1,0 +1,35 @@
+@import '../utils/_module'
+@import '../themes/_module'
+.scrollme
+  height: 2px
+  width: 2px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  @media screen and (max-width: 991px)
+    display: none
+  &--abs-center
+    position:  absolute
+    top: 50%
+    left: 0
+    right: auto
+    margin-top: -1px
+  &--right
+    left: auto
+    right: 0
+  &__inner
+    position: absolute
+    transform: rotate(-90deg)
+    display: flex
+    align-items: center
+    white-space: nowrap
+    text-transform: lowercase
+    @include font-family('ProximaNova', 'SemiBold')
+    span
+      padding: 0 $mp-default
+  &__line
+    display: inline-block
+    height: 2px
+    width: 100px
+    background-color: color('black')

@@ -1,0 +1,1 @@
+<a class="btn" href="<?php echo $siteData->urlBasic; ?>/blog?hashtag=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a>

@@ -1,0 +1,1 @@
+<option value="<?php echo !empty($data->values['name'])?$data->values['name']:$data->values['shablon']['ru'];?>"><?php echo $data->values['title']['ru'];?></option>

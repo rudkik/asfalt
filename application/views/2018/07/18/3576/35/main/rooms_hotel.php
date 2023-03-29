@@ -1,0 +1,1 @@
+<?php echo $siteData->replaceDatas['view::View_Hotel_Shop_Rooms\hotel']; die; ?>

@@ -1,0 +1,90 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.dropdown
+  position: relative
+  height: $field-height
+  max-width: 480px
+  -moz-appearance: none
+  -webkit-appearance: none
+  -ms-appearance: none
+  appearance: none
+  &--full
+    width: 100%
+  &--invert
+    &:after
+      background-color: color('lightgray') !important
+    .dropdown
+      &__current
+        &__wrap
+          background-color: color('lightgray')
+      &__item
+        background-color: color('lightgray')
+  &:after
+    content: ''
+    z-index: 2
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    height: $field-height - 10
+    width: $field-height - 10
+    pointer-events: none
+    background:
+      color: color('white')
+      image: url('../img/icons/arrow.png')
+      repeat: no-repeat
+      position: center center
+  &.field
+    .dropdown__current__wrap
+      padding-left: 0
+      padding-right: 0
+  &__current
+    &__wrap
+      z-index: 2
+      display: block
+      width: 100%
+      height: $field-height
+      border: none
+      font-size: $field-fsize
+      padding-left: $mp-default * 2
+      padding-right: $mp-default * 2
+      background:
+        color: color('white')
+        image: none
+      border-radius: 0
+      border: 0
+      box-shadow: none
+      -moz-appearance: none
+      -webkit-appearance: none
+      -ms-appearance: none
+      appearance: none
+      &.field
+        width: 100%
+        
+  &.open
+    .dropdown
+      &__list
+        visibility: visible
+      &__rotate
+        transform: rotateX(180deg)
+  &__list
+    visibility: hidden
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    overflow: auto
+    max-height: $field-height * 4
+  &__item
+    cursor: pointer
+    font-size: $size-normal - 2
+    height: $field-height
+    line-height: $field-height
+    padding: 0 $mp-default * 2
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    background-color: color('white')
+  &__rotate
+    transition: all 0.3s ease-out
+    transform: rotateX(0deg)

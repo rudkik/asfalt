@@ -1,0 +1,54 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.popup
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-height: calc(100vh - 30px)
+  max-width: calc(100vw - 30px)
+  padding: $mp-default * 2
+  overflow: auto
+  background-color: white
+  &__wrap
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    z-index: 9999
+    transition: opacity 0.3s ease-out
+    .popup
+      display: block
+    &.close
+      opacity: 0
+    &:empty
+      top: 100vh
+      opacity: 0
+  &__overlay
+    cursor: pointer
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    background-color: rgba(color('black'), 0.4)
+  &__close
+    cursor: pointer
+    position: absolute
+    top: $mp-default * 2
+    right: $mp-default * 2
+    height: 26px
+    width: 26px
+    background:
+      image: url('../img/icons/close.png')
+      repeat: no-repeat
+      position: center center
+      size: cover
+    @media screen and (min-width: 768px)
+      filter: grayscale(1)
+      transition: all 0.2s ease-out
+      &:hover
+        filter: grayscale(0)

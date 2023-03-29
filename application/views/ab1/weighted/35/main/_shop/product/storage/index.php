@@ -1,0 +1,76 @@
+<div class="col-md-12 padding-top-15px">
+	<div class="nav-tabs-custom nav-tabs-navy">
+        <?php
+        $view = View::factory('ab1/weighted/35/main/menu');
+        $view->siteData = $siteData;
+        $view->data = $data;
+        echo Helpers_View::viewToStr($view);
+        ?>
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <?php
+                $view = View::factory('ab1/weighted/35/main/_shop/product/storage/filter');
+                $view->siteData = $siteData;
+                $view->data = $data;
+                echo Helpers_View::viewToStr($view);
+                ?>
+            </div>
+                <div class="nav-tabs-custom" style="margin-bottom: 0px;">
+                    <ul id="tab-status" class="nav nav-tabs pull-right ui-sortable-handle">
+                        <li class="<?php if(Arr::path($siteData->urlParams, 'is_delete', '') == 1){echo 'active';}?>"><a href="<?php echo Func::getFullURL($siteData, '/shopproductstorage/index', array(), array('is_delete' => 1, 'is_public_ignore' => 1));?>" data-id="is_delete_public_ignore">Удаленные</a></li>
+                        <li class="<?php if(Arr::path($siteData->urlParams, 'is_not_public', '') == 1){echo 'active';}?>"><a href="<?php echo Func::getFullURL($siteData, '/shopproductstorage/index', array(), array('is_not_public' => 1));?>" data-id="is_not_public">Неактивные</a></li>
+                        <li class="<?php if(Arr::path($siteData->urlParams, 'is_public', '') == 1){echo 'active';}?>"><a href="<?php echo Func::getFullURL($siteData, '/shopproductstorage/index', array(), array('is_public' => 1));?>" data-id="is_public">Активные</a></li>
+                        <li class="<?php if(($siteData->url != '/'.$siteData->actionURLName.'/shopproductstorage/index_edit') && ($siteData->url != '/'.$siteData->actionURLName.'/shopproductstorage/sort') && (Arr::path($siteData->urlParams, 'is_delete', '') != 1) && (Arr::path($siteData->urlParams, 'is_not_public', '') != 1) && (Arr::path($siteData->urlParams, 'is_public', '') != 1)){echo 'active';}?>"><a href="<?php echo Func::getFullURL($siteData, '/shopproductstorage/index', array(), array('is_public_ignore' => 1));?>" data-id="is_public_ignore">Все <i class="fa fa-fw fa-info text-blue"></i></a></li>
+                        <li class="pull-left header" style="padding-right: 0px">
+                            <span><a href="<?php echo Func::getFullURL($siteData, '/shopproductstorage/new', array());?>" class="btn bg-purple btn-flat">
+                                <i class="fa fa-fw fa-plus"></i>
+                                Добавить объем
+                            </a></span>
+                        </li>
+                        <li class="pull-left header">
+                            <span><a data-action="car-new" href="#" class="btn bg-blue btn-flat">
+                                <i class="fa fa-fw fa-plus"></i>
+                                Добавить машину
+                            </a></span>
+                        </li>
+                    </ul>
+                </div>
+            <div class="body-table">
+            <div class="box-body table-responsive" style="padding-top: 0px;">
+                <?php echo trim($data['view::_shop/product/storage/list/index']); ?>
+            </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<?php
+$view = View::factory('ab1/weighted/35/_shop/product/storage/modal/car');
+$view->siteData = $siteData;
+$view->data = $data;
+$view->url = '/weighted/shopclient/save';
+echo Helpers_View::viewToStr($view);
+?>
+
+<script>
+    $('[data-action="car-new"]').click(function (e) {
+        e.preventDefault();
+        jQuery.ajax({
+            url: '/weighted/data/get',
+            data: ({
+                'is_tarra': true,
+            }),
+            type: "GET",
+            success: function (dataTarra) {
+                var obj = jQuery.parseJSON($.trim(dataTarra));
+                $('#dialog-car [name="number"]').attr('value', obj.number).val(obj.number);
+                $('#dialog-car [name="tare"]').attr('value', obj.tarra).val(obj.tarra);
+                $('#dialog-car').modal('show');
+            },
+            error: function (data) {
+                console.log(data.responseText);
+                alert('Ошибка запроса веса и номера машины.');
+            }
+        });
+    }).trigger('change');
+</script>

@@ -1,0 +1,26 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.section-number
+  display: inline-block
+  opacity: 0.4
+  color: color('lightgray')
+  position: relative
+  line-height: $size-title + 20
+  font-size: $size-title + 20
+  padding-bottom: 40px
+  white-space: nowrap
+  @include font-family('ProximaNova', 'ExtraBold')
+  @media screen and (max-width: 991px)
+    display: none
+  &:after
+    content: ''
+    position: absolute
+    left: 5px
+    bottom: 0
+    height: 40px
+    width: 10px
+    background-color: color('lightgray')
+  &--invert
+    color: color('white')
+    &:after
+      background-color: color('white')

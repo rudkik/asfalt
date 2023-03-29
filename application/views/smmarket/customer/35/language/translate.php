@@ -1,0 +1,1 @@
+<li><a href="<?php echo $siteData->urlBasic.$data->additionDatas['url'];?><?php if($siteData->branchID > 0){ ?>&shop_branch_id=<?php echo $siteData->branchID; ?><?php } ?>&data_language_id=<?php echo $data->id; ?>"><?php echo $data->values['name']; ?></a></li>

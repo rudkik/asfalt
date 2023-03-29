@@ -1,0 +1,66 @@
+<?php if ($data->id > 0){ ?>
+    <?php
+    Helpers_SEO::setSEOHeader(Model_Shop_Table_Rubric::TABLE_NAME, $data, $siteData);
+    $siteData->siteImage = $data->values['image_path'];
+    $_GET['_root_id_'] = $data->values['root_id'];
+    ?>
+    <header class="header-bread-crumbs">
+        <div class="container">
+            <h2><?php echo $data->values['name']; ?></h2>
+            <div class="box-bread-crumbs">
+                <a href="<?php echo $siteData->urlBasicLanguage; ?>">Главная</a> |
+                <?php echo trim($siteData->globalDatas['view::View_Shop_Table_Rubrics\-products-khlebnye-kroshki']); ?>
+                <span><?php echo $data->values['name']; ?></span>
+            </div>
+        </div>
+    </header>
+    <header class="header-catalogs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-detvora']); ?>
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-brendy']); ?>
+                </div>
+                <div class="col-xs-9">
+                    <h1 itemprop="headline" class="objectTitle2"><?php echo $data->values['name']; ?></h1>
+                    <div class="line-red"></div>
+                    <div class="box_text">
+                        <?php echo $data->values['text']; ?>
+                    </div>
+                    <?php if($data->id == 4016){?>
+                        <?php echo trim($siteData->globalDatas['view::View_Shop_News\vid_lda']); ?>
+                    <?php }?>
+
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-produktciya']); ?>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php }else{ ?>
+    <header class="header-bread-crumbs">
+        <div class="container">
+            <h2>Результаты поиска</h2>
+            <div class="box-bread-crumbs">
+                <a href="<?php echo $siteData->urlBasicLanguage; ?>">Главная</a> |
+                <?php echo trim($siteData->globalDatas['view::View_Shop_Table_Rubrics\-products-khlebnye-kroshki']); ?>
+                <span>Результаты поиска</span>
+            </div>
+        </div>
+    </header>
+    <header class="header-catalogs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-detvora']); ?>
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-brendy']); ?>
+                </div>
+                <div class="col-xs-9">
+                    <?php $name = Request_RequestParams::getParamStr('name_lexicon'); ?>
+                    <h1 itemprop="headline" class="objectTitle2">Результаты поиска <?php if (!empty($name)){echo 'по запросу «'.$name.'»';} ?></h1>
+                    <div class="line-red"></div>
+                    <?php echo trim($siteData->globalDatas['view::View_Shop_Goods\-products-produktciya']); ?>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php } ?>

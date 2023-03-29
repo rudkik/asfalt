@@ -1,0 +1,736 @@
+@import url("../ProximaNova/stylesheet.css");
+
+body{
+    font-family: "Proxima Nova";
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1);
+    font-weight: 400;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: "Proxima Nova";
+    font-weight: 700;
+}
+.h1, h1{
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 1);
+    margin: 0px 0px 30px;
+}
+.h2, h2{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    margin: 0px 0px 30px;
+}
+p{
+    margin-bottom: 20px;
+}
+.container{
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 1680px;
+}
+.header-left {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 64px;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+    background-color: rgba(50, 50, 50, 1);
+}
+.header-left .box-find{
+    background-color: rgba(0, 173, 238, 1);
+    padding: 23px 22px;
+}
+.box-languages{
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 24.5px;
+}
+.box-languages .box-language{
+    text-align: center;
+    padding: 24.5px 18px;
+    height: 100%;
+    float: left;
+}
+.box-languages .box-language a{
+    color: rgba(113, 113, 113, 1);
+}
+.box-languages .box-language a:focus, .box-languages .box-language a:hover, .box-languages .box-language a:active{
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+.box-languages .box-language .language {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.box-socials{
+    bottom: 0px;
+    position: absolute;
+    padding-bottom: 50px;
+}
+.box-socials .box-social{
+    padding: 18.5px 0px;
+    width: 64px;
+}
+.header-direction{
+    float: right;
+    width: 462px;
+    margin-right: 64px;
+}
+.box-directions{
+    background: url("../img/direction/background.png") no-repeat scroll center top transparent;
+}
+.box-directions .body-directions h3{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    margin: 0px 0px 21px;
+}
+.box-directions .body-directions{
+    background: rgba(0, 0, 0, 0.85);
+    padding: 49px 47px 37px;
+    width: 100%;
+    text-align: center;
+}
+.box-directions .body-directions .sector{
+    display: inline-block;
+}
+.box-directions .body-directions .sector .select{
+    display: none;
+}
+.box-directions .body-directions .sector.active .select, .box-directions .body-directions .sector:active .select, .box-directions .body-directions .sector:focus .select, .box-directions .body-directions .sector:hover .select{
+    display: block;
+}
+.box-directions .body-directions .sector.active .current, .box-directions .body-directions .sector:active .current, .box-directions .body-directions .sector:focus .current, .box-directions .body-directions .sector:hover .current{
+    display: none;
+}
+.box-directions .body-directions .sector img {
+    margin: 0 auto;
+}
+.box-direction-info{
+    background: url("../img/direction/background-1.png") no-repeat scroll center center transparent;
+    color: #fff;
+    display: none;
+}
+.box-direction-info.active{
+    display: block;
+}
+.box-direction-info .direction-info{
+    padding: 82px 45px 40px 56px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.box-direction-info h2{
+    font-size: 41px;
+    font-weight: 300;
+    margin: 0px 0px 27px;
+    color: #fff;
+}
+.box-direction-info .info{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    text-overflow: clip;
+    overflow: hidden;
+    max-height: 250px;
+}
+.box-direction-info a{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+}
+.box-football .media-left{
+    background: url("../img/football/b-1.png") no-repeat scroll center center transparent;
+    background-size: cover;
+    width: 50%;
+}
+.box-football .media-body{
+    background-color: rgba(255, 221, 1, 1);
+    width: 50%;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box-football .media-body a{
+    color: rgba(51, 51, 51, 1);
+}
+.box-ecology .media-left{
+    width: 50%;
+    background-color: rgba(21, 112, 47, 1);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 15px;
+    color: #fff
+}
+.box-ecology .media-body{
+    width: 50%;
+    background: url("../img/football/b-2.png") no-repeat scroll center center transparent;
+    background-size: cover;
+}
+.box-partners{
+    padding: 49px 34px 49px 55px;
+    background-color: rgba(247, 247, 247, 1);;
+}
+.box-partners h2{
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    text-transform: uppercase;
+    margin: 0px 0px 30px 0px;
+}
+.box-partners .partner img{
+    margin-bottom: 28px;
+    max-height: 45px;
+}
+.box-partners .partner .info{
+    font-size: 16px;
+    color: rgba(97, 97, 97, 1);
+}
+.box-title{
+    display: inline-block;
+    width: 100%;
+}
+.box-title .b-left{
+    padding-right: 35px;
+}
+.box-title .b-left{
+    background: url("../img/b-left.png") no-repeat scroll center left transparent;
+    width: 11px;
+    height: 18px;
+}
+.box-title .b-left:focus, .box-title .b-left:hover, .box-title .b-left:active{
+    background: url("../img/b-left-active.png") no-repeat scroll center left transparent;
+}
+.box-title .b-right{
+    background: url("../img/b-right.png") no-repeat scroll center right transparent;
+    width: 11px;
+    height: 18px;
+    padding-left: 35px;
+}
+.box-title .b-right:focus, .box-title .b-right:hover, .box-title .b-right:active{
+    background: url("../img/b-right-active.png") no-repeat scroll center right transparent;
+}
+.box-partners .partner .info .men{
+    font-size: 18px;
+    color: rgba(148, 159, 167, 1);
+}
+.border-t-grey{
+    border-top: 2px solid rgba(216, 216, 216, 1);
+}
+.header-body{
+    float: left;
+    width: calc(100% - 526px);
+}
+.box-menu{
+    padding: 13px 0px 22px;
+    margin-bottom: 22px;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 4px solid #4babc5;
+}
+.box-menu .menus{
+    display: inline-block;
+    float: left;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    padding-top: 38px;
+}
+.box-menu .menus .menu{
+    float: left;
+    margin-right: 35px;
+}
+.box-menu .menus .menu a{
+    color: rgba(51, 51, 51, 1);
+}
+.box-menu .logo{
+    margin-right: 43px;
+    float: left;
+}
+.box-menu .contact a{
+    font-size: 21px;
+    font-weight: 700;
+    color: rgba(0, 173, 238, 1);
+    float: right;
+    display: inline-block;
+    padding-top: 33px;
+}
+.box-body{
+    padding-top: 20px;
+}
+.box-quote{
+    background-color: rgba(247, 247, 247, 1);
+    padding: 32px 35px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.box-quote .quote{
+    background: url("../img/quote.png") no-repeat scroll top left transparent;
+    padding-left: 104px;
+}
+.box-quote .quote p{
+    max-width: 695px;
+}
+.box-quote.white{
+    background: #fff;
+    border-top: 2px solid rgba(148, 159, 167, 0.18);
+    border-bottom: 2px solid rgba(148, 159, 167, 0.18);
+    padding: 43px 35px;
+    font-size: 26px;
+}
+footer{
+    padding-right: 64px;
+}
+footer .line{
+    padding-bottom: 37px;
+    border-top: 2px solid rgba(148, 159, 167, 0.18);
+    display: inline-block;
+    width: 100%;
+}
+footer .copyright{
+    float: left;
+    font-size: 16px;
+    color: rgba(148, 159, 167, 1);
+    margin-right: 35px;
+}
+footer .address{
+    float: left;
+    font-size: 14px;
+    color: rgba(148, 159, 167, 1);
+}
+.box-news{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.box-news .news{
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 100%;
+}
+.box-news .col-md-3{
+    color: rgba(148, 159, 167, 1);
+}
+.box-news .col-md-9 a{
+    color: rgba(51, 51, 51, 1);
+}
+.list-directions{
+    padding-top: 25px;
+    display: inline-block;
+    width: 100%;
+}
+.list-directions .direction{
+    font-size: 18px;
+    padding-bottom: 30px;
+    text-overflow: clip;
+    overflow: hidden;
+}
+.list-directions .direction h3{
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0px 0px 35px;
+}
+.list-directions .direction h3 a{
+    color: rgba(51, 51, 51, 1);
+}
+.list-directions .direction img{
+    margin-bottom: 47px;
+}
+.list-directions .direction ul{
+    padding-left: 14px;
+    font-weight: bold;
+}
+.list-directions .direction ul a{
+    color: rgba(97, 97, 97, 1);
+}
+.box-address{
+    display: inline-block;
+    width: 100%;
+}
+.box-address h1{
+    padding-right: 20px;
+}
+.box-address .address{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(148, 159, 167, 1);
+    padding-top: 9px;
+}
+.box-message{
+    padding: 100px 0px 40px;
+    width: 100%;
+}
+.box-message h2{
+    font-size: 21px;
+    font-weight: bold;
+}
+.box-message textarea{
+    width: 100%;
+}
+.box-message .form-control, .box-message textarea{
+    border-radius: 0;
+    box-shadow: none;
+    border-color: rgba(148, 159, 167, 0.18);
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.box-message .btn-warning{
+    background: rgba(255, 221, 1, 1) !important;
+    border-color: rgba(255, 221, 1, 1);
+    border-radius: 0px;
+    font-size: 16px;
+    color: rgba(26, 24, 24, 1);
+    padding: 8px 21px;
+    margin-top: 20px;
+}
+.padding-t-0 {
+    padding-top: 0px;
+}
+.list-news{
+    padding-bottom: 30px;
+}
+.list-news .news{
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 45px;
+}
+.list-news .news .date{
+    color: rgba(148, 159, 167, 1);
+    margin-bottom: 20px;
+}
+.list-news .news a{
+    color: rgba(51, 51, 51, 1);
+}
+.list-news .big-news{
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.list-news .big-news .name{
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+.list-news .big-news .name a{
+    color: rgba(51, 51, 51, 1);
+}
+.list-news .big-news .info{
+    color: rgba(97, 97, 97, 1);
+    padding-bottom: 50px;
+}
+.list-news .big-news .full{
+    text-transform: uppercase;
+    color: rgba(51, 51, 51, 1);
+}
+.pagination > li > a, .pagination > li > span{
+    padding: 10px 16px;
+    border-radius: 0px !important;
+    width: 43px;
+    height: 43px;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #dfe1f0;
+    border-color: #dfe1f0;
+}
+.pagination > li > a, .pagination > li > span {
+    font-size: 15px;
+    color: rgba(51, 51, 51, 1) !important;
+}
+.box-pagination{
+    text-align: center;
+    margin-top: 6px;
+}
+.paginate_button a {
+    width: auto !important;
+}
+.bg-grey {
+    background: rgba(148, 159, 167, 0.18);
+    padding: 42px 0px;
+}
+.socials-title{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    padding-top: 6px;
+}
+.socials-title a{
+    color: rgba(51, 51, 51, 1);
+}
+.socials a{
+    margin-right: 11px;
+}
+.news-info{
+    padding-bottom: 40px;
+}
+.box-top{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.box-top .date{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(148, 159, 167, 1);
+    float: left;
+    display: inline-block;
+}
+.box-top .category{
+    float: right;
+    display: inline-block;
+    min-width: 154px;
+    width: 25px;
+    text-align: right;
+}
+.box-top .category a{
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+}
+.global-direct .box-menu .menus .menu a{
+    color: #fff !important;
+    font-weight: 400;
+}
+.global-direct .box-menu .contact a {
+    color: #fff !important;
+}
+.box-direct-info{
+    padding: 0px 50px 0px 154px;
+    width: 100%;
+    display: inline-block;
+    max-width: 876px;
+    min-height: 458px;
+}
+.box-direct-info h1{
+    font-size: 52px;
+    color: rgba(255, 255, 255, 1);
+}
+.box-direct-info .info{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+}
+.sector-background{
+    background: rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+.box-carousels{
+    width: 100%;
+    display: inline-block;
+}
+.box-text-main{
+    padding: 15px 0px 70px;
+}
+.list-direction-info{
+    display: inline-block;
+}
+#carousel-sector .carousel-control.left, #carousel-sector .carousel-control.right{
+    width: auto;
+    padding: 10px 0px;
+}
+#carousel-sector .carousel-inner {
+    padding: 0px 30px;
+}
+.logo{
+    max-height: 100px;
+}
+.box-contacts .contact{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(148, 159, 167, 1);
+    padding-bottom: 9px;
+}
+.box-contacts{
+    width: 100%;
+}
+.box-contacts h2{
+    font-size: 21px;
+    font-weight: bold;
+}
+.lines{
+    border-top: 8px solid #008016;
+    width: 100%;
+    margin-bottom: 37px;
+}
+.lines .blue{
+    border-top: 8px solid #1f497c;
+    width: 50%;
+    float: left;
+}
+.lines .yellow{
+    border-top: 8px solid #febf14;
+    width: 50%;
+    float: left;
+}
+.sectors-4{
+    display: inline-block;
+    width: 100%;
+}
+.sectors-2{
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+@media (max-width: 1554px) {
+    .sectors-2{
+        width: 100%;
+    }
+}
+@media (max-width: 1095px) {
+    .sectors-2 .direction{
+        width: 100%;
+    }
+}
+@media (max-width: 980px) {
+    .header-direction{
+        display: none;
+    }
+    .header-body {
+        width: calc(100% - 64px);
+    }
+}
+@media (min-width: 370px) and (max-width: 1184px) {
+    .box-menu .menus {
+        width: calc(100% - 143px);
+    }
+}
+@media (max-width: 369px) {
+    .box-menu .menus .menu {
+        float: none;
+    }
+}
+.box-goods{
+    padding: 50px 0px;
+}
+.goods{
+    margin-bottom: 25px;
+    height: 366.5px;
+}
+.goods .block-goods{
+    background-color: #fff;
+    text-align: left;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.goods .block-goods:focus,
+.goods .block-goods:hover{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.goods .block-goods > .img-goods{
+    width: 100%;
+}
+.block-goods .img-goods{
+    margin: 0 auto;
+}
+.goods h3{
+    margin-top: 10px;
+    min-height: 79.2px;
+    max-height: 79.2px;
+    text-overflow: clip;
+    overflow: hidden;
+}
+.goods h3 > a{
+    color: rgb(105, 105, 105);
+    font-size: 16px;
+}
+.goods h4 {
+    font-size: 16px;
+    height: 19.8px;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.goods h4 > a{
+    color: rgb(56, 101, 171);
+    font-size: 16px;
+}
+.goods .price{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(82, 118, 179);
+}
+.goods .status-new{
+    position: absolute;
+    right: 15px;
+}
+.goods .status-new > .discount-title{
+    position: absolute;
+    top: 14px;
+    left: 3px;
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    color: #fff;
+}
+.goods .status-new > .discount{
+    font-size: 20px;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    color: #fff;
+}
+.goods .block-count{
+    overflow: hidden;
+    text-align: center;
+    margin-top: 15px;
+}
+.goods .block-count input{
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 70px;
+    text-align: center;
+    height: 38px;
+    padding: 8px 12px;
+}
+.goods .block-count a{
+    float: left;
+    padding: 8px 15px;
+    width: 40px;
+}
+.goods .block-count span{
+    float: left;
+    padding-top: 8px;
+    margin-left: 10px;
+}
+.goods .block-count .block-center {
+    width: 190px;
+    margin: auto;
+    height: auto;
+    overflow: auto;
+}
+.goods .goods-info{
+    padding: 5px 20px 10px 20px;
+}
+.goods .buy a{
+    width: 100%;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 10px 12px;
+}

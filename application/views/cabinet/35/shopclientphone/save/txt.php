@@ -1,0 +1,1 @@
+<?php echo $data->id."\t".$data->values['email']."\t".str_replace("\r\n", ' ', $data->values['text']); ?>

@@ -1,0 +1,29 @@
+<ul class="nav nav-tabs">
+    <li <?php if(((strpos($siteData->url, '/shopproductrubric/')) || (strpos($siteData->url, '/shopproduct/pricelist') === false && strpos($siteData->url, '/shopproduct/'))) && (Request_RequestParams::getParamInt('shop_client_id') === NULL)){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopproductrubric/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Реализация</a></li>
+    <li <?php if((strpos($siteData->url, '/shopclient/statistics'))
+        || (strpos($siteData->url, '/shopboxcar/') === false && (Request_RequestParams::getParamBoolean('is_charity') !== true) && (Request_RequestParams::getParamInt('shop_client_id') !== NULL) && strpos($siteData->url, '/shopclient/charity_statistics') === false)
+        && (!((strpos($siteData->url, '/shopmovecar/')) || (strpos($siteData->url, '/shopmoveclient/'))))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopclient/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Реализация по клиентам</a></li>
+    <li <?php if((strpos($siteData->url, '/shopstorage/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopstorage/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Склад</a></li>
+    <li <?php if((strpos($siteData->url, '/shopregistermaterial/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopregistermaterial/statistics?shop_branch_id=<?php echo $siteData->shopID;?>" style="display: none">Остатки материалов</a></li>
+    <li <?php if((strpos($siteData->url, '/shopdelivery/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopdelivery/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Доставка</a></li>
+    <li <?php if(Request_RequestParams::getParamBoolean('is_import_car') && (strpos($siteData->url, '/shopcartomaterial/') || strpos($siteData->url, '/shopdaughter/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopcartomaterial/statistics?shop_branch_id=<?php echo $siteData->shopID;?>&is_import_car=1">Завоз материалов</a></li>
+    <li <?php if(!Request_RequestParams::getParamBoolean('is_import_car') && (strpos($siteData->url, '/shopcartomaterial/statistics') || strpos($siteData->url, '/shopdaughter/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopcartomaterial/statistics_subdivision?shop_branch_id=<?php echo $siteData->shopID;?>&is_import_car=0">Перемещение материалов</a></li>
+    <li <?php if(strpos($siteData->url, '/shopplan/')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopplan/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Заявки (В разработке)</a></li>
+    <li <?php if(Request_RequestParams::getParamInt('shop_client_id') === NULL && strpos($siteData->url, '/shopboxcar/')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopboxcar/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Приём вагонов</a></li>
+    <li <?php if(strpos($siteData->url, '/shopballast/')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopballast/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Балласт</a></li>
+    <li <?php if(strpos($siteData->url, '/shopcar/asu')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopcar/asu?shop_branch_id=<?php echo $siteData->shopID;?>">Очередь на погрузку</a></li>
+    <li <?php if((strpos($siteData->url, '/shopmovecar/')) || (strpos($siteData->url, '/shopmoveclient/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopmovecar/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Перемещение</a></li>
+    <li <?php if(Request_RequestParams::getParamBoolean('is_charity') === true || strpos($siteData->url, '/shopclient/charity_statistics')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopclient/charity_statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Благотворительность</a></li>
+    <li <?php if((Request_RequestParams::getParamInt('shop_client_id') > 0 && strpos($siteData->url, '/shopboxcar/index')) || (strpos($siteData->url, '/shoplesseecar/'))){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shoplesseecar/statistics?shop_branch_id=<?php echo $siteData->shopID;?>">Ответ.хранение</a></li>
+    <li style="display: none" <?php if(strpos($siteData->url, '/shopclientcontract/director')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopclientcontract/director?shop_branch_id=<?php echo $siteData->shopID;?>">Договоры</a></li>
+    <li style="display: none" <?php if(strpos($siteData->url, '/shopproduct/pricelist')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopproduct/pricelist?shop_branch_id=<?php echo $siteData->shopID;?>">Прайс-лист</a></li>
+    <li  <?php if(strpos($siteData->url, '/shopworkerentryexit/')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopworkerentryexit/history">КПП</a></li>
+    <?php if($siteData->operation->getIsAdmin()){ ?>
+        <li role="presentation" class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> Справочники <span class="caret"></span> </a>
+            <ul class="dropdown-menu">
+                <li <?php if(strpos($siteData->url, '/shopoperation/')){echo 'class="active"';}?>><a href="<?php echo $siteData->urlBasic; ?>/owner/shopoperation/index?is_public_ignore=1">Операторы</a></li>
+            </ul>
+        </li>
+    <?php } ?>
+</ul>

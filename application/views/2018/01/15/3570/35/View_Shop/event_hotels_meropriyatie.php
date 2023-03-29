@@ -1,0 +1,2 @@
+<h1><a href="<?php echo $siteData->urlBasic; ?>/event/hotels?id=<?php echo $data->values['id']; ?>">Проживание</a></h1>
+<span><a href="<?php echo $siteData->urlBasic; ?>/event?id=<?php echo $data->values['id']; ?>"><?php echo $data->values['name']; ?></a> / Проживание </span>

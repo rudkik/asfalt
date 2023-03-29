@@ -1,0 +1,1 @@
+<?php echo trim($data['view::_shop/building/list/index']); ?>

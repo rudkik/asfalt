@@ -1,0 +1,342 @@
+#tab-modals{
+    border: none;
+    display: inline-block;
+    padding: 5px 0px;
+}
+#tab-modals .btn-primary-outline {
+    padding: 10px 15px;
+}
+.fixed-table-container .fixed-table-body{
+    max-height: 465px;
+}
+.fixed-table-container tbody .selected td {
+    background-color: rgba(103, 168, 206, 0.2);;
+}
+.modal-edit .modal-dialog {
+    max-width: 700px;
+}
+.modal-edit .margin-0{
+    margin: 0px !important;
+}
+.modal-edit .col-form-label{
+    text-align: right;
+    padding-right: 0px;
+}
+#tab-modals .btn-danger-outline {
+    padding: 10px 10px;
+}
+#tab-modals .btn-primary-outline:active, #tab-modals .btn-primary-outline:focus,
+#tab-modals .btn-primary-outline:hover, #tab-modals .btn-primary-outline.active {
+    background-color: #3a529b;
+    border-color: #3a529b;
+    color: #fff;
+}
+#tab-modals .btn-primary-outline{
+    border-right: none;
+}
+#tab-modals .btn-danger-outline:active, #tab-modals .btn-danger-outline:focus,
+#tab-modals .btn-danger-outline:hover{
+    background-color: #ec644b;
+    border-color: #ec644b;
+    color: #fff;
+}
+#tab-modals .btn-danger-outline{
+    border-left: none;
+}
+
+#tab-modals .ks-icon{
+    margin: 0px;
+}
+#tab-modals .nav-item {
+    float: left;
+    margin: 5px 15px 5px 0px;
+}
+.modal-edit .ks-widget-overview > .ks-body {
+    padding: 15px;
+}
+.modal-edit .ks-panel .card-header, .ks-panel .panel-heading, .panel .card-header, .panel .panel-heading {
+    padding: 10px;
+}
+.modal-edit .ks-widget-followers > .card-block .ks-wrapper {
+    padding: 10px;
+}
+.modal-edit .form-group {
+    margin-bottom: 10px;
+}
+.modal-edit .ks-widget-followers > .card-block .ks-wrapper {
+    padding: 10px;
+}
+.modal-edit .row + .row {
+    margin-top: 10px;
+}
+.modal-edit .btn {
+    padding: 10px 15px;
+}
+.modal-edit .container-fluid{
+    padding: 0px;
+}
+.padding-b-0 {
+    padding-bottom: 0px;
+}
+.table-items td, .table th {
+    padding: 8px;
+}
+.table-items .td-check {
+    text-align: center;
+}
+.table-items .td-check .custom-control{
+    margin: 0px;
+    padding: 16px 16px 0px 0px;
+}
+.table-items .close{
+    font-size: 16px;
+    color: red;
+}
+.modal-edit .card-footer{
+    text-align: center;
+    padding: 4px;
+}
+.table-items {
+    margin: 0px;
+}
+.select2-close-mask{
+    z-index: 2099;
+}
+.select2-dropdown{
+    z-index: 3051;
+}
+.select2-container.select2-container--default.select2-container--open  {
+    z-index: 5000;
+}
+.tax-return{
+    background: rgb(200, 200, 200);
+    padding: 15px 20px !important;
+    max-height: calc(100vh - 121px);
+    overflow-y: auto;
+}
+.tax-return .number{
+    position: relative;
+    width: 113px;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+}
+.tax-return .field-right{
+    position: relative;
+    width: 200px;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: right;
+}
+.money-format{
+    text-align: right;
+}
+.tax-return .text{
+    position: relative;
+    width: calc(100% - 313px);
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+}
+.tax-return .form-control{
+    padding: 7px 10px;
+    height: 26px;
+}
+.tax-return .input-group-addon {
+    padding: 2px !important;
+    min-width: 24px;
+    border-radius: 0px;
+}
+.tax-return > .col-md-12 > .row{
+    margin-bottom: 10px;
+}
+.tax-return .field-number{
+    min-width: 22px;
+    color: #fff;
+    background: #000;
+    text-align: center;
+    padding: 3px;
+    margin: 0px 6px 0px 0px;
+}
+.tax-return .title-right{
+    float: right;
+    display: inline-block;
+}
+.tax-return .title-left{
+    float: left;
+    max-width: 200px;
+    width: 100%;
+}
+.tax-return .title-left .input-group{
+    max-width: 170px;
+    float: right;
+}
+.tax-return .title-right .field-number{
+    margin: 0px 0px 0px 6px;
+}
+.tax-return .number.title{
+    padding-top: 3px;
+    text-align: right;
+}
+.tax-return .tree-column.title{
+    max-width: 48px;
+}
+.tax-return .title-black{
+    padding: 7px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    width: 100%;
+}
+.tax-return h2{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.tax-return h3{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.modal-edit .modal-footer {
+    padding: 10px 15px;
+}
+.bootstrap-table .fixed-table-container .fixed-table-body .table > thead > tr th {
+    vertical-align: middle;
+}
+.file-upload {
+    position: relative;
+    height: 34px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1.42857143;
+    color: #555;
+    overflow: hidden;
+}
+
+.file-upload:after {
+    content: "Обзор";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    color: #333;
+}
+.file-upload:hover:after {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.file-upload:active:after {
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.file-upload:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: block;
+    width: calc(100% - 40px);
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.file-upload input {
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 100%;
+    z-index: 99;
+    width: 100%;
+    opacity: 0;
+}
+.ks-pricing-plans-page > .ks-plans > .ks-plan {
+    width: 284px;
+    padding: 20px 20px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(57,80,155,.05);
+    border: solid 1px rgba(57,81,155,.1);
+    margin-right: 30px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.ks-pricing-plans-page > .ks-plans > .ks-plan > .ks-header > .ks-price > .ks-amount {
+    font-size: 38px;
+    line-height: 43px;
+}
+body > .ks-container > .my-pages > .ks-header{
+    position: inherit;
+    width: 100%;
+}
+body > .ks-container > .my-pages > .ks-header > .ks-title{
+    padding: 0 15px;
+    height: auto;
+}
+body > .ks-container > .my-pages > .ks-content{
+    margin-top: 0px;
+    position: initial;
+}
+body > .ks-container > .my-pages > .ks-content > .ks-body{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.ks-pricing-subscriptions-page{
+    padding: 0px 15px;
+}
+.ks-pricing-subscriptions-page > .ks-header {
+    margin: 0px;
+}
+.ks-pricing-subscriptions-page > .ks-subscriptions > .ks-subscription > .ks-header,
+.ks-pricing-subscriptions-page > .ks-subscriptions > .ks-subscription > .ks-body {
+    padding: 30px;
+}
+.ks-pricing-subscriptions-page > .ks-subscriptions {
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+}
+.ks-pricing-subscriptions-page {
+    -webkit-box-align: left;
+    -webkit-align-items: left;
+    -ms-flex-align: left;
+    align-items: normal;
+}
+.ks-pricing-subscriptions-page > .ks-subscriptions > .ks-subscription > .ks-body > ul > .ks-item > .ks-icon {
+    margin-right: 10px;
+}
+.box_referral > .ks-body{
+    margin: 0px;
+    padding: 0px;
+}
+.box_referral > .ks-body > .ks-feed {
+    padding: 0px 15px;
+}
+.box_referral > .ks-body > .ks-feed .card-header{
+    padding: 20px;
+}
+.box_referral > .ks-body > .ks-feed .card-block{
+    padding: 0px 20px 20px;
+}
+.ks-pricing-plans-page > .ks-plans > .ks-plan > .ks-header > .ks-discount {
+    min-height: 27px;
+}

@@ -1,0 +1,7 @@
+<offer id="Н0000024771" type="Нет" available="true">
+    <Stock>&lt;100</Stock>
+    <prices>
+        <price type="Дилерская цена" currencyId="KZT">18172</price>
+        <price type="RRP" currencyId="KZT">24990</price>
+    </prices>
+</offer>

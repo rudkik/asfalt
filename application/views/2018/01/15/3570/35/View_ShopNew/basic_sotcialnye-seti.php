@@ -1,0 +1,1 @@
+<a href="<?php echo Arr::path($data->values['options'], 'url', ''); ?>" target="_blank" class="fb-icon"><i class="fa <?php echo Arr::path($data->values['options'], 'class', ''); ?>" aria-hidden="true"></i></a>

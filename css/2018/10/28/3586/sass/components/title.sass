@@ -1,0 +1,55 @@
+@import '../themes/_module'
+@import '../utils/_module'
+
+%title
+  line-height: $size-title
+  font-size: $size-title
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  @include font-family('ProximaNova', 'Bold')
+
+%title__row
+  display: inline-block
+  margin-top: 4px
+  margin-bottom: 4px
+  padding: 5px $mp-default * 2 !important
+  white-space: nowrap
+  @media screen and (min-width: 576px)
+    white-space: nowrap
+  @media screen and (max-width: 991px)
+    padding-right: $mp-default - 5 !important
+    padding-left: $mp-default - 5 !important
+
+.title
+  @extend %title
+  @media screen and (max-width: 1199px)
+    line-height: $size-title - 10
+    font-size: $size-title - 10
+  @media screen and (max-width: 767px)
+    line-height: $size-title - 22
+    font-size: $size-title - 26
+  &--mob
+    &-center
+      @media screen and (max-width: 991px)
+        display: flex
+        margin-left: auto
+        margin-right: auto
+        flex-direction: column
+        align-items: center
+  &__row
+    @extend %title__row
+    background-color: color('black')
+    color: color('white')
+    &--minp
+      padding: 0 6px !important
+  &--block
+    font-size: $size-block-title
+    line-height: $size-block-title + 4
+    display: inline-flex
+    flex-direction: column
+    align-items: flex-start
+    @include font-family('ProximaNova', 'Bold')
+    @media screen and (max-width: 1199px)
+      font-size: $size-block-title - 10
+      line-height: $size-block-title - 6

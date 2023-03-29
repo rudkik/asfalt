@@ -1,0 +1,87 @@
+@import '../_vars.sass'
+.contacts
+  *[data-city]
+    display: none
+  &__block
+    position: absolute
+    top: 0
+    left: -$pl
+    padding: $pl * 2
+    background-color: white
+    border: 1px solid $main_light_color
+    z-index: 2
+    @media screen and (max-width: 767px)
+      position: static
+      padding: $pl
+    &__main_title
+      font-size: 32px
+      white-space: nowrap
+      padding-right: 60px
+    &__title
+      font-size: 20px
+      margin: $margin / 2 0
+    &__address
+      font-size: 16px
+      margin: $margin / 2 0
+    &__links
+      font-size: 16px
+      color: $main_color
+      margin: $margin / 2 0
+    &__tel
+      font-size: 20px
+      display: flex
+      align-items: flex-start
+      &:hover
+        font-size: 20px
+      span
+        font-size: 32px
+        line-height: 26px
+      &__wrap
+        margin: $margin / 2 0
+  &__map
+    margin-top: 40px
+    height: 400px
+    width: 100%
+    @media screen and (max-width: 767px)
+      margin-top: $pl / 2
+  &__cityes
+    margin: 0 8px
+    padding: 0
+    @media screen and (max-width: 767px)
+      margin: $pl / 8  0
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    input
+      display: none
+      &:checked + label
+        background-color: $main_color
+        color: white
+    label
+      display: block
+      height: 100%
+      width: 100%
+      padding: 0 $pl
+      background-color: white
+      color: $main_color
+      border: 1px solid $main_color
+      transition: all 0.1s ease-out
+      &:hover
+        background-color: $main_light_color
+        border-color: $main_light_color
+        color: white
+    &__wrap
+      display: flex
+      position: absolute
+      right: -$pl
+      top: 40px
+      transform: translateY(-50%)
+      z-index: 2
+      @media screen and (max-width: 767px)
+        position: static
+        transform: translateY(0)
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        margin: $pl / 2 0 0

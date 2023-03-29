@@ -1,0 +1,1 @@
+<?php $_GET['id'] = $data->values['id']; ?>

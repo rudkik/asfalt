@@ -1,0 +1,130 @@
+@import '../_vars.sass'
+.news
+  .gutters-lg
+    @media screen and (max-width: 991px)
+      margin-right: 15px
+      margin-left: 15px
+      >[class*=col-]
+        padding-right: 15px
+        padding-left: 15px
+  &__title
+    &__wrap
+      width: auto
+      display: flex
+      align-items: flex-end
+      flex-direction: column
+      @media screen and (max-width: 991px)
+        align-items: flex-start
+  &__subtitle
+    font-size: 20px
+    font-weight: 300
+  &__years
+    margin-left: 7px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    font-size: 26px
+    font-weight: 300
+    >*
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        top: 2px
+        bottom: 2px
+        left: -7px
+        width: 2px
+        background-color: black
+    &__active
+      span
+        cursor: pointer
+    &__archive
+      color: $gray_color
+      span
+        cursor: pointer
+      &:before
+        background-color: $gray_color
+  &__block
+    margin: $margin 0
+    position: relative
+    min-height: 200px
+    background-color: $main_color
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    color: white
+    z-index: 2
+    @media screen and (max-width: 991px)
+      max-width: 344px
+      margin-top: 144px + $margin
+      margin-left: auto
+      margin-right: auto
+    .loading__wrap
+      position: absolute
+      left: auto
+      width: auto
+    &__img
+      position: absolute
+      right: 100%
+      width: auto
+      min-width: 60px
+      max-height: 240px
+      min-height: 44px
+      height: calc(100% - 44px)
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 !important
+      background-color: $main_ultra_light_color
+      font-weight: 300
+      font-size: 15px
+      transition: all 2s ease-out
+      @media screen and (max-width: 991px)
+        right: auto
+        left: 0
+        bottom: 100%
+        max-height: 144px
+        max-width: 100%
+        overflow-x: hidden
+      &__img
+        transition: all 2s ease-out
+        width: auto
+        height: 100%
+        max-height: 100%
+        display: none
+        position: absolute
+        left: 100%
+        background-color: $main_ultra_light_color
+        @media screen and (max-width: 991px)
+          position: static
+        &.loaded
+          left: auto
+          right: 0
+          display: inline-block
+    >*
+      margin: $pl / 2 0 $pl / 2 $pl
+    &__date
+      margin-top: $pl
+      font-weight: 300
+      font-size: 15px
+      padding-right: 15px
+    &__title
+      font-size: 28px
+      padding-right: 15px
+    &__desc
+      margin-bottom: $pl * 3
+      font-weight: 300
+      font-size: 15px
+      padding-right: 15px
+      padding-bottom: 1px
+      line-height: 20px
+      overflow-x: hidden
+      max-width: calc(100% - 24px - 15px)
+    &__more_info
+      position: absolute
+      left: $pl
+      bottom: 0
+      transform: translateY(50%)
+      margin: 0 !important
+

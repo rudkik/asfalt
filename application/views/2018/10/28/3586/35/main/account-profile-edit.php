@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::View_Ads_Shop_Client\-account-profile-edit-dannye-polzovatelya']); ?>

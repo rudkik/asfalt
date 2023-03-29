@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::View_ShopNews\delivery_dostavka']); ?>

@@ -1,0 +1,1 @@
+<a typeof="v:Breadcrumb" rel="v:url" property="v:title" href="<?php echo $siteData->urlBasicLanguage; ?>/catalogs<?php echo $data->values['name_url']; ?>"><?php echo $data->values['name']; ?></a> /

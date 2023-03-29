@@ -1,0 +1,1 @@
+<div class="contact"><?php echo Func::getContactHTMLRus($data->values, TRUE, TRUE);?></div>

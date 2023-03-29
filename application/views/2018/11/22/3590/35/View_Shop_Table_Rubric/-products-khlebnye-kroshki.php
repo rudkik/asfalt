@@ -1,0 +1,1 @@
+<a href="<?php echo $siteData->urlBasicLanguage; ?>/products<?php echo $data->values['name_url']; ?>"><?php echo Func::trimTextNew($data->values['name']); ?></a> |

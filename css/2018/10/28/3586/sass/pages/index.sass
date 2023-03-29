@@ -1,0 +1,19 @@
+@import '../themes/_module'
+@import '../utils/_module'
+
+.section--1
+  @media screen and (min-width: 768px)
+    &__rel
+      position: relative
+    &__abs
+      &--top
+        position: absolute
+        bottom: 120%
+      &--bottom
+        position: absolute
+        top: 120%
+  @media screen and (max-width: 767px)
+    &__abs
+      &--top
+      &--bottom
+        margin-top: 25px

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <suplier_id>ID поставщика (предоставляется нами)</suplier_id>
+    <products>
+        <product>
+            <id>ID записи (уникальное значение)</id>
+            <price type="a">Цена для торговых точек категории А</price>
+            <price type="b">Цена для торговых точек категории В</price>
+            <price type="b+">Цена для торговых точек категории В+</price>
+            <price type="c">Цена для торговых точек категории В+</price>
+            <price type="horeca">Цена для торговых точек категории Horeca</price>
+            <price type="market">Цена для торговых точек категории рынки и базары</price>
+            <is_delete>Если удалить запись надо, то 1 иначе 0 или не добавлять данный параметр</is_delete>
+            <storage_count>Количество товаров на складе</storage_count>
+        </product>
+        ...
+        <product>
+            <id>ID записи (уникальное значение)</id>
+            <price type="a">Цена для торговых точек категории А</price>
+            <price type="b">Цена для торговых точек категории В</price>
+            <price type="b+">Цена для торговых точек категории В+</price>
+            <price type="c">Цена для торговых точек категории В+</price>
+            <price type="horeca">Цена для торговых точек категории Horeca</price>
+            <price type="market">Цена для торговых точек категории рынки и базары</price>
+            <is_delete>Если удалить запись надо, то 1 иначе 0 или не добавлять данный параметр</is_delete>
+            <storage_count>Количество товаров на складе</storage_count>
+        </product>
+    </products>
+</data>
+
+Ответ от сервера: список записей, которых не обраружено в базе данных
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <suplier_id>ID поставщика (предоставляется нами)</suplier_id>
+    <products>
+        <product>
+            <id>ID записи (уникальное значение)</id>
+        </product>
+        ...
+        <product>
+            <id>ID записи (уникальное значение)</id>
+        </product>
+    </products>
+</data>

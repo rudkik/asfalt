@@ -1,0 +1,135 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.nav
+  &.open
+    .nav
+      &__hamburger>*
+        background-color: color('white')
+        &:first-child
+          top: 50%
+          transform: translateY(-50%) rotate(-135deg)
+        &:nth-child(2)
+          opacity: 0
+        &:last-child
+          bottom: 50%
+          transform: translateY(50%) rotate(135deg)
+      &__list
+        @media screen and (max-width: 1199px)
+          left: 0
+
+  &__hamburger
+    position: relative
+    width: 28px
+    height: 24px
+    z-index: 1000
+    @media screen and (min-width: 1200px)
+      display: none
+    &__line
+      position: absolute
+      height: 4px
+      width: 28px
+      border-radius: 4px
+      background-color: color('black')
+      transition: all 0.3s ease-out
+      &:first-child
+        top: 0%
+        transform: translateY(0%)
+      &:nth-child(2)
+        top: 50%
+        transform: translateY(-50%)
+      &:last-child
+        bottom: 0%
+        transform: translateY(0%)
+  &__list
+    &--withhumb
+      @media screen and (max-width: 1199px)
+        transition: all 0.3s ease-out
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 100%
+        width: 100%
+        z-index: 999
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        .nav
+          &__item
+            color: color('white')
+            line-height: 27px
+            display: inline-flex
+            align-items: center
+    &--horscroll
+      max-width: 100%
+      display: flex
+      align-items: center
+      overflow-x: auto
+      white-space: nowrap
+      height: 100%
+    &--right
+      margin-right: -$mp-list
+  &__item
+    display: inline-block
+    &--overlay
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: -1
+      background-color: rgba(color('black'), 0.5)
+      @media screen and (min-width: 1200px)
+        display: none
+  &__link
+    padding: $mp-list / 2 - 1 $mp-list
+    transition: all 0.3s ease-out
+    position: relative
+    // color: color('black')
+    // &:after
+    //   content: ''
+    //   position: absolute
+    //   right: 50%
+    //   left: 50%
+    //   height: 3px
+    //   top: calc(100% + 5px)
+    //   transition: all 0.3s ease-out
+    //   background-color: color('main')
+    // &:hover, current
+    //   color: color('main')
+    //   &:after
+    //     right: 0
+    //     left: 0
+  &--extra
+    width: 100%
+    background-color: color('black')
+    height: $mp-line
+    border: $border-width solid color('black')
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: $mp-default
+    .nav
+      &__list
+      &__link
+        color: color('white')
+        // &:after
+        //   content: none
+        // &:hover, current
+        //   color: color('main')
+        &.current
+          color: color('main')
+          @include font-family('ProximaNova', 'SemiBold')
+  &--footer
+    font-size: $size-normal - 4
+    margin-right: -$mp-default * 1.5
+    .nav
+      &__link
+        padding: $mp-list / 2 $mp-default * 2.5
+        // &:after
+        //   background-color: color('black')
+        // &:hover, current
+        //   color: color('black')
+        //   &:after
+        //     right: $mp-default * 2.5
+        //     left: $mp-default * 2.5

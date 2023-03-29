@@ -1,0 +1,17 @@
+@import '../themes/_module'
+.footer
+  margin-top: auto
+  background-color: color('main')
+  &__text
+    display: inline-flex
+    align-items: center
+    img
+      padding: 0 $mp-default / 2
+      &:first-child
+        padding-left: $mp-default
+      &:last-child
+        padding-right: 0
+  &__block
+    padding: $mp-header-top 0
+    &:last-child
+      padding-bottom: $mp-header-top * 3

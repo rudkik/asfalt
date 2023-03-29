@@ -1,0 +1,1 @@
+<?php echo trim($siteData->globalDatas['view::region/one/show']); ?>

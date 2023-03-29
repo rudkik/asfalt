@@ -1,0 +1,1 @@
+<h3>Оплата <span class="text-red"><?php echo $data->values['name']; ?></span></h3>

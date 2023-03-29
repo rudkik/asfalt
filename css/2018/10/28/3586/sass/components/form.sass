@@ -1,0 +1,22 @@
+@import '../themes/_module'
+@import '../utils/_module'
+.form
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  &__title
+    display: block
+    min-height: $field-height
+    margin-top: $field-height / 2
+    margin-bottom: $field-height / 2
+    @include font-family('ProximaNova', 'Bold')
+    &--nobottom
+      margin-bottom: 0
+      min-height: 0
+  &__text
+    display: block
+    min-height: $field-height
+    font-size: $size-normal
+  &__extra
+    font-size: $size-little
+    line-height: $field-height
